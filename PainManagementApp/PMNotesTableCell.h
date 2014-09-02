@@ -1,5 +1,5 @@
 //
-//  PMViewController.h
+//  PMNotesTableCell.h
 //  PainManagementApp
 //
 //  Created by Vishnu on 01/09/14.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PMViewController : UIViewController
+@interface PMNotesTableCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITextField *notes;
 
 @end

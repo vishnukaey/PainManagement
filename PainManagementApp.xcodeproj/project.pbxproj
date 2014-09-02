@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2299D02319B5947700AA6252 /* flip.png in Resources */ = {isa = PBXBuildFile; fileRef = 2299D02219B5947700AA6252 /* flip.png */; };
+		2299D02719B5994600AA6252 /* PMEmptyRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D02619B5994600AA6252 /* PMEmptyRootViewController.m */; };
+		2299D02A19B599AF00AA6252 /* PMFrontPainLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D02919B599AF00AA6252 /* PMFrontPainLocationViewController.m */; };
+		2299D02D19B599C200AA6252 /* PMBackPainLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D02C19B599C200AA6252 /* PMBackPainLocationViewController.m */; };
+		2299D02F19B5E3B200AA6252 /* medication.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2299D02E19B5E3B200AA6252 /* medication.plist */; };
+		2299D03319B5E56A00AA6252 /* methotrexate.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2299D03019B5E56A00AA6252 /* methotrexate.jpeg */; };
+		2299D03419B5E56A00AA6252 /* Plaquenil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2299D03119B5E56A00AA6252 /* Plaquenil.jpg */; };
+		2299D03519B5E56A00AA6252 /* sulfasalazine.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2299D03219B5E56A00AA6252 /* sulfasalazine.jpeg */; };
+		2299D03919B5E69600AA6252 /* PMAddMedicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D03819B5E69600AA6252 /* PMAddMedicationViewController.m */; };
+		2299D04119B5F47F00AA6252 /* PMConfirmMedicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D04019B5F47F00AA6252 /* PMConfirmMedicationViewController.m */; };
+		2299D04419B5FEA800AA6252 /* PMMedicationReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D04319B5FEA800AA6252 /* PMMedicationReminderViewController.m */; };
 		22A79E4619B45D7900E00023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A79E4519B45D7900E00023 /* Foundation.framework */; };
 		22A79E4819B45D7900E00023 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A79E4719B45D7900E00023 /* CoreGraphics.framework */; };
 		22A79E4A19B45D7900E00023 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A79E4919B45D7900E00023 /* UIKit.framework */; };
@@ -14,13 +25,18 @@
 		22A79E5219B45D7900E00023 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E5119B45D7900E00023 /* main.m */; };
 		22A79E5619B45D7900E00023 /* PMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E5519B45D7900E00023 /* PMAppDelegate.m */; };
 		22A79E5919B45D7900E00023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A79E5719B45D7900E00023 /* Main.storyboard */; };
-		22A79E5C19B45D7900E00023 /* PMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E5B19B45D7900E00023 /* PMViewController.m */; };
 		22A79E5E19B45D7900E00023 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22A79E5D19B45D7900E00023 /* Images.xcassets */; };
 		22A79E6519B45D7900E00023 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A79E6419B45D7900E00023 /* XCTest.framework */; };
 		22A79E6619B45D7900E00023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A79E4519B45D7900E00023 /* Foundation.framework */; };
 		22A79E6719B45D7900E00023 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A79E4919B45D7900E00023 /* UIKit.framework */; };
 		22A79E6F19B45D7900E00023 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22A79E6D19B45D7900E00023 /* InfoPlist.strings */; };
 		22A79E7119B45D7900E00023 /* PainManagementAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E7019B45D7900E00023 /* PainManagementAppTests.m */; };
+		22A79E8019B4610800E00023 /* PMDashBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E7F19B4610800E00023 /* PMDashBoardViewController.m */; };
+		22A79E8219B4634400E00023 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A79E8119B4634400E00023 /* list.png */; };
+		22A79E8619B48A4200E00023 /* PMOverallPainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E8519B48A4200E00023 /* PMOverallPainViewController.m */; };
+		22A79E8919B48AC800E00023 /* PMOverallSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E8819B48AC800E00023 /* PMOverallSliderCell.m */; };
+		22A79E8C19B490B500E00023 /* PMNotesTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E8B19B490B500E00023 /* PMNotesTableCell.m */; };
+		CD2C4DCCF3C74B03BE1A08D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EE4E37EE644B3E90371A78 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +50,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2299D02219B5947700AA6252 /* flip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flip.png; sourceTree = "<group>"; };
+		2299D02519B5994600AA6252 /* PMEmptyRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMEmptyRootViewController.h; sourceTree = "<group>"; };
+		2299D02619B5994600AA6252 /* PMEmptyRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMEmptyRootViewController.m; sourceTree = "<group>"; };
+		2299D02819B599AF00AA6252 /* PMFrontPainLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMFrontPainLocationViewController.h; sourceTree = "<group>"; };
+		2299D02919B599AF00AA6252 /* PMFrontPainLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMFrontPainLocationViewController.m; sourceTree = "<group>"; };
+		2299D02B19B599C200AA6252 /* PMBackPainLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMBackPainLocationViewController.h; sourceTree = "<group>"; };
+		2299D02C19B599C200AA6252 /* PMBackPainLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMBackPainLocationViewController.m; sourceTree = "<group>"; };
+		2299D02E19B5E3B200AA6252 /* medication.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = medication.plist; sourceTree = "<group>"; };
+		2299D03019B5E56A00AA6252 /* methotrexate.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = methotrexate.jpeg; sourceTree = "<group>"; };
+		2299D03119B5E56A00AA6252 /* Plaquenil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Plaquenil.jpg; sourceTree = "<group>"; };
+		2299D03219B5E56A00AA6252 /* sulfasalazine.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sulfasalazine.jpeg; sourceTree = "<group>"; };
+		2299D03719B5E69600AA6252 /* PMAddMedicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMAddMedicationViewController.h; sourceTree = "<group>"; };
+		2299D03819B5E69600AA6252 /* PMAddMedicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMAddMedicationViewController.m; sourceTree = "<group>"; };
+		2299D03F19B5F47F00AA6252 /* PMConfirmMedicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMConfirmMedicationViewController.h; sourceTree = "<group>"; };
+		2299D04019B5F47F00AA6252 /* PMConfirmMedicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMConfirmMedicationViewController.m; sourceTree = "<group>"; };
+		2299D04219B5FEA800AA6252 /* PMMedicationReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMMedicationReminderViewController.h; sourceTree = "<group>"; };
+		2299D04319B5FEA800AA6252 /* PMMedicationReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMMedicationReminderViewController.m; sourceTree = "<group>"; };
 		22A79E4219B45D7900E00023 /* PainManagementApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PainManagementApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A79E4519B45D7900E00023 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22A79E4719B45D7900E00023 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +78,23 @@
 		22A79E5419B45D7900E00023 /* PMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMAppDelegate.h; sourceTree = "<group>"; };
 		22A79E5519B45D7900E00023 /* PMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMAppDelegate.m; sourceTree = "<group>"; };
 		22A79E5819B45D7900E00023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		22A79E5A19B45D7900E00023 /* PMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMViewController.h; sourceTree = "<group>"; };
-		22A79E5B19B45D7900E00023 /* PMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMViewController.m; sourceTree = "<group>"; };
 		22A79E5D19B45D7900E00023 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		22A79E6319B45D7900E00023 /* PainManagementAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PainManagementAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A79E6419B45D7900E00023 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		22A79E6C19B45D7900E00023 /* PainManagementAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PainManagementAppTests-Info.plist"; sourceTree = "<group>"; };
 		22A79E6E19B45D7900E00023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22A79E7019B45D7900E00023 /* PainManagementAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PainManagementAppTests.m; sourceTree = "<group>"; };
+		22A79E7E19B4610800E00023 /* PMDashBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMDashBoardViewController.h; sourceTree = "<group>"; };
+		22A79E7F19B4610800E00023 /* PMDashBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMDashBoardViewController.m; sourceTree = "<group>"; };
+		22A79E8119B4634400E00023 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		22A79E8419B48A4200E00023 /* PMOverallPainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOverallPainViewController.h; sourceTree = "<group>"; };
+		22A79E8519B48A4200E00023 /* PMOverallPainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOverallPainViewController.m; sourceTree = "<group>"; };
+		22A79E8719B48AC800E00023 /* PMOverallSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOverallSliderCell.h; sourceTree = "<group>"; };
+		22A79E8819B48AC800E00023 /* PMOverallSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOverallSliderCell.m; sourceTree = "<group>"; };
+		22A79E8A19B490B500E00023 /* PMNotesTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMNotesTableCell.h; sourceTree = "<group>"; };
+		22A79E8B19B490B500E00023 /* PMNotesTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMNotesTableCell.m; sourceTree = "<group>"; };
+		38F0E8513E42460F853CF309 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C4EE4E37EE644B3E90371A78 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +105,7 @@
 				22A79E4819B45D7900E00023 /* CoreGraphics.framework in Frameworks */,
 				22A79E4A19B45D7900E00023 /* UIKit.framework in Frameworks */,
 				22A79E4619B45D7900E00023 /* Foundation.framework in Frameworks */,
+				CD2C4DCCF3C74B03BE1A08D0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,11 +122,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2299D02419B598F000AA6252 /* PainManagementViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2299D02519B5994600AA6252 /* PMEmptyRootViewController.h */,
+				2299D02619B5994600AA6252 /* PMEmptyRootViewController.m */,
+				22A79E8419B48A4200E00023 /* PMOverallPainViewController.h */,
+				22A79E8519B48A4200E00023 /* PMOverallPainViewController.m */,
+				2299D02819B599AF00AA6252 /* PMFrontPainLocationViewController.h */,
+				2299D02919B599AF00AA6252 /* PMFrontPainLocationViewController.m */,
+				2299D02B19B599C200AA6252 /* PMBackPainLocationViewController.h */,
+				2299D02C19B599C200AA6252 /* PMBackPainLocationViewController.m */,
+			);
+			name = PainManagementViewControllers;
+			sourceTree = "<group>";
+		};
+		2299D03619B5E64A00AA6252 /* MedicationViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2299D03719B5E69600AA6252 /* PMAddMedicationViewController.h */,
+				2299D03819B5E69600AA6252 /* PMAddMedicationViewController.m */,
+				2299D03F19B5F47F00AA6252 /* PMConfirmMedicationViewController.h */,
+				2299D04019B5F47F00AA6252 /* PMConfirmMedicationViewController.m */,
+				2299D04219B5FEA800AA6252 /* PMMedicationReminderViewController.h */,
+				2299D04319B5FEA800AA6252 /* PMMedicationReminderViewController.m */,
+			);
+			name = MedicationViewControllers;
+			sourceTree = "<group>";
+		};
 		22A79E3919B45D7900E00023 = {
 			isa = PBXGroup;
 			children = (
 				22A79E4B19B45D7900E00023 /* PainManagementApp */,
-				22A79E6A19B45D7900E00023 /* PainManagementAppTests */,
+				22A79E4C19B45D7900E00023 /* Supporting Files */,
 				22A79E4419B45D7900E00023 /* Frameworks */,
 				22A79E4319B45D7900E00023 /* Products */,
 			);
@@ -105,6 +176,7 @@
 				22A79E4719B45D7900E00023 /* CoreGraphics.framework */,
 				22A79E4919B45D7900E00023 /* UIKit.framework */,
 				22A79E6419B45D7900E00023 /* XCTest.framework */,
+				C4EE4E37EE644B3E90371A78 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,10 +187,10 @@
 				22A79E5419B45D7900E00023 /* PMAppDelegate.h */,
 				22A79E5519B45D7900E00023 /* PMAppDelegate.m */,
 				22A79E5719B45D7900E00023 /* Main.storyboard */,
-				22A79E5A19B45D7900E00023 /* PMViewController.h */,
-				22A79E5B19B45D7900E00023 /* PMViewController.m */,
-				22A79E5D19B45D7900E00023 /* Images.xcassets */,
-				22A79E4C19B45D7900E00023 /* Supporting Files */,
+				22A79E7A19B4609300E00023 /* ViewControllers */,
+				22A79E7D19B460B200E00023 /* Utilities */,
+				22A79E7C19B460A500E00023 /* Modal Classes */,
+				22A79E7B19B4609E00E00023 /* Views */,
 			);
 			path = PainManagementApp;
 			sourceTree = "<group>";
@@ -126,12 +198,18 @@
 		22A79E4C19B45D7900E00023 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				38F0E8513E42460F853CF309 /* Pods.xcconfig */,
+				22A79E6A19B45D7900E00023 /* PainManagementAppTests */,
+				22A79E8319B4635100E00023 /* Images */,
+				22A79E5D19B45D7900E00023 /* Images.xcassets */,
 				22A79E4D19B45D7900E00023 /* PainManagementApp-Info.plist */,
 				22A79E4E19B45D7900E00023 /* InfoPlist.strings */,
 				22A79E5119B45D7900E00023 /* main.m */,
 				22A79E5319B45D7900E00023 /* PainManagementApp-Prefix.pch */,
+				2299D02E19B5E3B200AA6252 /* medication.plist */,
 			);
 			name = "Supporting Files";
+			path = PainManagementApp;
 			sourceTree = "<group>";
 		};
 		22A79E6A19B45D7900E00023 /* PainManagementAppTests */ = {
@@ -141,7 +219,7 @@
 				22A79E6B19B45D7900E00023 /* Supporting Files */,
 			);
 			path = PainManagementAppTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		22A79E6B19B45D7900E00023 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -152,6 +230,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		22A79E7A19B4609300E00023 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2299D03619B5E64A00AA6252 /* MedicationViewControllers */,
+				22A79E7E19B4610800E00023 /* PMDashBoardViewController.h */,
+				22A79E7F19B4610800E00023 /* PMDashBoardViewController.m */,
+				2299D02419B598F000AA6252 /* PainManagementViewControllers */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		22A79E7B19B4609E00E00023 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22A79E8719B48AC800E00023 /* PMOverallSliderCell.h */,
+				22A79E8819B48AC800E00023 /* PMOverallSliderCell.m */,
+				22A79E8A19B490B500E00023 /* PMNotesTableCell.h */,
+				22A79E8B19B490B500E00023 /* PMNotesTableCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		22A79E7C19B460A500E00023 /* Modal Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Modal Classes";
+			sourceTree = "<group>";
+		};
+		22A79E7D19B460B200E00023 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		22A79E8319B4635100E00023 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2299D03019B5E56A00AA6252 /* methotrexate.jpeg */,
+				2299D03119B5E56A00AA6252 /* Plaquenil.jpg */,
+				2299D03219B5E56A00AA6252 /* sulfasalazine.jpeg */,
+				2299D02219B5947700AA6252 /* flip.png */,
+				22A79E8119B4634400E00023 /* list.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +285,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22A79E7419B45D7900E00023 /* Build configuration list for PBXNativeTarget "PainManagementApp" */;
 			buildPhases = (
+				E71981895C9B4A6DAD0417D2 /* Check Pods Manifest.lock */,
 				22A79E3E19B45D7900E00023 /* Sources */,
 				22A79E3F19B45D7900E00023 /* Frameworks */,
 				22A79E4019B45D7900E00023 /* Resources */,
+				D632FDA67230494FB1E676DE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,8 +358,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A79E5E19B45D7900E00023 /* Images.xcassets in Resources */,
+				2299D02F19B5E3B200AA6252 /* medication.plist in Resources */,
+				2299D03319B5E56A00AA6252 /* methotrexate.jpeg in Resources */,
+				2299D02319B5947700AA6252 /* flip.png in Resources */,
 				22A79E5019B45D7900E00023 /* InfoPlist.strings in Resources */,
 				22A79E5919B45D7900E00023 /* Main.storyboard in Resources */,
+				22A79E8219B4634400E00023 /* list.png in Resources */,
+				2299D03419B5E56A00AA6252 /* Plaquenil.jpg in Resources */,
+				2299D03519B5E56A00AA6252 /* sulfasalazine.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,14 +379,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D632FDA67230494FB1E676DE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E71981895C9B4A6DAD0417D2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		22A79E3E19B45D7900E00023 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2299D02D19B599C200AA6252 /* PMBackPainLocationViewController.m in Sources */,
 				22A79E5219B45D7900E00023 /* main.m in Sources */,
-				22A79E5C19B45D7900E00023 /* PMViewController.m in Sources */,
+				2299D04419B5FEA800AA6252 /* PMMedicationReminderViewController.m in Sources */,
+				22A79E8619B48A4200E00023 /* PMOverallPainViewController.m in Sources */,
+				22A79E8019B4610800E00023 /* PMDashBoardViewController.m in Sources */,
 				22A79E5619B45D7900E00023 /* PMAppDelegate.m in Sources */,
+				2299D02A19B599AF00AA6252 /* PMFrontPainLocationViewController.m in Sources */,
+				2299D04119B5F47F00AA6252 /* PMConfirmMedicationViewController.m in Sources */,
+				2299D02719B5994600AA6252 /* PMEmptyRootViewController.m in Sources */,
+				22A79E8919B48AC800E00023 /* PMOverallSliderCell.m in Sources */,
+				2299D03919B5E69600AA6252 /* PMAddMedicationViewController.m in Sources */,
+				22A79E8C19B490B500E00023 /* PMNotesTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +552,7 @@
 		};
 		22A79E7519B45D7900E00023 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38F0E8513E42460F853CF309 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -389,6 +566,7 @@
 		};
 		22A79E7619B45D7900E00023 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38F0E8513E42460F853CF309 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -461,6 +639,7 @@
 				22A79E7619B45D7900E00023 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22A79E7719B45D7900E00023 /* Build configuration list for PBXNativeTarget "PainManagementAppTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +648,7 @@
 				22A79E7919B45D7900E00023 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
