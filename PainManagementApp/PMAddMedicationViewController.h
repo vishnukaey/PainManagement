@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PMAddMedicationViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITableView *medicationTableView;
-
+    @property (weak, nonatomic) IBOutlet UITableView *medicationTableView;
 @end

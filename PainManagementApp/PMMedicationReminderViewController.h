@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PMMedicationReminderViewController : UIViewController
-//@property (assign, nonatomic) NSMutableDictionary *medication;
+@property (weak, nonatomic) IBOutlet UILabel *medicationName;
+@property (assign, nonatomic) NSMutableDictionary *medication;
 @end
 

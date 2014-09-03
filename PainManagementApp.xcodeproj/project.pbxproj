@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22952EC919B6F2A60073E131 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 22952EC819B6F2A60073E131 /* Utilities.m */; };
+		22952ECC19B6FFFF0073E131 /* PMFrequencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22952ECB19B6FFFF0073E131 /* PMFrequencyViewController.m */; };
+		22952ECF19B700130073E131 /* PMReminderPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22952ECE19B700130073E131 /* PMReminderPickerViewController.m */; };
 		2299D02319B5947700AA6252 /* flip.png in Resources */ = {isa = PBXBuildFile; fileRef = 2299D02219B5947700AA6252 /* flip.png */; };
 		2299D02719B5994600AA6252 /* PMEmptyRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D02619B5994600AA6252 /* PMEmptyRootViewController.m */; };
 		2299D02A19B599AF00AA6252 /* PMFrontPainLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D02919B599AF00AA6252 /* PMFrontPainLocationViewController.m */; };
@@ -50,6 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22952EC719B6F2A60073E131 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		22952EC819B6F2A60073E131 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		22952ECA19B6FFFF0073E131 /* PMFrequencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMFrequencyViewController.h; sourceTree = "<group>"; };
+		22952ECB19B6FFFF0073E131 /* PMFrequencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMFrequencyViewController.m; sourceTree = "<group>"; };
+		22952ECD19B700130073E131 /* PMReminderPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMReminderPickerViewController.h; sourceTree = "<group>"; };
+		22952ECE19B700130073E131 /* PMReminderPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMReminderPickerViewController.m; sourceTree = "<group>"; };
 		2299D02219B5947700AA6252 /* flip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flip.png; sourceTree = "<group>"; };
 		2299D02519B5994600AA6252 /* PMEmptyRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMEmptyRootViewController.h; sourceTree = "<group>"; };
 		2299D02619B5994600AA6252 /* PMEmptyRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMEmptyRootViewController.m; sourceTree = "<group>"; };
@@ -146,6 +155,10 @@
 				2299D04019B5F47F00AA6252 /* PMConfirmMedicationViewController.m */,
 				2299D04219B5FEA800AA6252 /* PMMedicationReminderViewController.h */,
 				2299D04319B5FEA800AA6252 /* PMMedicationReminderViewController.m */,
+				22952ECA19B6FFFF0073E131 /* PMFrequencyViewController.h */,
+				22952ECB19B6FFFF0073E131 /* PMFrequencyViewController.m */,
+				22952ECD19B700130073E131 /* PMReminderPickerViewController.h */,
+				22952ECE19B700130073E131 /* PMReminderPickerViewController.m */,
 			);
 			name = MedicationViewControllers;
 			sourceTree = "<group>";
@@ -262,6 +275,8 @@
 		22A79E7D19B460B200E00023 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				22952EC719B6F2A60073E131 /* Utilities.h */,
+				22952EC819B6F2A60073E131 /* Utilities.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -421,13 +436,16 @@
 				22A79E5219B45D7900E00023 /* main.m in Sources */,
 				2299D04419B5FEA800AA6252 /* PMMedicationReminderViewController.m in Sources */,
 				22A79E8619B48A4200E00023 /* PMOverallPainViewController.m in Sources */,
+				22952ECC19B6FFFF0073E131 /* PMFrequencyViewController.m in Sources */,
 				22A79E8019B4610800E00023 /* PMDashBoardViewController.m in Sources */,
+				22952ECF19B700130073E131 /* PMReminderPickerViewController.m in Sources */,
 				22A79E5619B45D7900E00023 /* PMAppDelegate.m in Sources */,
 				2299D02A19B599AF00AA6252 /* PMFrontPainLocationViewController.m in Sources */,
 				2299D04119B5F47F00AA6252 /* PMConfirmMedicationViewController.m in Sources */,
 				2299D02719B5994600AA6252 /* PMEmptyRootViewController.m in Sources */,
 				22A79E8919B48AC800E00023 /* PMOverallSliderCell.m in Sources */,
 				2299D03919B5E69600AA6252 /* PMAddMedicationViewController.m in Sources */,
+				22952EC919B6F2A60073E131 /* Utilities.m in Sources */,
 				22A79E8C19B490B500E00023 /* PMNotesTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

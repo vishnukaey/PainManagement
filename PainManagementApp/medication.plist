@@ -3,18 +3,24 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>medicationForm</key>
+		<string>Injection</string>
 		<key>medicationName</key>
 		<string>METHOTREXATE</string>
 		<key>medicationImage</key>
 		<string>methotrexate.jpeg</string>
 	</dict>
 	<dict>
+		<key>medicationForm</key>
+		<string>Injection</string>
 		<key>medicationName</key>
 		<string>PLAQUENIL</string>
 		<key>medicationImage</key>
 		<string>Plaquenil.jpg</string>
 	</dict>
 	<dict>
+		<key>medicationForm</key>
+		<string>Injection</string>
 		<key>medicationName</key>
 		<string>SULFASALAZINE</string>
 		<key>medicationImage</key>

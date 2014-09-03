@@ -50,14 +50,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-    if(cell.accessoryType == UITableViewCellAccessoryNone){
+    for ( int i= 0 ; i < medicationList.count; i ++ ){
+      UITableViewCell * cell2 = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        cell2.accessoryType= UITableViewCellAccessoryNone;
+    }
+    
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        medication = [medicationList objectAtIndex:indexPath.row];
-    }
-    else{
-        cell.accessoryType= UITableViewCellAccessoryNone;
-        medication=nil;
-    }
+    medication = [medicationList objectAtIndex:indexPath.row];
 }
 
 - (IBAction)confirmMedication:(id)sender {
@@ -65,9 +64,11 @@
     [self performSegueWithIdentifier:@"confirm" sender:self];
 }
 
+
 -(void) pushToReminderViewController{
     [self performSegueWithIdentifier:@"reminder" sender:self];
 }
+
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"confirm"]){
@@ -75,15 +76,17 @@
         confirm.delegate = self;
         confirm.medication = medication;
     }
+    
     if([segue.identifier isEqualToString:@"reminder"]){
-//        PMMedicationReminderViewController *reminder = [segue destinationViewController];
-//        reminder.medication= medication;
+        PMMedicationReminderViewController *reminder = [segue destinationViewController];
+        reminder.medication = medication;
+        NSLog(@"%@",reminder.medication);
     }
+    
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 @end
