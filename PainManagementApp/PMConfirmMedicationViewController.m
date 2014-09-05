@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 DenovoNow. All rights reserved.
 //
 
+/*
+ This ViewController shows a particular medication which is selected along with an image for the user to confirm it or cancel it
+ */
+
 #import "PMConfirmMedicationViewController.h"
 
 @interface PMConfirmMedicationViewController ()
@@ -22,26 +26,31 @@
     }
     return self;
 }
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.medicationName.text = self.medication.medicationName;
+    self.medicationImage.image = self.medication.medicationImage;
+}
+
+
+
 - (IBAction)confirmMedication:(id)sender {
     [self.delegate pushToReminderViewController];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
 - (IBAction)cancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.medicationName.text = [self.medication valueForKey:@"medicationName"];
-    self.medicationImage.image = [UIImage imageNamed:[self.medication valueForKey:@"medicationImage"]];
-}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

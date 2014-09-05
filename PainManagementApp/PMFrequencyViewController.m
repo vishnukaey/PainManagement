@@ -9,10 +9,16 @@
 #import "PMFrequencyViewController.h"
 #import "PMReminderPickerViewController.h"
 
-@interface PMFrequencyViewController (){
+/* 
+ 
+ Sets the frequency of intake of medication
+ 
+ */
+
+
+@interface PMFrequencyViewController () <Reminderdelegate> {
     NSMutableArray *frequency;
     NSArray *reccur;
-    NSMutableDictionary *medicationMutable;
 }
 
 @end
@@ -28,19 +34,17 @@
     return self;
 }
 - (void)viewDidLoad{
-    medicationMutable =[[NSMutableDictionary alloc] initWithDictionary:self.medication];
     [super viewDidLoad];
     frequency = [[NSMutableArray alloc]init];
-    for (int i=0;i<10;i++)
+    for (int i=0;i<5;i++)
         [frequency  setObject:@(i+1) atIndexedSubscript:i];
     reccur=[[NSArray alloc]initWithObjects:@"Daily",@"Weekly",@"Monthly",nil];
 }
 
 
 - (IBAction)nextViewController:(id)sender {
-    [medicationMutable setObject:self.reccurenceLabel.text forKey:@"reccurence"];
-    [medicationMutable setValue:self.frequencyLabel.text forKey:@"frequency"];
-    self.medication=medicationMutable;
+    self.medication.reminderReccurence = self.reccurenceLabel.text;
+    self.medication.reminderFrequency = self.frequencyLabel.text ;
     [self performSegueWithIdentifier:@"time" sender:self];
 }
 
@@ -48,7 +52,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    
 }
 
 #pragma -mark PickerView delegates
@@ -81,10 +84,15 @@
         self.reccurenceLabel.text=[reccur objectAtIndex:row];
 }
 
+-(void) popViewController{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"time"]){
         PMReminderPickerViewController *pickTime = [segue destinationViewController];
-        pickTime.medication=medicationMutable;
+        pickTime.delegate= self;
+        pickTime.medication=self.medication;
     }
 }
 @end

@@ -6,13 +6,15 @@
 //  Copyright (c) 2014 DenovoNow. All rights reserved.
 //
 
+/* Shows the summary of the medication selected, the form of medication and reminders set. User can click on any cell to change it
+ */
+
 #import "PMMedicationReminderViewController.h"
 #import "PMFrequencyViewController.h"
 
 @interface PMMedicationReminderViewController (){
     NSArray *reminderParamaters;
 }
-
 @end
 
 @implementation PMMedicationReminderViewController
@@ -30,10 +32,11 @@
 {
     [super viewDidLoad];
     reminderParamaters = [[NSArray alloc] initWithObjects:@"Form",@"Frequency",@"Day of the week", @"Reminder Time", nil];
-    self.medicationName.text = [self.medication valueForKey:@"medicationName"];
+    self.medicationName.text = self.medication.medicationName;
 }
 
 #pragma -mark TableView Delagate
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return reminderParamaters.count;
 }
@@ -45,7 +48,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.textLabel.text=[reminderParamaters objectAtIndex:indexPath.row];
     if(indexPath.row == 0)
-        cell.detailTextLabel.text=[self.medication valueForKey:@"medicationForm"];
+        cell.detailTextLabel.text=self.medication.medicationForm;
+    else if (indexPath.row == 1 && self.medication.reminderReccurence.length !=0)
+        cell.detailTextLabel.text=self.medication.reminderReccurence;
     return cell;
 }
 
@@ -55,6 +60,9 @@
     [ self performSegueWithIdentifier:@"frequency" sender:self];
     }
 }
+- (IBAction)nextButtonTapped:(id)sender {
+    [self performSegueWithIdentifier:@"Osteoporosis" sender:self];
+}
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"frequency"]){
@@ -63,6 +71,8 @@
         ;
     }
 }
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

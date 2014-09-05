@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @protocol PMConfirmMedicationViewControllerDelegate <NSObject>
--(void) pushToReminderViewController;
+    -(void) pushToReminderViewController;
 @end
 
 @interface PMConfirmMedicationViewController : UIViewController
-@property (nonatomic, weak) id <PMConfirmMedicationViewControllerDelegate> delegate;
-@property (weak, nonatomic) IBOutlet UILabel *medicationName;
-@property (weak, nonatomic) IBOutlet UILabel *medicationForm;
-@property (weak, nonatomic) IBOutlet UIImageView *medicationImage;
-@property (weak, nonatomic) IBOutlet UIButton *confirmMedication;
-@property(assign, nonatomic) NSMutableDictionary *medication;
+    @property (nonatomic, weak) id <PMConfirmMedicationViewControllerDelegate> delegate;
+    @property (weak, nonatomic) IBOutlet UILabel *medicationName;
+    @property (weak, nonatomic) IBOutlet UILabel *medicationForm;
+    @property (weak, nonatomic) IBOutlet UIImageView *medicationImage;
+    @property (weak, nonatomic) IBOutlet UIButton *confirmMedication;
+    @property(assign, nonatomic) PMMedicationModal *medication;
 @end

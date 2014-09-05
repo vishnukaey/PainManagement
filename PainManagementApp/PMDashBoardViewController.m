@@ -7,6 +7,7 @@
 //
 
 #import "PMDashBoardViewController.h"
+#import "PMMedicationModal.h"
 
 @interface PMDashBoardViewController ()
 

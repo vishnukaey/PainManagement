@@ -4,6 +4,61 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="cLQ-1h-BXX">
+            <objects>
+                <viewController id="XBk-r4-l1d" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k73-BD-hBZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="cyo-9C-ilT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wNp-O3-uaR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MANAGE PAIN BETTER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="185" translatesAutoresizingMaskIntoConstraints="NO" id="Ysw-a0-2yL">
+                                <rect key="frame" x="68" y="203" width="185" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv2-gM-lSx">
+                                <rect key="frame" x="83" y="29" width="155" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="82"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5t3-oy-iNV">
+                                <rect key="frame" x="98" y="518" width="124" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pain Management">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYH-2g-nSl">
+                                <rect key="frame" x="20" y="493" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Medication">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEA-X5-Uxi">
+                                <rect key="frame" x="212" y="493" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Appoinment">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.06323728266165507" green="0.2550184268891505" blue="0.33673469387755106" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doX-XF-EV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1797" y="-425"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="XHh-KC-CfE">
             <objects>
@@ -17,7 +72,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqc-Qd-2Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2372" y="472"/>
+            <point key="canvasLocation" x="-2380" y="440"/>
         </scene>
         <!--Front Pain Location View Controller-->
         <scene sceneID="deL-6R-82G">
@@ -152,7 +207,7 @@
                                                     <rect key="frame" x="20" y="20" width="280" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -251,6 +306,7 @@
                         <segue destination="XxQ-qh-r3S" kind="push" identifier="HELP" id="9Sr-8d-bbV"/>
                         <segue destination="jnP-Hx-dzW" kind="push" identifier="TERMS &amp; CONDITIONS" id="1hO-NS-3WT"/>
                         <segue destination="H0G-OY-9BY" kind="push" identifier="PAIN MANAGEMENT" id="oQ7-MV-aTo"/>
+                        <segue destination="XBk-r4-l1d" kind="modal" identifier="landingView" id="ceR-Kc-sVl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HqB-Ue-gAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -640,10 +696,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MEDICATION" id="8lj-Nb-aWa"/>
+                    <navigationItem key="navigationItem" title="MEDICATION" id="8lj-Nb-aWa">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="mw2-th-o3X"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="R6d-yP-JrS">
+                            <connections>
+                                <action selector="nextButtonTapped:" destination="i5L-TF-EQF" id="xNM-wI-Dmq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="medicationName" destination="Bs5-TK-sj4" id="jR9-qj-Oe1"/>
                         <segue destination="0p2-G3-fcw" kind="push" identifier="frequency" id="nvK-bD-gt3"/>
+                        <segue destination="TcB-3r-rXJ" kind="push" identifier="Osteoporosis" id="Ju4-1r-n9X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srI-Ft-vMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -717,7 +781,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOh-VT-Sfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="533" y="-2485"/>
+            <point key="canvasLocation" x="665" y="-2619"/>
         </scene>
         <!--Reminder Picker View Controller-->
         <scene sceneID="ykr-AL-rEa">
@@ -746,7 +810,7 @@
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="X: XX AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o8a-0M-APa">
                                                     <rect key="frame" x="15" y="0.0" width="290" height="79"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -770,7 +834,7 @@
                                             <!--2014-09-03 11:55:22 +0000-->
                                         </date>
                                         <timeZone key="timeZone" name="America/Los_Angeles">
-                                            <mutableData key="data">
+                                            <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -788,7 +852,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                                         </timeZone>
                                     </datePicker>
                                     <pickerView contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NBW-rB-wmy">
@@ -837,6 +901,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                     <navigationItem key="navigationItem" id="pKH-rN-dxw"/>
                     <connections>
+                        <outlet property="datePicker" destination="HAJ-f7-cVa" id="JT7-Sx-wgj"/>
                         <outlet property="frequencyPicker" destination="NBW-rB-wmy" id="GtX-ic-KDk"/>
                         <outlet property="pickerContainerView" destination="nyL-fp-ecV" id="S0r-1J-c7j"/>
                         <outlet property="reminderView" destination="7p4-nk-uOn" id="IUl-R9-rzG"/>
@@ -844,7 +909,112 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEz-2q-5qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="-2502"/>
+            <point key="canvasLocation" x="1228" y="-2762"/>
+        </scene>
+        <!--Osteo Medication View Controller-->
+        <scene sceneID="O13-lB-xN2">
+            <objects>
+                <viewController id="TcB-3r-rXJ" customClass="PMOsteoMedicationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ik0-If-rhb"/>
+                        <viewControllerLayoutGuide type="bottom" id="uyw-r8-c8H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wcx-bc-27t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9bj-gr-7B2">
+                                <rect key="frame" x="0.0" y="105" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Fds-EB-3OR" detailTextLabel="gL4-CY-0Ae" rowHeight="85" style="IBUITableViewCellStyleSubtitle" id="HlO-2Y-DgP">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HlO-2Y-DgP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fds-EB-3OR">
+                                                    <rect key="frame" x="15" y="24" width="34" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gL4-CY-0Ae">
+                                                    <rect key="frame" x="15" y="46" width="43" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="TcB-3r-rXJ" id="1kb-fd-Qbx"/>
+                                    <outlet property="delegate" destination="TcB-3r-rXJ" id="YWh-US-CYG"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFD-qF-fng">
+                                <rect key="frame" x="0.0" y="63" width="320" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select a medication below if you are receiving treatment for Osteoporosis" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="xUt-Ut-QpD">
+                                        <rect key="frame" x="20" y="15" width="280" height="74"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.115450233" green="0.59625194500000001" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xg1-tg-1WC">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Ayp-gP-0yS">
+                            <connections>
+                                <action selector="pushToScheduleViewController:" destination="TcB-3r-rXJ" id="8Og-O1-Olk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="7Hm-UW-kME" kind="push" identifier="schedule" id="ECo-ay-t6R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOe-BG-7Tt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1703" y="-2231"/>
+        </scene>
+        <!--Schedule View Controller-->
+        <scene sceneID="u9q-uO-90h">
+            <objects>
+                <viewController id="7Hm-UW-kME" customClass="PMScheduleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EGb-t1-SNW"/>
+                        <viewControllerLayoutGuide type="bottom" id="qAp-CK-5uy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kur-3u-2mm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IzI-nJ-G86">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Kre-za-Pa5">
+                            <connections>
+                                <action selector="saveMedication:" destination="7Hm-UW-kME" id="sQd-hV-QNY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7z-4J-Oh2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2135" y="-2231"/>
         </scene>
         <!--Back Pain Location View Controller-->
         <scene sceneID="OXu-OH-z3m">

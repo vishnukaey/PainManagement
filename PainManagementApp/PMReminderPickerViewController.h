@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol Reminderdelegate <NSObject>
+-(void) popViewController;
+@end
+
 @interface PMReminderPickerViewController : UIViewController
-@property (assign,nonatomic)  NSMutableDictionary *medication;
-@property (weak, nonatomic) IBOutlet UIPickerView *frequencyPicker;
-@property (weak, nonatomic) IBOutlet UITableView *reminderView;
-@property (weak, nonatomic) IBOutlet UIView *pickerContainerView;
+    @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+    @property (assign, nonatomic)  PMMedicationModal *medication;
+    @property (weak, nonatomic) IBOutlet UIPickerView *frequencyPicker;
+    @property (weak, nonatomic) IBOutlet UITableView *reminderView;
+    @property (weak, nonatomic) IBOutlet UIView *pickerContainerView;
+    @property (weak,nonatomic) id <Reminderdelegate> delegate;
 @end
 

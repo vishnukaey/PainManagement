@@ -6,13 +6,19 @@
 //  Copyright (c) 2014 DenovoNow. All rights reserved.
 //
 
+/* 
+ This ViewController Lists all the medicines available. User can select his/her Medication so as to add reminders for it
+ */
+
+
 #import "PMAddMedicationViewController.h"
 #import "PMConfirmMedicationViewController.h"
 #import "PMMedicationReminderViewController.h"
 
 @interface PMAddMedicationViewController ()<PMConfirmMedicationViewControllerDelegate>{
     NSArray *medicationList;
-    NSMutableDictionary *medication;
+    NSMutableDictionary *medicationItem;
+    PMMedicationModal *medication;
 }
 
 @end
@@ -31,7 +37,24 @@
 {
     [super viewDidLoad];
     medicationList = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"medication" ofType:@"plist"]];
+    medication = [[PMMedicationModal alloc] init];
 }
+
+- (IBAction)confirmMedication:(id)sender {
+    if(medicationItem){
+        medication.medicationName = [medicationItem valueForKey:@"medicationName"];
+        medication.medicationImage = [UIImage imageNamed:[medicationItem valueForKey:@"medicationImage"]];
+        medication.medicationForm= [medicationItem valueForKey:@"medicationForm"];
+        [self performSegueWithIdentifier:@"confirm" sender:self];
+    }
+}
+
+#pragma -mark delegate method of ConfirmView
+
+-(void) pushToReminderViewController{
+    [self performSegueWithIdentifier:@"reminder" sender:self];
+}
+
 
 #pragma -mark TableView Delagate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -50,26 +73,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+//    Show accessorytype Checkmark to all the cell selected and remove it from the other cells
     for ( int i= 0 ; i < medicationList.count; i ++ ){
       UITableViewCell * cell2 = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
         cell2.accessoryType= UITableViewCellAccessoryNone;
     }
-    
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    medication = [medicationList objectAtIndex:indexPath.row];
-}
-
-- (IBAction)confirmMedication:(id)sender {
-    if(medication)
-    [self performSegueWithIdentifier:@"confirm" sender:self];
+    medicationItem = [medicationList objectAtIndex:indexPath.row];
 }
 
 
--(void) pushToReminderViewController{
-    [self performSegueWithIdentifier:@"reminder" sender:self];
-}
-
-
+#pragma -mark Segue Methods
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"confirm"]){
         PMConfirmMedicationViewController *confirm = [segue destinationViewController];
@@ -87,6 +101,5 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 @end
