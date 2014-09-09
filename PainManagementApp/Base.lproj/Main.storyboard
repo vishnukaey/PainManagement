@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Landing View Controller-->
         <scene sceneID="cLQ-1h-BXX">
             <objects>
-                <viewController id="XBk-r4-l1d" sceneMemberID="viewController">
+                <viewController id="XBk-r4-l1d" customClass="PMLandingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k73-BD-hBZ"/>
                         <viewControllerLayoutGuide type="bottom" id="cyo-9C-ilT"/>
@@ -31,25 +31,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5t3-oy-iNV">
-                                <rect key="frame" x="98" y="518" width="124" height="30"/>
+                                <rect key="frame" x="98" y="513" width="124" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pain Management">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushToPainManagement:" destination="XBk-r4-l1d" eventType="touchUpInside" id="Ij7-7w-ACv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYH-2g-nSl">
-                                <rect key="frame" x="20" y="493" width="76" height="30"/>
+                                <rect key="frame" x="20" y="475" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Medication">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushToMedication:" destination="XBk-r4-l1d" eventType="touchUpInside" id="hN8-9d-h8S"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEA-X5-Uxi">
-                                <rect key="frame" x="212" y="493" width="84" height="30"/>
+                                <rect key="frame" x="212" y="475" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Appoinment">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pustToAppoinment:" destination="XBk-r4-l1d" eventType="touchUpInside" id="3uT-Ig-ntP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.06323728266165507" green="0.2550184268891505" blue="0.33673469387755106" alpha="1" colorSpace="calibratedRGB"/>
@@ -152,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nA-ZX-l8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="559" y="-1417"/>
+            <point key="canvasLocation" x="-273" y="-1225"/>
         </scene>
         <!--Overall Pain View Controller-->
         <scene sceneID="Ijs-Lo-SnQ">
@@ -228,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZdK-8b-9FQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="-871"/>
+            <point key="canvasLocation" x="775" y="-727"/>
         </scene>
         <!--Dash Board View Controller - DASHBOARD-->
         <scene sceneID="3Eh-wc-2sm">
@@ -313,7 +322,7 @@
             </objects>
             <point key="canvasLocation" x="-1821" y="445"/>
         </scene>
-        <!--View Controller - APPOINTMENTS-->
+        <!--View Controller - PHYSICIAN-->
         <scene sceneID="t1h-uk-9Yc">
             <objects>
                 <viewController id="l9y-Qc-hGr" sceneMemberID="viewController">
@@ -324,13 +333,235 @@
                     <view key="view" contentMode="scaleToFill" id="emN-Oo-4Dt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.44999999999999962" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="free-medical-clipart-medical_stethoscope_black.png" translatesAutoresizingMaskIntoConstraints="NO" id="beV-nu-OTl">
+                                <rect key="frame" x="39" y="154" width="221" height="211"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wes-Sa-Unm">
+                                <rect key="frame" x="85" y="417" width="150" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.115450233" green="0.59625194500000001" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="ADD PHYSICIAN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="70F-CN-XS3" kind="push" id="ozV-in-cID"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="APPOINTMENTS" id="V7K-pN-GMW"/>
+                    <navigationItem key="navigationItem" title="PHYSICIAN" id="V7K-pN-GMW">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="5gT-Ia-st7"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nwr-3D-lH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-393" y="-1391"/>
+            <point key="canvasLocation" x="-777" y="-2015"/>
+        </scene>
+        <!--Physicians View Controller - PHYSICIAN-->
+        <scene sceneID="FOK-Jd-xCE">
+            <objects>
+                <viewController id="70F-CN-XS3" customClass="PMPhysiciansViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CX5-cd-djL"/>
+                        <viewControllerLayoutGuide type="bottom" id="byu-XE-nJF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="swb-Yo-FPv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="125" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dtb-h3-yqp">
+                                <rect key="frame" x="0.0" y="46" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="physicianCell" rowHeight="125" id="9lQ-i7-blG" customClass="PMPhysicianCell">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="125"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9lQ-i7-blG" id="gju-KY-3lK">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Physician" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lE-13-0NC">
+                                                    <rect key="frame" x="20" y="20" width="232" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Specialization" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyK-2E-zMQ">
+                                                    <rect key="frame" x="20" y="51" width="232" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.115450233" green="0.59625194500000001" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="232" translatesAutoresizingMaskIntoConstraints="NO" id="Ec2-C0-P2x">
+                                                    <rect key="frame" x="20" y="74" width="232" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oi1-ei-Z10">
+                                                    <rect key="frame" x="260" y="46" width="40" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.115450233" green="0.59625194500000001" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <state key="normal" title="+">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="addAppointment:" destination="9lQ-i7-blG" eventType="touchUpInside" id="2lv-c3-Izu"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="physicianAddress" destination="Ec2-C0-P2x" id="tJB-Wa-Rcb"/>
+                                            <outlet property="physicianName" destination="3lE-13-0NC" id="Rm3-A3-7do"/>
+                                            <outlet property="physicianSpecialization" destination="tyK-2E-zMQ" id="5Gf-7r-0WR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="70F-CN-XS3" id="5Zh-Nz-Sje"/>
+                                    <outlet property="delegate" destination="70F-CN-XS3" id="P2Y-JD-dKe"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W7h-OL-5hD">
+                                <rect key="frame" x="0.0" y="65" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PHYSICIAN" id="9dS-sp-Mjw">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="urZ-Xf-ec7"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="physiciansTableView" destination="dtb-h3-yqp" id="WvP-yQ-f9t"/>
+                        <outlet property="searchBar" destination="W7h-OL-5hD" id="lqg-ax-apb"/>
+                        <segue destination="59F-cY-gMI" kind="push" identifier="addAppointment" id="Ar9-Rg-3p1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHe-im-IUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-301" y="-2015"/>
+        </scene>
+        <!--Add Appointment View Controller - PHYSICIAN-->
+        <scene sceneID="Zyz-Km-N0I">
+            <objects>
+                <viewController id="59F-cY-gMI" customClass="PMAddAppointmentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FUr-ik-Y5U"/>
+                        <viewControllerLayoutGuide type="bottom" id="2mt-bF-310"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bNd-Ll-3Fa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djc-0f-Uqj">
+                                <rect key="frame" x="0.0" y="65" width="320" height="108"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Hojan Chi Minh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSF-da-En2">
+                                        <rect key="frame" x="15" y="20" width="227" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pediatrician" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVm-Ac-N0W">
+                                        <rect key="frame" x="15" y="41" width="227" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.115450233" green="0.59625194500000001" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="kGM-mf-Jog">
+                                        <rect key="frame" x="15" y="58" width="227" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Hkzsn, mk 90sdfdshbfsdb
+asfknafadknf</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95408163265306123" green="0.95408163265306123" blue="0.95408163265306123" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5R-W9-Afe">
+                                <rect key="frame" x="80" y="449" width="161" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.115450233" green="0.59625194500000001" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="ADD APPOINTMENT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addAppointment:" destination="59F-cY-gMI" eventType="touchUpInside" id="mVv-1e-CfX"/>
+                                    <segue destination="Rh1-o4-CVE" kind="push" id="A0o-dP-Mbc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blank-clipboard-and-pen-with-stethoscope-870505.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hrl-zn-bd6">
+                                <rect key="frame" x="51" y="216" width="228" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PHYSICIAN" id="aoy-JB-1KB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ruk-zu-QJa"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyu-zU-pmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="-2023"/>
+        </scene>
+        <!--Save Appointment View Controller-->
+        <scene sceneID="SCR-bZ-vCO">
+            <objects>
+                <viewController id="Rh1-o4-CVE" customClass="PMSaveAppointmentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HWJ-i3-XtG"/>
+                        <viewControllerLayoutGuide type="bottom" id="qZr-HZ-bSW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gkA-jW-EgI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7dy-Jh-mTX"/>
+                    <connections>
+                        <segue destination="36u-qa-gn0" kind="push" identifier="reminder" id="Lt9-A2-yfg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rm-oB-KjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711" y="-2023"/>
+        </scene>
+        <!--Appointment Reminders View Controller-->
+        <scene sceneID="iC9-bK-YQI">
+            <objects>
+                <viewController id="36u-qa-gn0" customClass="PMAppointmentRemindersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T8V-CJ-BAk"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Le-ml-eJB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D8X-rP-sL6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wuv-w9-Dcc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jXa-Ml-nKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="-2015"/>
         </scene>
         <!--Add Medication View Controller - MEDICATION-->
         <scene sceneID="YYa-mt-7Im">
@@ -391,7 +622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nY9-m5-afh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-823" y="-2231"/>
+            <point key="canvasLocation" x="-777" y="-2924"/>
         </scene>
         <!--Confirm Medication View Controller-->
         <scene sceneID="Q4O-U0-Yj9">
@@ -467,7 +698,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlO-di-Yh3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-305" y="-2726"/>
+            <point key="canvasLocation" x="-273" y="-3352"/>
         </scene>
         <!--Empty Root View Controller - PAIN MANAGEMENT-->
         <scene sceneID="fyh-pr-637">
@@ -490,7 +721,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgg-4P-CWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="-839"/>
+            <point key="canvasLocation" x="-777" y="-727"/>
         </scene>
         <!--View Controller - PHYSICAL THERAPY-->
         <scene sceneID="1Yi-Ar-0y3">
@@ -509,7 +740,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShQ-cN-W5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="559" y="-403"/>
+            <point key="canvasLocation" x="-793" y="77"/>
         </scene>
         <!--View Controller - REWARDS-->
         <scene sceneID="hze-5W-BXj">
@@ -528,7 +759,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7td-4e-wn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="669"/>
+            <point key="canvasLocation" x="-783" y="1549"/>
         </scene>
         <!--View Controller - TIMELINE-->
         <scene sceneID="pQC-JT-Juf">
@@ -547,7 +778,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Cd-tN-sa3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545" y="989"/>
+            <point key="canvasLocation" x="-777" y="2245"/>
         </scene>
         <!--View Controller - TERMS & CONDITIONS-->
         <scene sceneID="aDT-w1-CXr">
@@ -566,7 +797,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kwt-lf-j0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-823" y="2134"/>
+            <point key="canvasLocation" x="-769" y="4390"/>
         </scene>
         <!--View Controller - HELP-->
         <scene sceneID="Quu-Ed-KNU">
@@ -585,7 +816,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UGg-vR-0lx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-393" y="1821"/>
+            <point key="canvasLocation" x="-769" y="3685"/>
         </scene>
         <!--View Controller - LABS-->
         <scene sceneID="vC5-CX-Ccg">
@@ -604,7 +835,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LaR-mQ-oZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="-59"/>
+            <point key="canvasLocation" x="-793" y="821"/>
         </scene>
         <!--View Controller - SETTINGS-->
         <scene sceneID="c7J-Q6-sIZ">
@@ -623,7 +854,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAG-92-ovz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="1430"/>
+            <point key="canvasLocation" x="-777" y="2966"/>
         </scene>
         <!--Medication Reminder View Controller - MEDICATION-->
         <scene sceneID="zmu-A6-uUd">
@@ -706,13 +937,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="medicationName" destination="Bs5-TK-sj4" id="jR9-qj-Oe1"/>
+                        <outlet property="medicationTableView" destination="Duc-wi-l2a" id="HdW-Ka-90D"/>
                         <segue destination="0p2-G3-fcw" kind="push" identifier="frequency" id="nvK-bD-gt3"/>
                         <segue destination="TcB-3r-rXJ" kind="push" identifier="Osteoporosis" id="Ju4-1r-n9X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srI-Ft-vMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="-2231"/>
+            <point key="canvasLocation" x="103" y="-2924"/>
         </scene>
         <!--Frequency View Controller-->
         <scene sceneID="fKX-9I-59j">
@@ -781,7 +1013,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOh-VT-Sfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="665" y="-2619"/>
+            <point key="canvasLocation" x="675" y="-3352"/>
         </scene>
         <!--Reminder Picker View Controller-->
         <scene sceneID="ykr-AL-rEa">
@@ -909,7 +1141,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEz-2q-5qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="-2762"/>
+            <point key="canvasLocation" x="1252" y="-3696"/>
         </scene>
         <!--Osteo Medication View Controller-->
         <scene sceneID="O13-lB-xN2">
@@ -931,7 +1163,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Fds-EB-3OR" detailTextLabel="gL4-CY-0Ae" rowHeight="85" style="IBUITableViewCellStyleSubtitle" id="HlO-2Y-DgP">
                                         <rect key="frame" x="0.0" y="86" width="320" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HlO-2Y-DgP">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HlO-2Y-DgP" id="ksZ-qZ-fWn">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -988,7 +1220,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOe-BG-7Tt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1703" y="-2231"/>
+            <point key="canvasLocation" x="1319" y="-2924"/>
         </scene>
         <!--Schedule View Controller-->
         <scene sceneID="u9q-uO-90h">
@@ -1014,7 +1246,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7z-4J-Oh2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2135" y="-2231"/>
+            <point key="canvasLocation" x="1959" y="-2924"/>
         </scene>
         <!--Back Pain Location View Controller-->
         <scene sceneID="OXu-OH-z3m">
@@ -1091,12 +1323,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xez-pK-dFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1578" y="-1417"/>
+            <point key="canvasLocation" x="278" y="-1225"/>
         </scene>
     </scenes>
     <resources>
+        <image name="blank-clipboard-and-pen-with-stethoscope-870505.jpg" width="1210" height="1132"/>
         <image name="flip.png" width="30" height="30"/>
         <image name="flip.png" width="30" height="30"/>
+        <image name="free-medical-clipart-medical_stethoscope_black.png" width="4251" height="6271"/>
         <image name="list.png" width="24" height="24"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221D393519BEBD47001690C4 /* PMLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D393419BEBD47001690C4 /* PMLandingViewController.m */; };
+		221D393919BEC7EE001690C4 /* free-medical-clipart-medical_stethoscope_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 221D393819BEC7EE001690C4 /* free-medical-clipart-medical_stethoscope_black.png */; };
+		221D393C19BECCAA001690C4 /* PMPhysicianCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D393B19BECCAA001690C4 /* PMPhysicianCell.m */; };
+		221D393F19BECDF6001690C4 /* PMPhysiciansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D393E19BECDF6001690C4 /* PMPhysiciansViewController.m */; };
+		221D394319BEDDAC001690C4 /* blank-clipboard-and-pen-with-stethoscope-870505.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 221D394219BEDDAC001690C4 /* blank-clipboard-and-pen-with-stethoscope-870505.jpg */; };
+		221D394619BEDFEB001690C4 /* PMAddAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D394519BEDFEB001690C4 /* PMAddAppointmentViewController.m */; };
+		221D394919BEDFFE001690C4 /* PMSaveAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D394819BEDFFE001690C4 /* PMSaveAppointmentViewController.m */; };
+		221D394C19BEE025001690C4 /* PMAppointmentRemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D394B19BEE025001690C4 /* PMAppointmentRemindersViewController.m */; };
 		22952EC919B6F2A60073E131 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 22952EC819B6F2A60073E131 /* Utilities.m */; };
 		22952ECC19B6FFFF0073E131 /* PMFrequencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22952ECB19B6FFFF0073E131 /* PMFrequencyViewController.m */; };
 		22952ECF19B700130073E131 /* PMReminderPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22952ECE19B700130073E131 /* PMReminderPickerViewController.m */; };
@@ -56,6 +64,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		221D393319BEBD47001690C4 /* PMLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMLandingViewController.h; sourceTree = "<group>"; };
+		221D393419BEBD47001690C4 /* PMLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMLandingViewController.m; sourceTree = "<group>"; };
+		221D393819BEC7EE001690C4 /* free-medical-clipart-medical_stethoscope_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-medical-clipart-medical_stethoscope_black.png"; sourceTree = "<group>"; };
+		221D393A19BECCAA001690C4 /* PMPhysicianCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPhysicianCell.h; sourceTree = "<group>"; };
+		221D393B19BECCAA001690C4 /* PMPhysicianCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMPhysicianCell.m; sourceTree = "<group>"; };
+		221D393D19BECDF6001690C4 /* PMPhysiciansViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMPhysiciansViewController.h; sourceTree = "<group>"; };
+		221D393E19BECDF6001690C4 /* PMPhysiciansViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMPhysiciansViewController.m; sourceTree = "<group>"; };
+		221D394219BEDDAC001690C4 /* blank-clipboard-and-pen-with-stethoscope-870505.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blank-clipboard-and-pen-with-stethoscope-870505.jpg"; sourceTree = "<group>"; };
+		221D394419BEDFEB001690C4 /* PMAddAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMAddAppointmentViewController.h; sourceTree = "<group>"; };
+		221D394519BEDFEB001690C4 /* PMAddAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMAddAppointmentViewController.m; sourceTree = "<group>"; };
+		221D394719BEDFFE001690C4 /* PMSaveAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSaveAppointmentViewController.h; sourceTree = "<group>"; };
+		221D394819BEDFFE001690C4 /* PMSaveAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSaveAppointmentViewController.m; sourceTree = "<group>"; };
+		221D394A19BEE025001690C4 /* PMAppointmentRemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMAppointmentRemindersViewController.h; sourceTree = "<group>"; };
+		221D394B19BEE025001690C4 /* PMAppointmentRemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMAppointmentRemindersViewController.m; sourceTree = "<group>"; };
 		22952EC719B6F2A60073E131 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		22952EC819B6F2A60073E131 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		22952ECA19B6FFFF0073E131 /* PMFrequencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMFrequencyViewController.h; sourceTree = "<group>"; };
@@ -140,6 +162,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221D393619BEC680001690C4 /* MainViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				22A79E7E19B4610800E00023 /* PMDashBoardViewController.h */,
+				22A79E7F19B4610800E00023 /* PMDashBoardViewController.m */,
+				221D393319BEBD47001690C4 /* PMLandingViewController.h */,
+				221D393419BEBD47001690C4 /* PMLandingViewController.m */,
+			);
+			name = MainViewControllers;
+			sourceTree = "<group>";
+		};
+		221D393719BEC698001690C4 /* AppoinmentsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				221D393D19BECDF6001690C4 /* PMPhysiciansViewController.h */,
+				221D393E19BECDF6001690C4 /* PMPhysiciansViewController.m */,
+				221D394419BEDFEB001690C4 /* PMAddAppointmentViewController.h */,
+				221D394519BEDFEB001690C4 /* PMAddAppointmentViewController.m */,
+				221D394719BEDFFE001690C4 /* PMSaveAppointmentViewController.h */,
+				221D394819BEDFFE001690C4 /* PMSaveAppointmentViewController.m */,
+				221D394A19BEE025001690C4 /* PMAppointmentRemindersViewController.h */,
+				221D394B19BEE025001690C4 /* PMAppointmentRemindersViewController.m */,
+			);
+			name = AppoinmentsViewController;
+			sourceTree = "<group>";
+		};
 		2299D02419B598F000AA6252 /* PainManagementViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,10 +307,10 @@
 		22A79E7A19B4609300E00023 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				22A79E7E19B4610800E00023 /* PMDashBoardViewController.h */,
-				22A79E7F19B4610800E00023 /* PMDashBoardViewController.m */,
+				221D393619BEC680001690C4 /* MainViewControllers */,
 				2299D03619B5E64A00AA6252 /* MedicationViewControllers */,
 				2299D02419B598F000AA6252 /* PainManagementViewControllers */,
+				221D393719BEC698001690C4 /* AppoinmentsViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -270,6 +318,8 @@
 		22A79E7B19B4609E00E00023 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				221D393A19BECCAA001690C4 /* PMPhysicianCell.h */,
+				221D393B19BECCAA001690C4 /* PMPhysicianCell.m */,
 				22A79E8719B48AC800E00023 /* PMOverallSliderCell.h */,
 				22A79E8819B48AC800E00023 /* PMOverallSliderCell.m */,
 				22A79E8A19B490B500E00023 /* PMNotesTableCell.h */,
@@ -299,6 +349,8 @@
 		22A79E8319B4635100E00023 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				221D394219BEDDAC001690C4 /* blank-clipboard-and-pen-with-stethoscope-870505.jpg */,
+				221D393819BEC7EE001690C4 /* free-medical-clipart-medical_stethoscope_black.png */,
 				2299D03019B5E56A00AA6252 /* methotrexate.jpeg */,
 				2299D03119B5E56A00AA6252 /* Plaquenil.jpg */,
 				2299D03219B5E56A00AA6252 /* sulfasalazine.jpeg */,
@@ -389,9 +441,11 @@
 			files = (
 				22A79E5E19B45D7900E00023 /* Images.xcassets in Resources */,
 				2299D02F19B5E3B200AA6252 /* medication.plist in Resources */,
+				221D394319BEDDAC001690C4 /* blank-clipboard-and-pen-with-stethoscope-870505.jpg in Resources */,
 				2299D03319B5E56A00AA6252 /* methotrexate.jpeg in Resources */,
 				2299D02319B5947700AA6252 /* flip.png in Resources */,
 				22A79E5019B45D7900E00023 /* InfoPlist.strings in Resources */,
+				221D393919BEC7EE001690C4 /* free-medical-clipart-medical_stethoscope_black.png in Resources */,
 				22A79E5919B45D7900E00023 /* Main.storyboard in Resources */,
 				22A79E8219B4634400E00023 /* list.png in Resources */,
 				2299D03419B5E56A00AA6252 /* Plaquenil.jpg in Resources */,
@@ -448,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2299D02D19B599C200AA6252 /* PMBackPainLocationViewController.m in Sources */,
+				221D393C19BECCAA001690C4 /* PMPhysicianCell.m in Sources */,
 				22A79E5219B45D7900E00023 /* main.m in Sources */,
 				2299D04419B5FEA800AA6252 /* PMMedicationReminderViewController.m in Sources */,
 				22A79E8619B48A4200E00023 /* PMOverallPainViewController.m in Sources */,
@@ -458,13 +513,18 @@
 				22952ECF19B700130073E131 /* PMReminderPickerViewController.m in Sources */,
 				22A79E5619B45D7900E00023 /* PMAppDelegate.m in Sources */,
 				2299D02A19B599AF00AA6252 /* PMFrontPainLocationViewController.m in Sources */,
+				221D394619BEDFEB001690C4 /* PMAddAppointmentViewController.m in Sources */,
+				221D394C19BEE025001690C4 /* PMAppointmentRemindersViewController.m in Sources */,
 				2299D04119B5F47F00AA6252 /* PMConfirmMedicationViewController.m in Sources */,
+				221D393519BEBD47001690C4 /* PMLandingViewController.m in Sources */,
+				221D393F19BECDF6001690C4 /* PMPhysiciansViewController.m in Sources */,
 				229A13B219B9B6300002BEA7 /* PMOsteoMedicationViewController.m in Sources */,
 				2299D02719B5994600AA6252 /* PMEmptyRootViewController.m in Sources */,
 				22A79E8919B48AC800E00023 /* PMOverallSliderCell.m in Sources */,
 				2299D03919B5E69600AA6252 /* PMAddMedicationViewController.m in Sources */,
 				22952EC919B6F2A60073E131 /* Utilities.m in Sources */,
 				22A79E8C19B490B500E00023 /* PMNotesTableCell.m in Sources */,
+				221D394919BEDFFE001690C4 /* PMSaveAppointmentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,9 @@
 
 #import "PMDashBoardViewController.h"
 #import "PMMedicationModal.h"
+#import "PMLandingViewController.h"
 
-@interface PMDashBoardViewController ()
+@interface PMDashBoardViewController () <LandingViewDelegate>
 
 @end
 
@@ -31,6 +32,7 @@
     menuItems=[[NSArray alloc]initWithObjects:
                @"MEDICATION",@"APPOINTMENTS",@"PAIN MANAGEMENT",@"PHYSICAL THERAPY",@"LABS",@"REWARDS",@"TIMELINE",
                @"SETTINGS",@"HELP",@"TERMS & CONDITIONS", nil];
+    [self performSegueWithIdentifier:@"landingView" sender:self];
 }
 
 
@@ -65,6 +67,18 @@
         [self toggleSideMenu:Nil];
 }
 
+#pragma -mark LandingViewDelegateMethods
+-(void) performSegueToMedicationViewController{
+    [self performSegueWithIdentifier:@"MEDICATION" sender:self];
+}
+-(void) performSegueToPainManagementViewController{
+    [self performSegueWithIdentifier:@"PAIN MANAGEMENT" sender:self];
+    
+}
+-(void) performSegueToAppoinmentsViewController{
+    [self performSegueWithIdentifier:@"APPOINTMENTS" sender:self];
+    
+}
 
 #pragma -mark TableView Delagate
 
@@ -117,6 +131,14 @@
     }
     else{
         
+    }
+}
+
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"landingView"]){
+        PMLandingViewController *landing = [segue destinationViewController];
+        landing.delegate = self;
     }
 }
 

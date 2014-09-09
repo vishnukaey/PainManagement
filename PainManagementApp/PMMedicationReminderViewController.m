@@ -28,6 +28,10 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [self.medicationTableView reloadData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
