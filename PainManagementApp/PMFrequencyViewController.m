@@ -16,9 +16,10 @@
  */
 
 
-@interface PMFrequencyViewController () <Reminderdelegate> {
+@interface PMFrequencyViewController ()  {
     NSMutableArray *frequency;
     NSArray *reccur;
+    UIView *oldView;
 }
 
 @end
@@ -29,10 +30,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     frequency = [[NSMutableArray alloc]init];
@@ -41,17 +42,10 @@
     reccur=[[NSArray alloc]initWithObjects:@"Daily",@"Weekly",@"Monthly",nil];
 }
 
-
-- (IBAction)nextViewController:(id)sender {
+- (IBAction)doneAddingFrequency:(id)sender {
     self.medication.reminderReccurence = self.reccurenceLabel.text;
     self.medication.reminderFrequency = self.frequencyLabel.text ;
-    [self performSegueWithIdentifier:@"time" sender:self];
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma -mark PickerView delegates
@@ -82,17 +76,20 @@
         self.frequencyLabel.text=[NSString stringWithFormat:@"%@",[frequency objectAtIndex:row]];
     else
         self.reccurenceLabel.text=[reccur objectAtIndex:row];
+    if (oldView != nil)
+        oldView.backgroundColor = [UIColor clearColor];
+    
+    UIView * selectedView = [[UIView alloc] init];
+    selectedView = [pickerView viewForRow:row forComponent:component];
+    selectedView.backgroundColor = [UIColor redColor];
+    [selectedView setNeedsDisplay];
+    oldView = selectedView;
 }
 
--(void) popViewController{
-    [self.navigationController popViewControllerAnimated:YES];
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
 }
 
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"time"]){
-        PMReminderPickerViewController *pickTime = [segue destinationViewController];
-        pickTime.delegate= self;
-        pickTime.medication=self.medication;
-    }
-}
 @end

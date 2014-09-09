@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220195F019BF434F002A41CF /* CloudStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 220195EF19BF434F002A41CF /* CloudStorage.m */; };
 		221D393519BEBD47001690C4 /* PMLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D393419BEBD47001690C4 /* PMLandingViewController.m */; };
 		221D393919BEC7EE001690C4 /* free-medical-clipart-medical_stethoscope_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 221D393819BEC7EE001690C4 /* free-medical-clipart-medical_stethoscope_black.png */; };
 		221D393C19BECCAA001690C4 /* PMPhysicianCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D393B19BECCAA001690C4 /* PMPhysicianCell.m */; };
@@ -15,6 +16,10 @@
 		221D394619BEDFEB001690C4 /* PMAddAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D394519BEDFEB001690C4 /* PMAddAppointmentViewController.m */; };
 		221D394919BEDFFE001690C4 /* PMSaveAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D394819BEDFFE001690C4 /* PMSaveAppointmentViewController.m */; };
 		221D394C19BEE025001690C4 /* PMAppointmentRemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D394B19BEE025001690C4 /* PMAppointmentRemindersViewController.m */; };
+		2279D7DA19BF03D800DCFF33 /* ball-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 2279D7D719BF03D800DCFF33 /* ball-green.png */; };
+		2279D7DF19BF04BA00DCFF33 /* ball-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 2279D7DD19BF04BA00DCFF33 /* ball-orange.png */; };
+		2279D7E019BF04BA00DCFF33 /* Blue_2DGlass_2DButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2279D7DE19BF04BA00DCFF33 /* Blue_2DGlass_2DButton.png */; };
+		2279D7E419BF19DB00DCFF33 /* PMGetDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2279D7E319BF19DB00DCFF33 /* PMGetDayViewController.m */; };
 		22952EC919B6F2A60073E131 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 22952EC819B6F2A60073E131 /* Utilities.m */; };
 		22952ECC19B6FFFF0073E131 /* PMFrequencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22952ECB19B6FFFF0073E131 /* PMFrequencyViewController.m */; };
 		22952ECF19B700130073E131 /* PMReminderPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22952ECE19B700130073E131 /* PMReminderPickerViewController.m */; };
@@ -22,7 +27,6 @@
 		2299D02719B5994600AA6252 /* PMEmptyRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D02619B5994600AA6252 /* PMEmptyRootViewController.m */; };
 		2299D02A19B599AF00AA6252 /* PMFrontPainLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D02919B599AF00AA6252 /* PMFrontPainLocationViewController.m */; };
 		2299D02D19B599C200AA6252 /* PMBackPainLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D02C19B599C200AA6252 /* PMBackPainLocationViewController.m */; };
-		2299D02F19B5E3B200AA6252 /* medication.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2299D02E19B5E3B200AA6252 /* medication.plist */; };
 		2299D03319B5E56A00AA6252 /* methotrexate.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2299D03019B5E56A00AA6252 /* methotrexate.jpeg */; };
 		2299D03419B5E56A00AA6252 /* Plaquenil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2299D03119B5E56A00AA6252 /* Plaquenil.jpg */; };
 		2299D03519B5E56A00AA6252 /* sulfasalazine.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2299D03219B5E56A00AA6252 /* sulfasalazine.jpeg */; };
@@ -64,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		220195EE19BF434F002A41CF /* CloudStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudStorage.h; sourceTree = "<group>"; };
+		220195EF19BF434F002A41CF /* CloudStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudStorage.m; sourceTree = "<group>"; };
 		221D393319BEBD47001690C4 /* PMLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMLandingViewController.h; sourceTree = "<group>"; };
 		221D393419BEBD47001690C4 /* PMLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMLandingViewController.m; sourceTree = "<group>"; };
 		221D393819BEC7EE001690C4 /* free-medical-clipart-medical_stethoscope_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-medical-clipart-medical_stethoscope_black.png"; sourceTree = "<group>"; };
@@ -78,6 +84,11 @@
 		221D394819BEDFFE001690C4 /* PMSaveAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSaveAppointmentViewController.m; sourceTree = "<group>"; };
 		221D394A19BEE025001690C4 /* PMAppointmentRemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMAppointmentRemindersViewController.h; sourceTree = "<group>"; };
 		221D394B19BEE025001690C4 /* PMAppointmentRemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMAppointmentRemindersViewController.m; sourceTree = "<group>"; };
+		2279D7D719BF03D800DCFF33 /* ball-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball-green.png"; sourceTree = "<group>"; };
+		2279D7DD19BF04BA00DCFF33 /* ball-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball-orange.png"; sourceTree = "<group>"; };
+		2279D7DE19BF04BA00DCFF33 /* Blue_2DGlass_2DButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue_2DGlass_2DButton.png; sourceTree = "<group>"; };
+		2279D7E219BF19DB00DCFF33 /* PMGetDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMGetDayViewController.h; sourceTree = "<group>"; };
+		2279D7E319BF19DB00DCFF33 /* PMGetDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMGetDayViewController.m; sourceTree = "<group>"; };
 		22952EC719B6F2A60073E131 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		22952EC819B6F2A60073E131 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		22952ECA19B6FFFF0073E131 /* PMFrequencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMFrequencyViewController.h; sourceTree = "<group>"; };
@@ -91,7 +102,6 @@
 		2299D02919B599AF00AA6252 /* PMFrontPainLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMFrontPainLocationViewController.m; sourceTree = "<group>"; };
 		2299D02B19B599C200AA6252 /* PMBackPainLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMBackPainLocationViewController.h; sourceTree = "<group>"; };
 		2299D02C19B599C200AA6252 /* PMBackPainLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMBackPainLocationViewController.m; sourceTree = "<group>"; };
-		2299D02E19B5E3B200AA6252 /* medication.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = medication.plist; sourceTree = "<group>"; };
 		2299D03019B5E56A00AA6252 /* methotrexate.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = methotrexate.jpeg; sourceTree = "<group>"; };
 		2299D03119B5E56A00AA6252 /* Plaquenil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Plaquenil.jpg; sourceTree = "<group>"; };
 		2299D03219B5E56A00AA6252 /* sulfasalazine.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sulfasalazine.jpeg; sourceTree = "<group>"; };
@@ -188,6 +198,19 @@
 			name = AppoinmentsViewController;
 			sourceTree = "<group>";
 		};
+		2279D7E119BF182100DCFF33 /* frequencyViewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				22952ECA19B6FFFF0073E131 /* PMFrequencyViewController.h */,
+				22952ECB19B6FFFF0073E131 /* PMFrequencyViewController.m */,
+				22952ECD19B700130073E131 /* PMReminderPickerViewController.h */,
+				22952ECE19B700130073E131 /* PMReminderPickerViewController.m */,
+				2279D7E219BF19DB00DCFF33 /* PMGetDayViewController.h */,
+				2279D7E319BF19DB00DCFF33 /* PMGetDayViewController.m */,
+			);
+			name = frequencyViewcontroller;
+			sourceTree = "<group>";
+		};
 		2299D02419B598F000AA6252 /* PainManagementViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,10 +235,7 @@
 				2299D04019B5F47F00AA6252 /* PMConfirmMedicationViewController.m */,
 				2299D04219B5FEA800AA6252 /* PMMedicationReminderViewController.h */,
 				2299D04319B5FEA800AA6252 /* PMMedicationReminderViewController.m */,
-				22952ECA19B6FFFF0073E131 /* PMFrequencyViewController.h */,
-				22952ECB19B6FFFF0073E131 /* PMFrequencyViewController.m */,
-				22952ECD19B700130073E131 /* PMReminderPickerViewController.h */,
-				22952ECE19B700130073E131 /* PMReminderPickerViewController.m */,
+				2279D7E119BF182100DCFF33 /* frequencyViewcontroller */,
 				229A13B019B9B6300002BEA7 /* PMOsteoMedicationViewController.h */,
 				229A13B119B9B6300002BEA7 /* PMOsteoMedicationViewController.m */,
 				229A13B319B9CAB30002BEA7 /* PMScheduleViewController.h */,
@@ -258,6 +278,8 @@
 		22A79E4B19B45D7900E00023 /* PainManagementApp */ = {
 			isa = PBXGroup;
 			children = (
+				220195EE19BF434F002A41CF /* CloudStorage.h */,
+				220195EF19BF434F002A41CF /* CloudStorage.m */,
 				22A79E5419B45D7900E00023 /* PMAppDelegate.h */,
 				22A79E5519B45D7900E00023 /* PMAppDelegate.m */,
 				22A79E5719B45D7900E00023 /* Main.storyboard */,
@@ -280,7 +302,6 @@
 				22A79E4E19B45D7900E00023 /* InfoPlist.strings */,
 				22A79E5119B45D7900E00023 /* main.m */,
 				22A79E5319B45D7900E00023 /* PainManagementApp-Prefix.pch */,
-				2299D02E19B5E3B200AA6252 /* medication.plist */,
 			);
 			name = "Supporting Files";
 			path = PainManagementApp;
@@ -349,6 +370,9 @@
 		22A79E8319B4635100E00023 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2279D7DD19BF04BA00DCFF33 /* ball-orange.png */,
+				2279D7DE19BF04BA00DCFF33 /* Blue_2DGlass_2DButton.png */,
+				2279D7D719BF03D800DCFF33 /* ball-green.png */,
 				221D394219BEDDAC001690C4 /* blank-clipboard-and-pen-with-stethoscope-870505.jpg */,
 				221D393819BEC7EE001690C4 /* free-medical-clipart-medical_stethoscope_black.png */,
 				2299D03019B5E56A00AA6252 /* methotrexate.jpeg */,
@@ -440,13 +464,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				22A79E5E19B45D7900E00023 /* Images.xcassets in Resources */,
-				2299D02F19B5E3B200AA6252 /* medication.plist in Resources */,
+				2279D7DA19BF03D800DCFF33 /* ball-green.png in Resources */,
+				2279D7DF19BF04BA00DCFF33 /* ball-orange.png in Resources */,
 				221D394319BEDDAC001690C4 /* blank-clipboard-and-pen-with-stethoscope-870505.jpg in Resources */,
 				2299D03319B5E56A00AA6252 /* methotrexate.jpeg in Resources */,
 				2299D02319B5947700AA6252 /* flip.png in Resources */,
 				22A79E5019B45D7900E00023 /* InfoPlist.strings in Resources */,
 				221D393919BEC7EE001690C4 /* free-medical-clipart-medical_stethoscope_black.png in Resources */,
 				22A79E5919B45D7900E00023 /* Main.storyboard in Resources */,
+				2279D7E019BF04BA00DCFF33 /* Blue_2DGlass_2DButton.png in Resources */,
 				22A79E8219B4634400E00023 /* list.png in Resources */,
 				2299D03419B5E56A00AA6252 /* Plaquenil.jpg in Resources */,
 				2299D03519B5E56A00AA6252 /* sulfasalazine.jpeg in Resources */,
@@ -520,11 +546,13 @@
 				221D393F19BECDF6001690C4 /* PMPhysiciansViewController.m in Sources */,
 				229A13B219B9B6300002BEA7 /* PMOsteoMedicationViewController.m in Sources */,
 				2299D02719B5994600AA6252 /* PMEmptyRootViewController.m in Sources */,
+				220195F019BF434F002A41CF /* CloudStorage.m in Sources */,
 				22A79E8919B48AC800E00023 /* PMOverallSliderCell.m in Sources */,
 				2299D03919B5E69600AA6252 /* PMAddMedicationViewController.m in Sources */,
 				22952EC919B6F2A60073E131 /* Utilities.m in Sources */,
 				22A79E8C19B490B500E00023 /* PMNotesTableCell.m in Sources */,
 				221D394919BEDFFE001690C4 /* PMSaveAppointmentViewController.m in Sources */,
+				2279D7E419BF19DB00DCFF33 /* PMGetDayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,10 +680,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: PRATHAPAN SETHUMAPHAVAN (3KHRN2958R)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: PRATHAPAN SETHUMAPHAVAN (3KHRN2958R)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PainManagementApp/PainManagementApp-Prefix.pch";
 				INFOPLIST_FILE = "PainManagementApp/PainManagementApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -666,10 +698,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: PRATHAPAN SETHUMAPHAVAN (3KHRN2958R)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PainManagementApp/PainManagementApp-Prefix.pch";
 				INFOPLIST_FILE = "PainManagementApp/PainManagementApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

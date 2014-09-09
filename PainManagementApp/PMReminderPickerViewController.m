@@ -12,9 +12,7 @@
 @interface PMReminderPickerViewController (){
     NSMutableArray *pickerViewData;
     int componentInverse;
-    UIPickerView *pickerView;
     UILabel *activeLabel;
-    NSString *pickerViewDay,*pickerViewWeek;
     NSDate *date;
 }
 
@@ -43,11 +41,6 @@
 
 -(void) createDataSourceForPickerView{
     pickerViewData = [[NSMutableArray alloc] init];
-    NSArray *days=@[@"Sunday",@"Monday",@"Tuesday",@"Wednesday",@"Thursday",@"Friday",@"Saturday"];
-    [pickerViewData addObject:days];
-    [pickerViewData addObject:@[@"Week 1",@"Week 2",@"Week 3",@"Week 4"]];
-    pickerViewDay = @"";
-    pickerViewWeek = @"";
     date =[[NSDate alloc] init];
 }
 
@@ -109,40 +102,14 @@
         return 0;
 }
 
-- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return (int)[[pickerViewData objectAtIndex:componentInverse-component-1] count];
-}
-
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    
-    return [[pickerViewData objectAtIndex:componentInverse- component-1] objectAtIndex:row];
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    if(component == 0)
-        pickerViewWeek = [[pickerViewData objectAtIndex:componentInverse-1] objectAtIndex:row];
-    else
-        pickerViewDay = [[pickerViewData objectAtIndex:0] objectAtIndex:row];
-    [self changeActiveLabelValue];
-}
-
-
 - (void) dateChanged:(id)sender{
     date = self.datePicker.date;
     [self changeActiveLabelValue];
 }
 
 -(void) changeActiveLabelValue{
-    NSMutableString *string = [[NSMutableString alloc] init];
-    if(pickerViewWeek != NULL)
-        [string appendFormat:@"%@ ",pickerViewWeek];
-    if(pickerViewDay != NULL)
-        [string appendFormat:@"%@ ",pickerViewDay];
      if(date != NULL)
-    [string appendString:[self getTimeStringFromDate:date]];
-    activeLabel.text = string;
+    activeLabel.text = [self getTimeStringFromDate:date];
 }
 
 
@@ -161,8 +128,7 @@
         [self.medication.reminderTimings addObject:cell.textLabel.text];
     }
     NSLog(@"%@",self.medication);
-    [self.delegate popViewController];
-    [self dismissViewControllerAnimated:YES completion:Nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

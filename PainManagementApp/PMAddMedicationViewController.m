@@ -14,6 +14,7 @@
 #import "PMAddMedicationViewController.h"
 #import "PMConfirmMedicationViewController.h"
 #import "PMMedicationReminderViewController.h"
+#import "CloudStorage.h"
 
 @interface PMAddMedicationViewController ()<PMConfirmMedicationViewControllerDelegate>{
     NSArray *medicationList;
@@ -35,16 +36,26 @@
 
 - (void)viewDidLoad
 {
+    medicationList = [[NSArray alloc] init];
     [super viewDidLoad];
-    medicationList = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"medication" ofType:@"plist"]];
+    CloudStorage *cloud = [[CloudStorage alloc] init];
+    [cloud getRequest:@"" requestSucceeded:^(NSArray *array) {
+        medicationList = array;
+        NSLog(@"%@",medicationList);
+        [self.medicationTableView reloadData];
+    } requestFailed:^(NSError *error) {
+        NSLog(@"Error");
+    }     ];
     medication = [[PMMedicationModal alloc] init];
 }
 
 - (IBAction)confirmMedication:(id)sender {
     if(medicationItem){
-        medication.medicationName = [medicationItem valueForKey:@"medicationName"];
-        medication.medicationImage = [UIImage imageNamed:[medicationItem valueForKey:@"medicationImage"]];
-        medication.medicationForm= [medicationItem valueForKey:@"medicationForm"];
+        medication.medicationName = [medicationItem valueForKey:@"name"];
+        NSURL *url = [NSURL URLWithString:[medicationItem valueForKey:@"imageUrl"]];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        medication.medicationImage = [[UIImage alloc] initWithData:data];
+        medication.medicationForm= [medicationItem valueForKey:@"form"];
         [self performSegueWithIdentifier:@"confirm" sender:self];
     }
 }
@@ -66,7 +77,7 @@
 {
         static NSString *CellIdentifier = @"Cell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text=[[medicationList objectAtIndex:indexPath.row] valueForKey:@"medicationName"];
+    cell.textLabel.text=[[medicationList objectAtIndex:indexPath.row] valueForKey:@"name"];
     return cell;
 }
 

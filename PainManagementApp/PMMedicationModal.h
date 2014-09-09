@@ -14,5 +14,5 @@
     @property (weak, nonatomic) NSString *reminderFrequency;
     @property (weak, nonatomic) NSString *reminderReccurence;
     @property (strong, nonatomic) NSMutableArray *reminderTimings;
-    @property (weak, nonatomic) UIImage *medicationImage;
+    @property (strong, nonatomic) UIImage *medicationImage;
 @end
