@@ -18,8 +18,7 @@
 
 @interface PMAddMedicationViewController ()<PMConfirmMedicationViewControllerDelegate>{
     NSArray *medicationList;
-    NSMutableDictionary *medicationItem;
-    PMMedicationModal *medication;
+    NSMutableArray *selectedMedications;
 }
 
 @end
@@ -46,19 +45,33 @@
     } requestFailed:^(NSError *error) {
         NSLog(@"Error");
     }     ];
-    medication = [[PMMedicationModal alloc] init];
 }
 
 - (IBAction)confirmMedication:(id)sender {
-    if(medicationItem){
-        medication.medicationName = [medicationItem valueForKey:@"name"];
-        NSURL *url = [NSURL URLWithString:[medicationItem valueForKey:@"imageUrl"]];
-        NSData *data = [NSData dataWithContentsOfURL:url];
-        medication.medicationImage = [[UIImage alloc] initWithData:data];
-        medication.medicationForm= [medicationItem valueForKey:@"form"];
-        [self performSegueWithIdentifier:@"confirm" sender:self];
-    }
+    selectedMedications = [[NSMutableArray alloc] init];
+        for ( int i= 0 ; i < medicationList.count; i ++ ){
+            UITableViewCell * cell2 = [self.medicationTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if(cell2.accessoryType == UITableViewCellAccessoryCheckmark)
+                [self addSelectedmedication:i];
+        }
+    
+    if(selectedMedications.count != 0)
+    [self performSegueWithIdentifier:@"confirm" sender:self];
+    else
+        [Utilities showAlert:@"Select atleast One medication" withTitle:@"No Selection"];
 }
+
+
+- (void) addSelectedmedication:(int) index{
+    PMMedicationModal *medication = [[PMMedicationModal alloc] init];
+    medication.medicationName =[[medicationList objectAtIndex:index ] valueForKey:@"name"];
+    NSURL *url = [NSURL URLWithString:[[medicationList objectAtIndex:index ] valueForKey:@"imageUrl"]];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    medication.medicationImage = [[UIImage alloc] initWithData:data];
+    medication.medicationForm= [[medicationList objectAtIndex:index ] valueForKey:@"form"];
+    [selectedMedications addObject:medication];
+}
+
 
 #pragma -mark delegate method of ConfirmView
 
@@ -85,12 +98,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
 //    Show accessorytype Checkmark to all the cell selected and remove it from the other cells
-    for ( int i= 0 ; i < medicationList.count; i ++ ){
-      UITableViewCell * cell2 = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
-        cell2.accessoryType= UITableViewCellAccessoryNone;
-    }
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    medicationItem = [medicationList objectAtIndex:indexPath.row];
+    if(cell.accessoryType == UITableViewCellAccessoryCheckmark)
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    else
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
 }
 
 
@@ -99,12 +110,12 @@
     if([segue.identifier isEqualToString:@"confirm"]){
         PMConfirmMedicationViewController *confirm = [segue destinationViewController];
         confirm.delegate = self;
-        confirm.medication = medication;
+        confirm.medication = [selectedMedications objectAtIndex:0];
     }
     
     if([segue.identifier isEqualToString:@"reminder"]){
         PMMedicationReminderViewController *reminder = [segue destinationViewController];
-        reminder.medication = medication;
+        reminder.medication = [selectedMedications objectAtIndex:0];
         NSLog(@"%@",reminder.medication);
     }
     

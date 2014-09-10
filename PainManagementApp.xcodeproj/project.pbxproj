@@ -54,6 +54,7 @@
 		22A79E8619B48A4200E00023 /* PMOverallPainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E8519B48A4200E00023 /* PMOverallPainViewController.m */; };
 		22A79E8919B48AC800E00023 /* PMOverallSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E8819B48AC800E00023 /* PMOverallSliderCell.m */; };
 		22A79E8C19B490B500E00023 /* PMNotesTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E8B19B490B500E00023 /* PMNotesTableCell.m */; };
+		22E7DFBC19C01BD8000A1E7F /* PMSampleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */; };
 		CD2C4DCCF3C74B03BE1A08D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EE4E37EE644B3E90371A78 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +144,8 @@
 		22A79E8819B48AC800E00023 /* PMOverallSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOverallSliderCell.m; sourceTree = "<group>"; };
 		22A79E8A19B490B500E00023 /* PMNotesTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMNotesTableCell.h; sourceTree = "<group>"; };
 		22A79E8B19B490B500E00023 /* PMNotesTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMNotesTableCell.m; sourceTree = "<group>"; };
+		22E7DFBA19C01BD8000A1E7F /* PMSampleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSampleCollectionViewController.h; sourceTree = "<group>"; };
+		22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSampleCollectionViewController.m; sourceTree = "<group>"; };
 		38F0E8513E42460F853CF309 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C4EE4E37EE644B3E90371A78 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -287,6 +290,8 @@
 				22A79E7D19B460B200E00023 /* Utilities */,
 				22A79E7C19B460A500E00023 /* Modal Classes */,
 				22A79E7B19B4609E00E00023 /* Views */,
+				22E7DFBA19C01BD8000A1E7F /* PMSampleCollectionViewController.h */,
+				22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */,
 			);
 			path = PainManagementApp;
 			sourceTree = "<group>";
@@ -544,6 +549,7 @@
 				2299D04119B5F47F00AA6252 /* PMConfirmMedicationViewController.m in Sources */,
 				221D393519BEBD47001690C4 /* PMLandingViewController.m in Sources */,
 				221D393F19BECDF6001690C4 /* PMPhysiciansViewController.m in Sources */,
+				22E7DFBC19C01BD8000A1E7F /* PMSampleCollectionViewController.m in Sources */,
 				229A13B219B9B6300002BEA7 /* PMOsteoMedicationViewController.m in Sources */,
 				2299D02719B5994600AA6252 /* PMEmptyRootViewController.m in Sources */,
 				220195F019BF434F002A41CF /* CloudStorage.m in Sources */,

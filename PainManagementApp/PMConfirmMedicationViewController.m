@@ -12,7 +12,9 @@
 
 #import "PMConfirmMedicationViewController.h"
 
-@interface PMConfirmMedicationViewController ()
+@interface PMConfirmMedicationViewController (){
+    NSArray *imagesInArray;
+}
 
 @end
 
@@ -32,9 +34,27 @@
 {
     [super viewDidLoad];
     self.medicationName.text = self.medication.medicationName;
-    self.medicationImage.image = self.medication.medicationImage;
+//    imagesInArray = [[NSArray alloc]init];
+//	imagesInArray = [NSArray arrayWithObjects:
+//                     @"ball-orange.png",@"ball-orange.png", @"ball-orange.png",@"ball-orange.png", nil];
+    self.image.image = self.medication.medicationImage;
 }
 
+//#pragma mark-  Collection View Delegates
+//
+//- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+//    return 1;
+//}
+//
+//
+//
+//- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+//    static NSString *identifier = @"collection";
+//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+//    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:20];
+//    recipeImageView.image = [UIImage imageNamed:[imagesInArray objectAtIndex:indexPath.row]];
+//    return cell;
+//}
 
 
 - (IBAction)confirmMedication:(id)sender {

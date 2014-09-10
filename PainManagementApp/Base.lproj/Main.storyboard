@@ -745,6 +745,64 @@ asfknafadknf</string>
             </objects>
             <point key="canvasLocation" x="-777" y="-2924"/>
         </scene>
+        <!--Sample Collection View Controller-->
+        <scene sceneID="TdP-vx-4jg">
+            <objects>
+                <viewController id="hOH-4D-oc4" customClass="PMSampleCollectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o4g-wh-g2Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="egD-4J-mKT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pUh-nh-qFr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iOa-4Y-8jY">
+                                <rect key="frame" x="72" y="118" width="191" height="239"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PZA-nk-8qp">
+                                    <size key="itemSize" width="181" height="220"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collection" id="EtX-dM-hTJ">
+                                        <rect key="frame" x="5" y="0.0" width="181" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="20" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9HT-ev-C7V">
+                                                    <rect key="frame" x="0.0" y="1" width="179" height="219"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="hOH-4D-oc4" id="maf-aa-rQG"/>
+                                    <outlet property="delegate" destination="hOH-4D-oc4" id="2G8-zA-CGi"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="R3e-sk-o2W">
+                                <rect key="frame" x="148" y="331" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageController" destination="R3e-sk-o2W" id="8Xg-Tz-clG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SiV-Q8-hMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-369" y="-4415"/>
+        </scene>
         <!--Confirm Medication View Controller-->
         <scene sceneID="Q4O-U0-Yj9">
             <objects>
@@ -757,11 +815,11 @@ asfknafadknf</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I57-js-ibd">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I57-js-ibd">
                                 <rect key="frame" x="36" y="51" width="249" height="444"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5T-xl-3H7">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5T-xl-3H7">
                                         <rect key="frame" x="127" y="389" width="122" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.115450233" green="0.59625194500000001" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -774,13 +832,10 @@ asfknafadknf</string>
                                             <action selector="confirmMedication:" destination="ofJ-7r-4zW" eventType="touchUpInside" id="iAa-Sy-0lC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FH2-AI-a3d">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FH2-AI-a3d">
                                         <rect key="frame" x="0.0" y="389" width="99" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.115450233" green="0.59625194500000001" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="99" id="STf-H5-v0t"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -790,24 +845,11 @@ asfknafadknf</string>
                                             <action selector="cancel:" destination="ofJ-7r-4zW" eventType="touchUpInside" id="mOu-OT-vET"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cFA-Sp-7Fj">
-                                        <rect key="frame" x="22" y="94" width="204" height="229"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLE-iq-PZp">
+                                        <rect key="frame" x="20" y="111" width="209" height="239"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="FH2-AI-a3d" firstAttribute="top" secondItem="cFA-Sp-7Fj" secondAttribute="bottom" constant="66" id="9Jz-vs-FG9"/>
-                                    <constraint firstItem="cFA-Sp-7Fj" firstAttribute="top" secondItem="I57-js-ibd" secondAttribute="top" constant="94" id="Bqc-SR-1YE"/>
-                                    <constraint firstAttribute="width" constant="249" id="I3S-Wh-5Jo"/>
-                                    <constraint firstItem="FH2-AI-a3d" firstAttribute="baseline" secondItem="W5T-xl-3H7" secondAttribute="baseline" id="Kmb-e5-Q4p"/>
-                                    <constraint firstItem="cFA-Sp-7Fj" firstAttribute="leading" secondItem="I57-js-ibd" secondAttribute="leading" constant="22" id="RpJ-Yp-rV0"/>
-                                    <constraint firstItem="W5T-xl-3H7" firstAttribute="leading" secondItem="FH2-AI-a3d" secondAttribute="trailing" constant="28" id="S1X-Iw-493"/>
-                                    <constraint firstItem="cFA-Sp-7Fj" firstAttribute="centerX" secondItem="I57-js-ibd" secondAttribute="centerX" id="XKs-kY-CYJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="W5T-xl-3H7" secondAttribute="trailing" id="acL-AO-XyU"/>
-                                    <constraint firstItem="FH2-AI-a3d" firstAttribute="leading" secondItem="I57-js-ibd" secondAttribute="leading" id="eHb-xJ-JGF"/>
-                                    <constraint firstAttribute="bottom" secondItem="FH2-AI-a3d" secondAttribute="bottom" constant="20" symbolic="YES" id="gsY-ZA-ksL"/>
-                                    <constraint firstItem="FH2-AI-a3d" firstAttribute="height" secondItem="W5T-xl-3H7" secondAttribute="height" id="hTv-Jj-xLb"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ry6-wC-eKN">
                                 <rect key="frame" x="58" y="69" width="204" height="26"/>
@@ -823,16 +865,12 @@ asfknafadknf</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="7Mb-ii-3wn" firstAttribute="top" secondItem="I57-js-ibd" secondAttribute="bottom" constant="73" id="huD-Dw-Ir0"/>
-                            <constraint firstItem="I57-js-ibd" firstAttribute="leading" secondItem="U8Z-T5-3tA" secondAttribute="leading" constant="36" id="jn5-Tl-L8f"/>
-                            <constraint firstItem="I57-js-ibd" firstAttribute="top" secondItem="58d-St-pkm" secondAttribute="bottom" constant="31" id="lvB-XF-E8W"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="confirmMedication" destination="W5T-xl-3H7" id="ne4-CC-kpk"/>
+                        <outlet property="image" destination="gLE-iq-PZp" id="07F-pg-PB9"/>
                         <outlet property="medicationForm" destination="lMM-We-6a3" id="ELR-9n-Lea"/>
-                        <outlet property="medicationImage" destination="cFA-Sp-7Fj" id="Fbv-5C-P0q"/>
                         <outlet property="medicationName" destination="ry6-wC-eKN" id="vzP-V8-qbR"/>
                     </connections>
                 </viewController>
