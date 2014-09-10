@@ -10,8 +10,7 @@
 #import "PMConfirmCollectionViewCell.h"
 
 @interface PMSampleCollectionViewController (){
-    NSArray *imagesInArray;
-    NSInteger *page;
+    NSArray *frequencyArray,*reccurenceArray;
 }
 
 @end
@@ -30,43 +29,45 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    imagesInArray = [[NSArray alloc]init];
-	imagesInArray = [NSArray arrayWithObjects:
-                     @"Plaquenil.jpg",@"ball-orange.png", @"Plaquenil.jpg",@"ball-orange.png", nil];
+    frequencyArray = @[@"",@"",@"1",@"2",@"3",@"4",@"5",@"",@""];
+    reccurenceArray = @[@"",@"",@"Daily",@"Weekly",@"Monthly",@"",@""];
 }
 
-#pragma mark-  Collection View Delegates
+#pragma mark - Table view data source
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 4;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if(tableView == self.frequencyTable)
+        return frequencyArray.count;
+    else
+        return reccurenceArray.count;
 }
 
 
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identifier = @"collection";
-    PMConfirmCollectionViewCell *cell = (PMConfirmCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    if (cell==nil){
-        cell=[[PMConfirmCollectionViewCell alloc] init];
-    }
-    cell.imageView.image = [UIImage imageNamed:[imagesInArray objectAtIndex:indexPath.row]];
-    int pages = floor(_collectionView.contentSize.width / _collectionView.frame.size.width);
-    [_pageController setNumberOfPages:pages];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(tableView == self.frequencyTable){
+    static NSString *CellIdentifier = @"frequency";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    if(cell == Nil)
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:@"frequency"];
+        cell.textLabel.text  = [frequencyArray objectAtIndex:indexPath.row];
     return cell;
-}
-
-#pragma mark - UIScrollVewDelegate for UIPageControl
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    CGFloat pageWidth = _collectionView.frame.size.width;
-    float currentPage = _collectionView.contentOffset.x / pageWidth;
-    if (0.0f != fmodf(currentPage, 1.0f)) {
-        _pageController.currentPage = currentPage + 1;
-    } else {
-        _pageController.currentPage = currentPage;
+    }
+    
+    else{
+        static NSString *CellIdentifier = @"reccurence";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        if(cell == Nil)
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:@"reccurence"];
+        cell.textLabel.text  = [reccurenceArray objectAtIndex:indexPath.row];
+        return cell;
     }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 
 
 - (void)didReceiveMemoryWarning

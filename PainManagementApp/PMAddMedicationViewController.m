@@ -15,6 +15,7 @@
 #import "PMConfirmMedicationViewController.h"
 #import "PMMedicationReminderViewController.h"
 #import "CloudStorage.h"
+#import "ConfirmView.h"
 
 @interface PMAddMedicationViewController ()<PMConfirmMedicationViewControllerDelegate>{
     NSArray *medicationList;
@@ -55,8 +56,19 @@
                 [self addSelectedmedication:i];
         }
     
-    if(selectedMedications.count != 0)
-    [self performSegueWithIdentifier:@"confirm" sender:self];
+    if(selectedMedications.count != 0){
+        ConfirmView *ConfirmMedicationView = [[ConfirmView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"ConfirmView" owner:self options:nil];
+        ConfirmMedicationView = [views objectAtIndex:0];
+        PMMedicationModal *med = [[PMMedicationModal alloc] init];
+        med = [selectedMedications objectAtIndex:0];
+        ConfirmMedicationView.medicationName.text = med.medicationName;
+        ConfirmMedicationView.medicationForm.text = med.medicationForm;
+        
+        ConfirmMedicationView.imagesArray = med.medicationImages;
+        [self.view addSubview:ConfirmMedicationView];
+    }
+//    [self performSegueWithIdentifier:@"confirm" sender:self];
     else
         [Utilities showAlert:@"Select atleast One medication" withTitle:@"No Selection"];
 }
@@ -105,7 +117,6 @@
     else
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
 }
-
 
 #pragma -mark Segue Methods
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

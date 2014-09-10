@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface PMSampleCollectionViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIPageControl *pageController;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UITableView *frequencyTable;
+@property (weak, nonatomic) IBOutlet UITableView *reccurenceTable;
+@property (weak, nonatomic) IBOutlet UIView *selectionView;
 
 @end
