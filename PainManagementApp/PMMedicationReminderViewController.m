@@ -13,6 +13,7 @@
 #import "PMFrequencyViewController.h"
 #import "PMReminderPickerViewController.h"
 #import "PMGetDayViewController.h"
+#import "PMSelectDayOrDateViewController.h"
 
 @interface PMMedicationReminderViewController (){
     NSArray *reminderParamaters;
@@ -26,13 +27,13 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [self.medicationTableView reloadData];
+    
 }
 
 - (void)viewDidLoad
@@ -57,8 +58,22 @@
     cell.textLabel.text=[reminderParamaters objectAtIndex:indexPath.row];
     if(indexPath.row == 0)
         cell.detailTextLabel.text = self.medication.medicationForm;
-    else if (indexPath.row == 1 && self.medication.reminderReccurence.length !=0)
-        cell.detailTextLabel.text=self.medication.reminderReccurence;
+    else if (indexPath.row == 1 && self.medication.reminderReccurence.length !=0){
+        NSString *string = [NSString stringWithFormat:@"%@ x %@",self.medication.reminderFrequency,self.medication.reminderReccurence];
+        cell.detailTextLabel.text = string;
+    }
+    else if (indexPath.row == 2 && self.medication.days.count !=0){
+        NSMutableString *string= [[NSMutableString alloc]init];;
+        for(int i= 0 ; i< self.medication.days.count ; i++)
+            [string appendFormat :@"%@,",[self.medication.days objectAtIndex:i]];
+        cell.detailTextLabel.text = string;
+    }
+    else if (indexPath.row == 3 && self.medication.reminderTimings.count !=0){
+        NSMutableString *string= [[NSMutableString alloc]init];;
+        for(int i= 0 ; i< self.medication.reminderTimings.count ; i++)
+            [string appendFormat :@"%@,",[self.medication.reminderTimings objectAtIndex:i]];
+        cell.detailTextLabel.text = string;
+    }
     return cell;
 }
 
@@ -68,19 +83,19 @@
     [ self performSegueWithIdentifier:@"frequency" sender:self];
     }
     else if(indexPath.row == 0){
-        [self performSegueWithIdentifier:@"form" sender:self];
         toSelect = @"Form";
+        [self performSegueWithIdentifier:@"form" sender:self];
     }
     else if(indexPath.row == 2 && [self.medication.reminderReccurence isEqualToString:@"Daily"]){
         [self performSegueWithIdentifier:@"time" sender:self];
     }
     else if(indexPath.row == 2 && [self.medication.reminderReccurence isEqualToString:@"Weekly"]){
-        [self performSegueWithIdentifier:@"form" sender:self];
         toSelect = @"Day";
+        [self performSegueWithIdentifier:@"dayOrDate" sender:self];
     }
     else if(indexPath.row == 2 && [self.medication.reminderReccurence isEqualToString:@"Monthly"]){
-        [self performSegueWithIdentifier:@"form" sender:self];
         toSelect = @"Week";
+        [self performSegueWithIdentifier:@"dayOrDate" sender:self];
     }
     else
         [self performSegueWithIdentifier:@"time" sender:self];
@@ -104,7 +119,12 @@
      else if([segue.identifier isEqualToString:@"form"]){
          PMGetDayViewController *getDay= [segue destinationViewController];
          getDay.medication =self.medication;
+     }
+     else if([segue.identifier isEqualToString:@"dayOrDate"]){
+         PMSelectDayOrDateViewController *getDay= [segue destinationViewController];
          getDay.toSelect = toSelect;
+         getDay.numberOfselectionsNeeded = self.medication.reminderFrequency;
+         getDay.medication = self.medication;
      }
 
 }

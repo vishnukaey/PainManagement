@@ -20,7 +20,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -28,17 +27,8 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     NSArray *forms = [[NSArray alloc]initWithObjects:@"Injection",@"Tablet", nil];
-    NSArray *days=@[@"Sunday",@"Monday",@"Tuesday",@"Wednesday",@"Thursday",@"Friday",@"Saturday"];
-    NSMutableArray *alldays = [[NSMutableArray alloc]init];
-    for (int i=0;i<30;i++)
-        [alldays  setObject:@(i+1) atIndexedSubscript:i];
-    if([self.toSelect isEqualToString:@"Form"])
         self.pickerViewDataSource = forms;
-    else if([self.toSelect isEqualToString:@"Day"])
-        self.pickerViewDataSource = days;
-    else if([self.toSelect isEqualToString:@"Week"])
-        self.pickerViewDataSource = alldays;
-    [self.PickerView reloadAllComponents];
+    self.label.text =  [self.pickerViewDataSource objectAtIndex:0];
 }
 
 
@@ -56,11 +46,10 @@
 {
     return [self.pickerViewDataSource objectAtIndex:row];
 }
+
 - (IBAction)done:(id)sender {
-    if([self.toSelect isEqualToString:@"Form"]){
         self.medication.medicationForm = self.label.text;
-    }
-    [self.navigationController popViewControllerAnimated:YES];
+        [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component

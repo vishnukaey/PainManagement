@@ -18,6 +18,5 @@
     @property (weak, nonatomic) IBOutlet UILabel *medicationForm;
     @property (weak, nonatomic) IBOutlet UIButton *confirmMedication;
     @property(assign, nonatomic) PMMedicationModal *medication;
-@property (weak, nonatomic) IBOutlet UIImageView *image;
-
+    @property (weak, nonatomic) IBOutlet UIImageView *image;
 @end

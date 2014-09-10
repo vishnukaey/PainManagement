@@ -589,7 +589,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyu-zU-pmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="219" y="-2023"/>
+            <point key="canvasLocation" x="217" y="-1931"/>
         </scene>
         <!--Get Day View Controller-->
         <scene sceneID="dWc-1d-lGG">
@@ -610,7 +610,7 @@ asfknafadknf</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Form " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsb-5g-BKE">
-                                <rect key="frame" x="90" y="201" width="140" height="63"/>
+                                <rect key="frame" x="113" y="175" width="160" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.115450233" green="0.59625194500000001" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -630,7 +630,7 @@ asfknafadknf</string>
                     <navigationItem key="navigationItem" id="dEm-Kb-c5J">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="LAd-Lk-w9W">
                             <connections>
-                                <action selector="done:" destination="sKw-Um-BOc" id="ze4-jN-WAT"/>
+                                <action selector="done:" destination="sKw-Um-BOc" id="Rat-dh-4JI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -641,7 +641,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRW-Td-h2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="-2579"/>
+            <point key="canvasLocation" x="675" y="-2615"/>
         </scene>
         <!--Save Appointment View Controller-->
         <scene sceneID="SCR-bZ-vCO">
@@ -663,7 +663,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rm-oB-KjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711" y="-2023"/>
+            <point key="canvasLocation" x="663" y="-1931"/>
         </scene>
         <!--Appointment Reminders View Controller-->
         <scene sceneID="iC9-bK-YQI">
@@ -682,7 +682,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXa-Ml-nKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="-2015"/>
+            <point key="canvasLocation" x="1157" y="-1923"/>
         </scene>
         <!--Add Medication View Controller - MEDICATION-->
         <scene sceneID="YYa-mt-7Im">
@@ -1120,6 +1120,7 @@ asfknafadknf</string>
                         <segue destination="sKw-Um-BOc" kind="push" identifier="form" id="OHf-tm-ac0"/>
                         <segue destination="0p2-G3-fcw" kind="push" identifier="frequency" id="e7a-CQ-BUl"/>
                         <segue destination="10j-NS-SMd" kind="push" identifier="time" id="V47-ZJ-iZR"/>
+                        <segue destination="ffu-zq-Z6m" kind="push" identifier="dayOrDate" id="RgV-lG-rXK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srI-Ft-vMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1200,7 +1201,42 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOh-VT-Sfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="-3308"/>
+            <point key="canvasLocation" x="675" y="-3318"/>
+        </scene>
+        <!--Select Day Or Date View Controller-->
+        <scene sceneID="yVy-SL-5Nv">
+            <objects>
+                <tableViewController id="ffu-zq-Z6m" customClass="PMSelectDayOrDateViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="22" sectionFooterHeight="22" id="QK6-Yq-1oF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="81" id="eqe-2h-XWi">
+                                <rect key="frame" x="0.0" y="86" width="320" height="81"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eqe-2h-XWi" id="vF9-EE-Ye4">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ffu-zq-Z6m" id="w21-ei-Mie"/>
+                            <outlet property="delegate" destination="ffu-zq-Z6m" id="afi-bx-iAa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="tLH-Fq-udY">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="omb-kz-ARO">
+                            <connections>
+                                <action selector="done:" destination="ffu-zq-Z6m" id="vkQ-MV-ZQz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQH-7s-FtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="-3308"/>
         </scene>
         <!--Reminder Picker View Controller-->
         <scene sceneID="ykr-AL-rEa">
@@ -1215,7 +1251,7 @@ asfknafadknf</string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7p4-nk-uOn">
-                                <rect key="frame" x="0.0" y="63" width="320" height="272"/>
+                                <rect key="frame" x="0.0" y="3" width="320" height="272"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1226,7 +1262,7 @@ asfknafadknf</string>
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="X: XX AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o8a-0M-APa">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="X: XX AM (Tap to Change)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o8a-0M-APa">
                                                     <rect key="frame" x="15" y="0.0" width="290" height="79"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1303,11 +1339,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="TIME PICKER" id="V4t-7s-G2h">
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="JEW-4O-wvc">
-                                            <connections>
-                                                <action selector="Done:" destination="10j-NS-SMd" id="NEg-BH-opD"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="JEW-4O-wvc"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1319,7 +1351,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pKH-rN-dxw">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="1wt-QL-Cxz"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="1wt-QL-Cxz">
+                            <connections>
+                                <action selector="Done:" destination="10j-NS-SMd" id="bGR-pw-8T7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="HAJ-f7-cVa" id="JT7-Sx-wgj"/>

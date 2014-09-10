@@ -15,4 +15,5 @@
     @synthesize reminderFrequency;
     @synthesize reminderReccurence;
     @synthesize reminderTimings;
+    @synthesize days;
 @end

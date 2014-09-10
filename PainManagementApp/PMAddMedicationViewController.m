@@ -116,6 +116,7 @@
     if([segue.identifier isEqualToString:@"reminder"]){
         PMMedicationReminderViewController *reminder = [segue destinationViewController];
         reminder.medication = [selectedMedications objectAtIndex:0];
+        reminder.selectedMedications = selectedMedications;
         NSLog(@"%@",reminder.medication);
     }
     

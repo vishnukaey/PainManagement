@@ -13,5 +13,4 @@
 @property (strong, nonatomic) IBOutlet UILabel *label;
 @property (assign,nonatomic)  PMMedicationModal *medication;
 @property (strong, nonatomic) NSArray *pickerViewDataSource;
-@property (assign , nonatomic) NSString *toSelect;
 @end

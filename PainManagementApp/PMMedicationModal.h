@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface PMMedicationModal : NSObject
-    @property (weak, nonatomic) NSString *medicationName;
-    @property (weak, nonatomic) NSString *medicationForm;
-    @property (weak, nonatomic) NSString *reminderFrequency;
-    @property (weak, nonatomic) NSString *reminderReccurence;
+    @property (strong, nonatomic) NSString *medicationName;
+    @property (strong, nonatomic) NSString *medicationForm;
+    @property (strong, nonatomic) NSString *reminderFrequency;
+    @property (strong, nonatomic) NSString *reminderReccurence;
+    @property (strong, nonatomic) NSMutableArray *days;
     @property (strong, nonatomic) NSMutableArray *reminderTimings;
     @property (strong, nonatomic) UIImage *medicationImage;
 @end

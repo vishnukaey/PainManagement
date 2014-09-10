@@ -76,11 +76,6 @@
         self.frequencyLabel.text=[NSString stringWithFormat:@"%@",[frequency objectAtIndex:row]];
     else
         self.reccurenceLabel.text=[reccur objectAtIndex:row];
-    UIView * selectedView = [[UIView alloc] init];
-    selectedView = [pickerView viewForRow:row forComponent:component];
-    selectedView.backgroundColor = [UIColor redColor];
-    [selectedView setNeedsDisplay];
-    oldView = selectedView;
 }
 
 
