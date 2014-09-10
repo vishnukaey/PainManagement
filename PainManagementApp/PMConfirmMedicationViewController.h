@@ -17,6 +17,7 @@
     @property (weak, nonatomic) IBOutlet UILabel *medicationName;
     @property (weak, nonatomic) IBOutlet UILabel *medicationForm;
     @property (weak, nonatomic) IBOutlet UIButton *confirmMedication;
+    @property (weak, nonatomic) IBOutlet UIPageControl *pageController;
+    @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
     @property(assign, nonatomic) PMMedicationModal *medication;
-    @property (weak, nonatomic) IBOutlet UIImageView *image;
 @end

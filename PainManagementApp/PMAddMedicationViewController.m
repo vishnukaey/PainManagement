@@ -67,7 +67,9 @@
     medication.medicationName =[[medicationList objectAtIndex:index ] valueForKey:@"name"];
     NSURL *url = [NSURL URLWithString:[[medicationList objectAtIndex:index ] valueForKey:@"imageUrl"]];
     NSData *data = [NSData dataWithContentsOfURL:url];
-    medication.medicationImage = [[UIImage alloc] initWithData:data];
+    medication.medicationImages = [[NSMutableArray alloc] init];
+     [medication.medicationImages addObject:[[UIImage alloc] initWithData:data]];
+    [medication.medicationImages addObject:[UIImage imageNamed:@"ball-orange.png"]];
     medication.medicationForm= [[medicationList objectAtIndex:index ] valueForKey:@"form"];
     [selectedMedications addObject:medication];
 }

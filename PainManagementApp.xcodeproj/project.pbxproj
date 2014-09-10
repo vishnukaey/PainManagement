@@ -55,6 +55,7 @@
 		22A79E8919B48AC800E00023 /* PMOverallSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E8819B48AC800E00023 /* PMOverallSliderCell.m */; };
 		22A79E8C19B490B500E00023 /* PMNotesTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E8B19B490B500E00023 /* PMNotesTableCell.m */; };
 		22BB7AED19C0498D00DD7D53 /* PMSelectDayOrDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB7AEC19C0498D00DD7D53 /* PMSelectDayOrDateViewController.m */; };
+		22BB7AF019C0718700DD7D53 /* PMConfirmCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB7AEF19C0718700DD7D53 /* PMConfirmCollectionViewCell.m */; };
 		22E7DFBC19C01BD8000A1E7F /* PMSampleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */; };
 		CD2C4DCCF3C74B03BE1A08D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EE4E37EE644B3E90371A78 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -147,6 +148,8 @@
 		22A79E8B19B490B500E00023 /* PMNotesTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMNotesTableCell.m; sourceTree = "<group>"; };
 		22BB7AEB19C0498D00DD7D53 /* PMSelectDayOrDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSelectDayOrDateViewController.h; sourceTree = "<group>"; };
 		22BB7AEC19C0498D00DD7D53 /* PMSelectDayOrDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSelectDayOrDateViewController.m; sourceTree = "<group>"; };
+		22BB7AEE19C0718600DD7D53 /* PMConfirmCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMConfirmCollectionViewCell.h; sourceTree = "<group>"; };
+		22BB7AEF19C0718700DD7D53 /* PMConfirmCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMConfirmCollectionViewCell.m; sourceTree = "<group>"; };
 		22E7DFBA19C01BD8000A1E7F /* PMSampleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSampleCollectionViewController.h; sourceTree = "<group>"; };
 		22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSampleCollectionViewController.m; sourceTree = "<group>"; };
 		38F0E8513E42460F853CF309 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -295,6 +298,8 @@
 				22A79E7D19B460B200E00023 /* Utilities */,
 				22A79E7C19B460A500E00023 /* Modal Classes */,
 				22A79E7B19B4609E00E00023 /* Views */,
+				22BB7AEE19C0718600DD7D53 /* PMConfirmCollectionViewCell.h */,
+				22BB7AEF19C0718700DD7D53 /* PMConfirmCollectionViewCell.m */,
 				22E7DFBA19C01BD8000A1E7F /* PMSampleCollectionViewController.h */,
 				22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */,
 			);
@@ -550,6 +555,7 @@
 				22A79E5619B45D7900E00023 /* PMAppDelegate.m in Sources */,
 				2299D02A19B599AF00AA6252 /* PMFrontPainLocationViewController.m in Sources */,
 				221D394619BEDFEB001690C4 /* PMAddAppointmentViewController.m in Sources */,
+				22BB7AF019C0718700DD7D53 /* PMConfirmCollectionViewCell.m in Sources */,
 				221D394C19BEE025001690C4 /* PMAppointmentRemindersViewController.m in Sources */,
 				2299D04119B5F47F00AA6252 /* PMConfirmMedicationViewController.m in Sources */,
 				221D393519BEBD47001690C4 /* PMLandingViewController.m in Sources */,

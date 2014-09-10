@@ -33,7 +33,6 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [self.medicationTableView reloadData];
-    
 }
 
 - (void)viewDidLoad
@@ -73,6 +72,21 @@
         for(int i= 0 ; i< self.medication.reminderTimings.count ; i++)
             [string appendFormat :@"%@,",[self.medication.reminderTimings objectAtIndex:i]];
         cell.detailTextLabel.text = string;
+    }
+    else if(indexPath.row == 2 && self.medication.reminderTimings.count !=0 && [self.medication.reminderReccurence isEqualToString:@"Daily"]){
+        NSMutableString *string= [[NSMutableString alloc]init];;
+        for(int i= 0 ; i< self.medication.reminderTimings.count ; i++)
+            [string appendFormat :@"%@,",[self.medication.reminderTimings objectAtIndex:i]];
+        cell.detailTextLabel.text = string;
+    }
+        
+    if(indexPath.row == 2){
+        if([self.medication.reminderReccurence isEqualToString:@"Daily"])
+            cell.textLabel.text= @"Time of the Day";
+        else if([self.medication.reminderReccurence isEqualToString:@"Weekly"])
+            cell.textLabel.text= @"Days of the Week";
+        else if([self.medication.reminderReccurence isEqualToString:@"Monthly"])
+            cell.textLabel.text= @"Days of the month";
     }
     return cell;
 }

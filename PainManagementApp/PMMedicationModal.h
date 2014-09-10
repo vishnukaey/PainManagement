@@ -15,5 +15,5 @@
     @property (strong, nonatomic) NSString *reminderReccurence;
     @property (strong, nonatomic) NSMutableArray *days;
     @property (strong, nonatomic) NSMutableArray *reminderTimings;
-    @property (strong, nonatomic) UIImage *medicationImage;
+    @property (strong, nonatomic) NSMutableArray *medicationImages;
 @end

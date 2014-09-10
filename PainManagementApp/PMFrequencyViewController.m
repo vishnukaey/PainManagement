@@ -20,6 +20,7 @@
     NSMutableArray *frequency;
     NSArray *reccur;
     UIView *oldView;
+    int selectedRow;
 }
 
 @end
@@ -72,6 +73,8 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
+    selectedRow = row;
+    
     if(component == 0)
         self.frequencyLabel.text=[NSString stringWithFormat:@"%@",[frequency objectAtIndex:row]];
     else

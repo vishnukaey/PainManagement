@@ -16,4 +16,5 @@
     @synthesize reminderReccurence;
     @synthesize reminderTimings;
     @synthesize days;
+    @synthesize medicationImages;
 @end

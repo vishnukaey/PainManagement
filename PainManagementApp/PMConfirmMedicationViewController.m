@@ -11,6 +11,7 @@
  */
 
 #import "PMConfirmMedicationViewController.h"
+#import "PMConfirmCollectionViewCell.h"
 
 @interface PMConfirmMedicationViewController (){
     NSArray *imagesInArray;
@@ -30,11 +31,13 @@
 }
 
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.medicationName.text = self.medication.medicationName;
-    self.image.image = self.medication.medicationImage;
+    self.medicationForm.text = self.medication.medicationForm;
+    imagesInArray = self.medication.medicationImages;
 }
 
 
@@ -47,6 +50,40 @@
 - (IBAction)cancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+#pragma mark-  Collection View Delegates
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return imagesInArray.count;
+}
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *identifier = @"collection";
+    PMConfirmCollectionViewCell *cell = (PMConfirmCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    if (cell==nil){
+        cell=[[PMConfirmCollectionViewCell alloc] init];
+    }
+    cell.imageView.image = [imagesInArray objectAtIndex:indexPath.row];
+    int pages = floor(_collectionView.contentSize.width / _collectionView.frame.size.width);
+    [_pageController setNumberOfPages:pages];
+    return cell;
+}
+
+#pragma mark - UIScrollVewDelegate for UIPageControl
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    CGFloat pageWidth = _collectionView.frame.size.width;
+    float currentPage = _collectionView.contentOffset.x / pageWidth;
+    if (0.0f != fmodf(currentPage, 1.0f)) {
+        _pageController.currentPage = currentPage + 1;
+    } else {
+        _pageController.currentPage = currentPage;
+    }
+}
+
+
 
 
 - (void)didReceiveMemoryWarning

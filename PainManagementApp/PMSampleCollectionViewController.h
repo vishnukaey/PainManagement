@@ -10,5 +10,6 @@
 
 @interface PMSampleCollectionViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIPageControl *pageController;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

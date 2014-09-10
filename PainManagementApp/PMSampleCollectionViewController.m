@@ -7,6 +7,7 @@
 //
 
 #import "PMSampleCollectionViewController.h"
+#import "PMConfirmCollectionViewCell.h"
 
 @interface PMSampleCollectionViewController (){
     NSArray *imagesInArray;
@@ -44,17 +45,26 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"collection";
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:20];
-    recipeImageView.image = [UIImage imageNamed:[imagesInArray objectAtIndex:indexPath.row]];
-    
+    PMConfirmCollectionViewCell *cell = (PMConfirmCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    if (cell==nil){
+        cell=[[PMConfirmCollectionViewCell alloc] init];
+    }
+    cell.imageView.image = [UIImage imageNamed:[imagesInArray objectAtIndex:indexPath.row]];
+    int pages = floor(_collectionView.contentSize.width / _collectionView.frame.size.width);
+    [_pageController setNumberOfPages:pages];
     return cell;
 }
 
 #pragma mark - UIScrollVewDelegate for UIPageControl
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    self.pageController.currentPage = self.pageController.currentPage+1;
+    CGFloat pageWidth = _collectionView.frame.size.width;
+    float currentPage = _collectionView.contentOffset.x / pageWidth;
+    if (0.0f != fmodf(currentPage, 1.0f)) {
+        _pageController.currentPage = currentPage + 1;
+    } else {
+        _pageController.currentPage = currentPage;
+    }
 }
 
 
