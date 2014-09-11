@@ -1,19 +1,17 @@
 //
-//  CloudStorage.m
-//  SampleServerDemo
+//  PMDataHandler.m
+//  PainManagementApp
 //
-//  Created by Vishnu on 21/08/14.
-//  Copyright (c) 2014 Vishnu. All rights reserved.
+//  Created by Vishnu on 11/09/14.
+//  Copyright (c) 2014 DenovoNow. All rights reserved.
 //
 
-#import "CloudStorage.h"
+#import "PMDataHandler.h"
 
-@implementation CloudStorage{
-    
+@implementation PMDataHandler{
     NSMutableData *responseData;
     NSString *requestMethodType;
 }
-
 
 #pragma mark - Overridden Methods
 
@@ -65,4 +63,5 @@
         self.successRequestCallBack(array);
     }
 }
+
 @end

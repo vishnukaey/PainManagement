@@ -11,7 +11,6 @@
 #import "PMLandingViewController.h"
 
 @interface PMDashBoardViewController () <LandingViewDelegate>
-
 @end
 
 @implementation PMDashBoardViewController{
@@ -29,9 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    menuItems=[[NSArray alloc]initWithObjects:
-               @"MEDICATION",@"APPOINTMENTS",@"PAIN MANAGEMENT",@"PHYSICAL THERAPY",@"LABS",@"REWARDS",@"TIMELINE",
-               @"SETTINGS",@"HELP",@"TERMS & CONDITIONS", nil];
+    menuItems=[[NSArray alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"DashBoardMenuItems" ofType:@"plist"]];
     [self performSegueWithIdentifier:@"landingView" sender:self];
 }
 

@@ -27,9 +27,9 @@
 }
 
 
-
 - (IBAction)confirmMedication:(id)sender {
     [self removeFromSuperview];
+    [self.delegate pushToReminderViewController];
 }
 
 #pragma mark-  Collection View Delegates
@@ -39,8 +39,9 @@
     return imagesInArray.count;
 }
 
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identifier = @"collection2";
+    static NSString *identifier = @"collection";
     PMConfirmCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     if (cell==nil){
         cell=[[PMConfirmCollectionViewCell alloc] init];

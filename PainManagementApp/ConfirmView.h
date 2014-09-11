@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ConfirmMedicationViewDelegate <NSObject>
+    -(void) pushToReminderViewController;
+@end
+
 @interface ConfirmView : UIView
+    @property (nonatomic, weak) id <ConfirmMedicationViewDelegate> delegate;
     @property (weak, nonatomic) IBOutlet UILabel *medicationName;
     @property (weak, nonatomic) IBOutlet UILabel *medicationForm;
     @property (weak, nonatomic) IBOutlet UIButton *confirmMedication;

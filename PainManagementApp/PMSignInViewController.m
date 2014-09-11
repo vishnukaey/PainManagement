@@ -1,19 +1,18 @@
 //
-//  PMCheckViewViewController.m
+//  PMSignInViewController.m
 //  PainManagementApp
 //
-//  Created by Vishnu on 10/09/14.
+//  Created by Vishnu on 11/09/14.
 //  Copyright (c) 2014 DenovoNow. All rights reserved.
 //
 
-#import "PMCheckViewViewController.h"
-#import "ConfirmView.h"
+#import "PMSignInViewController.h"
 
-@interface PMCheckViewViewController ()
+@interface PMSignInViewController ()
 
 @end
 
-@implementation PMCheckViewViewController
+@implementation PMSignInViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,9 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"ConfirmView" owner:self options:nil];
-    self.viewFromNib = [views objectAtIndex:0];
-	[self.view addSubview:self.viewFromNib];
+	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

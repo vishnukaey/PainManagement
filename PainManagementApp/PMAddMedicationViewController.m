@@ -12,12 +12,11 @@
 
 
 #import "PMAddMedicationViewController.h"
-#import "PMConfirmMedicationViewController.h"
 #import "PMMedicationReminderViewController.h"
-#import "CloudStorage.h"
+#import "PMDataHandler.h"
 #import "ConfirmView.h"
 
-@interface PMAddMedicationViewController ()<PMConfirmMedicationViewControllerDelegate>{
+@interface PMAddMedicationViewController ()<ConfirmMedicationViewDelegate>{
     NSArray *medicationList;
     NSMutableArray *selectedMedications;
 }
@@ -38,7 +37,7 @@
 {
     medicationList = [[NSArray alloc] init];
     [super viewDidLoad];
-    CloudStorage *cloud = [[CloudStorage alloc] init];
+    PMDataHandler *cloud = [[PMDataHandler alloc] init];
     [cloud getRequest:@"" requestSucceeded:^(NSArray *array) {
         medicationList = array;
         NSLog(@"%@",medicationList);
@@ -64,8 +63,8 @@
         med = [selectedMedications objectAtIndex:0];
         ConfirmMedicationView.medicationName.text = med.medicationName;
         ConfirmMedicationView.medicationForm.text = med.medicationForm;
-        
         ConfirmMedicationView.imagesArray = med.medicationImages;
+        ConfirmMedicationView.delegate = self;
         [self.view addSubview:ConfirmMedicationView];
     }
 //    [self performSegueWithIdentifier:@"confirm" sender:self];
@@ -120,12 +119,6 @@
 
 #pragma -mark Segue Methods
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"confirm"]){
-        PMConfirmMedicationViewController *confirm = [segue destinationViewController];
-        confirm.delegate = self;
-        confirm.medication = [selectedMedications objectAtIndex:0];
-    }
-    
     if([segue.identifier isEqualToString:@"reminder"]){
         PMMedicationReminderViewController *reminder = [segue destinationViewController];
         reminder.medication = [selectedMedications objectAtIndex:0];

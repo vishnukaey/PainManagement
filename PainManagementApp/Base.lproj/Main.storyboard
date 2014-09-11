@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nA-ZX-l8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-273" y="-1225"/>
+            <point key="canvasLocation" x="-289" y="-937"/>
         </scene>
         <!--Overall Pain View Controller-->
         <scene sceneID="Ijs-Lo-SnQ">
@@ -306,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZdK-8b-9FQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775" y="-727"/>
+            <point key="canvasLocation" x="459" y="-559"/>
         </scene>
         <!--Dash Board View Controller - DASHBOARD-->
         <scene sceneID="3Eh-wc-2sm">
@@ -428,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nwr-3D-lH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-777" y="-2015"/>
+            <point key="canvasLocation" x="-825" y="-1567"/>
         </scene>
         <!--Physicians View Controller - PHYSICIAN-->
         <scene sceneID="FOK-Jd-xCE">
@@ -520,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHe-im-IUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-301" y="-2015"/>
+            <point key="canvasLocation" x="-461" y="-1567"/>
         </scene>
         <!--Add Appointment View Controller - PHYSICIAN-->
         <scene sceneID="Zyz-Km-N0I">
@@ -589,7 +589,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyu-zU-pmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="217" y="-1931"/>
+            <point key="canvasLocation" x="-87" y="-1567"/>
         </scene>
         <!--Get Day View Controller-->
         <scene sceneID="dWc-1d-lGG">
@@ -641,7 +641,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRW-Td-h2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="-2615"/>
+            <point key="canvasLocation" x="187" y="-2423"/>
         </scene>
         <!--Save Appointment View Controller-->
         <scene sceneID="SCR-bZ-vCO">
@@ -663,7 +663,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rm-oB-KjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="-1931"/>
+            <point key="canvasLocation" x="287" y="-1567"/>
         </scene>
         <!--Appointment Reminders View Controller-->
         <scene sceneID="iC9-bK-YQI">
@@ -682,7 +682,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXa-Ml-nKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157" y="-1923"/>
+            <point key="canvasLocation" x="649" y="-1567"/>
         </scene>
         <!--Add Medication View Controller - MEDICATION-->
         <scene sceneID="YYa-mt-7Im">
@@ -701,7 +701,7 @@ asfknafadknf</string>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="4qw-an-Zvz" rowHeight="68" style="IBUITableViewCellStyleDefault" id="f8V-mQ-nmG">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="4qw-an-Zvz" detailTextLabel="2xR-DN-dlE" rowHeight="68" style="IBUITableViewCellStyleSubtitle" id="f8V-mQ-nmG">
                                         <rect key="frame" x="0.0" y="86" width="320" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f8V-mQ-nmG" id="Xvq-ZU-5bI">
@@ -709,9 +709,16 @@ asfknafadknf</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4qw-an-Zvz">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="67"/>
+                                                    <rect key="frame" x="15" y="15" width="34" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2xR-DN-dlE">
+                                                    <rect key="frame" x="15" y="37" width="43" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -742,7 +749,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nY9-m5-afh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-802" y="-3002"/>
+            <point key="canvasLocation" x="-730" y="-2924"/>
         </scene>
         <!--Sample Collection View Controller-->
         <scene sceneID="TdP-vx-4jg">
@@ -840,7 +847,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SiV-Q8-hMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-369" y="-4415"/>
+            <point key="canvasLocation" x="2283" y="-1863"/>
         </scene>
         <!--Empty Root View Controller - PAIN MANAGEMENT-->
         <scene sceneID="fyh-pr-637">
@@ -863,7 +870,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgg-4P-CWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-777" y="-727"/>
+            <point key="canvasLocation" x="-802" y="-559"/>
         </scene>
         <!--View Controller - PHYSICAL THERAPY-->
         <scene sceneID="1Yi-Ar-0y3">
@@ -882,7 +889,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShQ-cN-W5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-793" y="77"/>
+            <point key="canvasLocation" x="-783" y="213"/>
         </scene>
         <!--View Controller - REWARDS-->
         <scene sceneID="hze-5W-BXj">
@@ -1011,18 +1018,18 @@ asfknafadknf</string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVh-qL-UuY">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MEDICATION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs5-TK-sj4">
-                                        <rect key="frame" x="20" y="80" width="280" height="35"/>
+                                        <rect key="frame" x="20" y="12" width="280" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setup a medication schedule and receive reminders" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="T4A-Lv-wiZ">
-                                        <rect key="frame" x="20" y="120" width="280" height="46"/>
+                                        <rect key="frame" x="20" y="55" width="280" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1089,7 +1096,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srI-Ft-vMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="-2924"/>
+            <point key="canvasLocation" x="-349" y="-2924"/>
         </scene>
         <!--Frequency View Controller-->
         <scene sceneID="fKX-9I-59j">
@@ -1165,7 +1172,7 @@ asfknafadknf</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOh-VT-Sfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="-3318"/>
+            <point key="canvasLocation" x="187" y="-3366"/>
         </scene>
         <!--Select Day Or Date View Controller-->
         <scene sceneID="yVy-SL-5Nv">
@@ -1200,7 +1207,7 @@ asfknafadknf</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQH-7s-FtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054" y="-3308"/>
+            <point key="canvasLocation" x="187" y="-4773"/>
         </scene>
         <!--Reminder Picker View Controller-->
         <scene sceneID="ykr-AL-rEa">
@@ -1329,7 +1336,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEz-2q-5qb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="-4036"/>
+            <point key="canvasLocation" x="195" y="-4052"/>
         </scene>
         <!--Osteo Medication View Controller-->
         <scene sceneID="O13-lB-xN2">
@@ -1408,7 +1415,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOe-BG-7Tt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1367" y="-2676"/>
+            <point key="canvasLocation" x="567" y="-2900"/>
         </scene>
         <!--Schedule View Controller-->
         <scene sceneID="u9q-uO-90h">
@@ -1431,10 +1438,52 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="kTL-u9-e9g" kind="modal" identifier="signUp" id="kCo-9f-x0k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7z-4J-Oh2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1927" y="-2676"/>
+            <point key="canvasLocation" x="939" y="-2900"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="58x-xE-gqf">
+            <objects>
+                <viewController id="kTL-u9-e9g" customClass="PMSignUpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="grB-bh-ssY"/>
+                        <viewControllerLayoutGuide type="bottom" id="aj8-aI-b81"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nWg-ip-THr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="X76-tI-vaJ" kind="modal" identifier="signIn" id="ttM-M5-BEm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vlq-rE-5kz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1483" y="-3352"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="UN1-kZ-NhR">
+            <objects>
+                <viewController id="X76-tI-vaJ" customClass="PMSignInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m0T-HZ-VpG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Il8-sC-43x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yFr-Fi-A8S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKP-Hk-3Np" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1875" y="-3352"/>
         </scene>
         <!--Back Pain Location View Controller-->
         <scene sceneID="OXu-OH-z3m">
@@ -1511,7 +1560,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xez-pK-dFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="-1225"/>
+            <point key="canvasLocation" x="86" y="-945"/>
         </scene>
     </scenes>
     <resources>
@@ -1519,6 +1568,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="ball-green.png" width="250" height="250"/>
         <image name="ball-orange.png" width="250" height="250"/>
         <image name="blank-clipboard-and-pen-with-stethoscope-870505.jpg" width="1210" height="1132"/>
+        <image name="flip.png" width="30" height="30"/>
         <image name="flip.png" width="30" height="30"/>
         <image name="free-medical-clipart-medical_stethoscope_black.png" width="4251" height="6271"/>
         <image name="list.png" width="24" height="24"/>
