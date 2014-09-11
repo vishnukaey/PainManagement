@@ -29,7 +29,7 @@
 }
 
 -(void) performSegueForPhysician:(NSString *)physician{
-    [self performSegueWithIdentifier:@"addAppointment" sender:self];
+    [self performSegueWithIdentifier:ADD_AN_APPOINTMENT sender:self];
 }
 #pragma -mark TableView delegate and Datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -39,8 +39,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"physicianCell";
-    PMPhysicianCell *cell = (PMPhysicianCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    PMPhysicianCell *cell = (PMPhysicianCell *) [tableView dequeueReusableCellWithIdentifier:physicianCellIdentifier forIndexPath:indexPath];
     cell.delegate= self;
     cell.physicianName.text = @"Hello";
     cell.physicianSpecialization.text = @"Nothing Special";

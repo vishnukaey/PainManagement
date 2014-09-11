@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PMPhysiciansViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITableView *physiciansTableView;
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+    @property (weak, nonatomic) IBOutlet UITableView *physiciansTableView;
+    @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @end

@@ -28,7 +28,7 @@
 }
 
 - (IBAction)addAppointment:(id)sender {
-    [self performSegueWithIdentifier:@"saveAppointment" sender:self];
+    [self performSegueWithIdentifier:SAVE_APPOINTMENT sender:self];
 }
 
 - (void)didReceiveMemoryWarning{

@@ -18,25 +18,28 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 }
 
+
 - (IBAction)pushToMedication:(id)sender {
     [self.delegate performSegueToMedicationViewController];
     [self dismissViewControllerAnimated:YES completion:Nil];
 }
 
+
 - (IBAction)pustToAppoinment:(id)sender {
     [self.delegate performSegueToAppoinmentsViewController];
     [self dismissViewControllerAnimated:YES completion:Nil];
 }
+
 
 - (IBAction)pushToPainManagement:(id)sender {
     [self.delegate performSegueToPainManagementViewController];

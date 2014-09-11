@@ -24,19 +24,27 @@
     return self;
 }
 
-
--(void) viewWillAppear:(BOOL)animated{
-    [self performSegueWithIdentifier:@"locatePain" sender:self];
-}
-
--(void) manageOverallPain{
-    [self performSegueWithIdentifier:@"overall" sender:self];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 }
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self performSegueWithIdentifier:LOCATE_PAIN sender:self];
+}
+
+-(void) manageOverallPain{
+    [self performSegueWithIdentifier:OVERALL sender:self];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:LOCATE_PAIN]){
+        PMFrontPainLocationViewController *front = [segue destinationViewController];
+        front.delegate = self;
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -44,11 +52,5 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"locatePain"]){
-        PMFrontPainLocationViewController *front = [segue destinationViewController];
-        front.delegate = self;
-    }
-}
 
 @end

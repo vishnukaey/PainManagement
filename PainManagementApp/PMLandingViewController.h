@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#pragma -mark LandingViewDelegateMethods
 @protocol LandingViewDelegate <NSObject>
--(void) performSegueToMedicationViewController;
--(void) performSegueToPainManagementViewController;
--(void) performSegueToAppoinmentsViewController;
+    -(void) performSegueToMedicationViewController;
+    -(void) performSegueToPainManagementViewController;
+    -(void) performSegueToAppoinmentsViewController;
 @end
 
+
 @interface PMLandingViewController : UIViewController
-@property (weak,nonatomic) id <LandingViewDelegate> delegate;
+    @property (weak,nonatomic) id <LandingViewDelegate> delegate;
 @end

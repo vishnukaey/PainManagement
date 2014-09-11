@@ -26,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 - (IBAction)dismissToOverallPainVC:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

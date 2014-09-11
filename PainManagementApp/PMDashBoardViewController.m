@@ -25,11 +25,22 @@
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    menuItems=[[NSArray alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"DashBoardMenuItems" ofType:@"plist"]];
-    [self performSegueWithIdentifier:@"landingView" sender:self];
+    menuItems=[[NSArray alloc]initWithContentsOfFile:
+               [[NSBundle mainBundle] pathForResource:
+                DASHBOARD_MENU_ITEMS ofType:@"plist"]];
+    [self performSegueWithIdentifier:GO_TO_LANDINGVIEW sender:self];
+}
+
+
+
+-(void) viewWillDisappear:(BOOL)animated{
+    if(self.sideMenuTableView.frame.origin.x==0)
+        [self toggleSideMenu:Nil];
 }
 
 
@@ -39,6 +50,8 @@
     menuViewShown=!menuViewShown;
     [self toggleSideMenulist:menuViewShown];
 }
+
+
 
 -(void) toggleSideMenulist:(bool)shouldshow{
     int offset;
@@ -59,23 +72,24 @@
 }
 
 
--(void) viewWillDisappear:(BOOL)animated{
-    if(self.sideMenuTableView.frame.origin.x==0)
-        [self toggleSideMenu:Nil];
-}
 
 #pragma -mark LandingViewDelegateMethods
+
 -(void) performSegueToMedicationViewController{
-    [self performSegueWithIdentifier:@"MEDICATION" sender:self];
+    [self performSegueWithIdentifier:ADD_MEDICATION sender:self];
 }
+
 -(void) performSegueToPainManagementViewController{
-    [self performSegueWithIdentifier:@"PAIN MANAGEMENT" sender:self];
+    [self performSegueWithIdentifier:MANAGE_PAIN sender:self];
     
 }
+
 -(void) performSegueToAppoinmentsViewController{
-    [self performSegueWithIdentifier:@"APPOINTMENTS" sender:self];
+    [self performSegueWithIdentifier:ADD_APPOINTMENT sender:self];
     
 }
+
+
 
 #pragma -mark TableView Delagate
 
@@ -86,54 +100,50 @@
         return 1;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if(tableView == self.sideMenuTableView)
         return menuItems.count;
-    else{
-            return 1;
-    }
+    else
+        return 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(tableView == self.sideMenuTableView){
-        static NSString *CellIdentifier = @"menuCell";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:menuCellIdentifier forIndexPath:indexPath];
         cell.textLabel.font=[UIFont systemFontOfSize:13.0];
         cell.backgroundColor=[UIColor groupTableViewBackgroundColor];
         cell.textLabel.text=[menuItems objectAtIndex:indexPath.row];
         return cell;
     }
+    
     else{
-        if(indexPath.section == 0){
-            static NSString *CellIdentifier = @"dashboardCell";
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
+                                 dashBoardCellIdentifier forIndexPath:indexPath];
+        if(indexPath.section == 0)
             cell.textLabel.text = @"Section 1";
-            return cell;
-        }
-        else{
-            static NSString *CellIdentifier = @"dashboardCell";
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        else
             cell.textLabel.text = @"Section 2";
-            return cell;        }
+        return cell;
     }
 }
-
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(tableView == self.sideMenuTableView){
         [self performSegueWithIdentifier:[menuItems objectAtIndex:indexPath.row] sender:self];
     }
-    else{
-        
-    }
 }
 
 
+
+#pragma -mark SegueMethods
+
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"landingView"]){
+    if([segue.identifier isEqualToString:GO_TO_LANDINGVIEW]){
         PMLandingViewController *landing = [segue destinationViewController];
         landing.delegate = self;
     }

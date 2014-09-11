@@ -31,17 +31,28 @@
     return self;
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [self.medicationTableView reloadData];
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    reminderParamaters = [[NSArray alloc] initWithObjects:@"Form",@"Frequency",@"Day of the week", @"Reminder Time", nil];
     self.medicationName.text = self.medication.medicationName;
+    reminderParamaters = [[NSArray alloc] initWithObjects:
+                          @"Form",@"Frequency",@"Day of the week", @"Reminder Time", nil];
     toSelect =[[NSString alloc]init];
 }
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.medicationTableView reloadData];
+}
+
+
+
+- (IBAction)nextButtonTapped:(id)sender {
+    [self performSegueWithIdentifier:SELECT_OSTEO_MEDICATION sender:self];
+}
+
 
 #pragma -mark TableView Delagate
 
@@ -52,95 +63,105 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"reminder";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReminderCellIdentifier forIndexPath:indexPath];
     cell.textLabel.text=[reminderParamaters objectAtIndex:indexPath.row];
-    if(indexPath.row == 0)
-        cell.detailTextLabel.text = self.medication.medicationForm;
-    else if (indexPath.row == 1 && self.medication.reminderReccurence.length !=0){
-        NSString *string = [NSString stringWithFormat:@"%@ x %@",self.medication.reminderFrequency,self.medication.reminderReccurence];
-        cell.detailTextLabel.text = string;
+    switch(indexPath.row){
+        case 0:{
+            cell.detailTextLabel.text = self.medication.medicationForm;
+            break;
+            
+        }case 1:{
+            if(self.medication.reminderReccurence.length !=0){
+                NSString *string = [NSString stringWithFormat:@"%@ x %@"
+                                    ,self.medication.reminderFrequency,
+                                    self.medication.reminderReccurence];
+                cell.detailTextLabel.text = string;
+            }
+            break;
+            
+        }case 2:{
+            if([self.medication.reminderReccurence isEqualToString:@"Daily"])
+                cell.textLabel.text= @"Time of the Day";
+            else if([self.medication.reminderReccurence isEqualToString:@"Weekly"])
+                cell.textLabel.text= @"Days of the Week";
+            else if([self.medication.reminderReccurence isEqualToString:@"Monthly"])
+                cell.textLabel.text= @"Days of the month";
+            
+            if(self.medication.days.count !=0){
+                NSMutableString *string= [[NSMutableString alloc]init];;
+                for(int i= 0 ; i< self.medication.days.count ; i++)
+                    [string appendFormat :@"%@,",[self.medication.days objectAtIndex:i]];
+                cell.detailTextLabel.text = string;
+            }
+            else if(self.medication.reminderTimings.count !=0 && [self.medication.reminderReccurence isEqualToString:@"Daily"]){
+                NSMutableString *string= [[NSMutableString alloc]init];;
+                for(int i= 0 ; i< self.medication.reminderTimings.count ; i++)
+                    [string appendFormat :@"%@,",[self.medication.reminderTimings objectAtIndex:i]];
+                cell.detailTextLabel.text = string;
+            }
+            break;
+            
+        }case 3:{
+            if(self.medication.reminderTimings.count !=0){
+                NSMutableString *string= [[NSMutableString alloc]init];
+            for(int i= 0 ; i< self.medication.reminderTimings.count ; i++)
+                [string appendFormat :@"%@,",[self.medication.reminderTimings objectAtIndex:i]];
+            cell.detailTextLabel.text = string;
+            }
+        }
     }
-    else if (indexPath.row == 2 && self.medication.days.count !=0){
-        NSMutableString *string= [[NSMutableString alloc]init];;
-        for(int i= 0 ; i< self.medication.days.count ; i++)
-            [string appendFormat :@"%@,",[self.medication.days objectAtIndex:i]];
-        cell.detailTextLabel.text = string;
-    }
-    else if (indexPath.row == 3 && self.medication.reminderTimings.count !=0){
-        NSMutableString *string= [[NSMutableString alloc]init];;
-        for(int i= 0 ; i< self.medication.reminderTimings.count ; i++)
-            [string appendFormat :@"%@,",[self.medication.reminderTimings objectAtIndex:i]];
-        cell.detailTextLabel.text = string;
-    }
-    else if(indexPath.row == 2 && self.medication.reminderTimings.count !=0 && [self.medication.reminderReccurence isEqualToString:@"Daily"]){
-        NSMutableString *string= [[NSMutableString alloc]init];;
-        for(int i= 0 ; i< self.medication.reminderTimings.count ; i++)
-            [string appendFormat :@"%@,",[self.medication.reminderTimings objectAtIndex:i]];
-        cell.detailTextLabel.text = string;
-    }
-        
-    if(indexPath.row == 2){
-        if([self.medication.reminderReccurence isEqualToString:@"Daily"])
-            cell.textLabel.text= @"Time of the Day";
-        else if([self.medication.reminderReccurence isEqualToString:@"Weekly"])
-            cell.textLabel.text= @"Days of the Week";
-        else if([self.medication.reminderReccurence isEqualToString:@"Monthly"])
-            cell.textLabel.text= @"Days of the month";
-    }
+
     return cell;
 }
 
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.row == 1){
-    [ self performSegueWithIdentifier:@"frequency" sender:self];
+    [ self performSegueWithIdentifier:SET_REMINDER_FREQUENCY sender:self];
     }
     else if(indexPath.row == 0){
         toSelect = @"Form";
-        [self performSegueWithIdentifier:@"form" sender:self];
+        [self performSegueWithIdentifier:SET_MEDICATION_FORM sender:self];
     }
     else if(indexPath.row == 2 && [self.medication.reminderReccurence isEqualToString:@"Daily"]){
-        [self performSegueWithIdentifier:@"time" sender:self];
+        [self performSegueWithIdentifier:SET_REMINDER_TIMINGS sender:self];
     }
     else if(indexPath.row == 2 && [self.medication.reminderReccurence isEqualToString:@"Weekly"]){
         toSelect = @"Day";
-        [self performSegueWithIdentifier:@"dayOrDate" sender:self];
+        [self performSegueWithIdentifier:SELECT_DAYS sender:self];
     }
     else if(indexPath.row == 2 && [self.medication.reminderReccurence isEqualToString:@"Monthly"]){
         toSelect = @"Week";
-        [self performSegueWithIdentifier:@"dayOrDate" sender:self];
+        [self performSegueWithIdentifier:SELECT_DAYS sender:self];
     }
     else
-        [self performSegueWithIdentifier:@"time" sender:self];
+        [self performSegueWithIdentifier:SET_REMINDER_TIMINGS sender:self];
 }
 
-- (IBAction)nextButtonTapped:(id)sender {
-    [self performSegueWithIdentifier:@"Osteoporosis" sender:self];
-}
 
+
+#pragma -mark Segue Methods
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"frequency"]){
+    if([segue.identifier isEqualToString:SET_REMINDER_FREQUENCY]){
         PMFrequencyViewController *frequency=[segue destinationViewController];
-        frequency.medication = self.medication
-        ;
+        frequency.medication = self.medication;
     }
-    else if([segue.identifier isEqualToString:@"time"]){
+    else if([segue.identifier isEqualToString:SET_REMINDER_TIMINGS]){
         PMReminderPickerViewController *pickTime = [segue destinationViewController];
         pickTime.medication=self.medication;
     }
-     else if([segue.identifier isEqualToString:@"form"]){
+     else if([segue.identifier isEqualToString:SET_MEDICATION_FORM]){
          PMGetDayViewController *getDay= [segue destinationViewController];
          getDay.medication =self.medication;
      }
-     else if([segue.identifier isEqualToString:@"dayOrDate"]){
+     else if([segue.identifier isEqualToString:SELECT_DAYS]){
          PMSelectDayOrDateViewController *getDay= [segue destinationViewController];
          getDay.toSelect = toSelect;
          getDay.numberOfselectionsNeeded = self.medication.reminderFrequency;
          getDay.medication = self.medication;
      }
-
 }
 
 

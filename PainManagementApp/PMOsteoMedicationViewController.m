@@ -38,8 +38,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:OsteoCellIdentifier forIndexPath:indexPath];
     cell.textLabel.text=[[medicationList objectAtIndex:indexPath.row] valueForKey:@"medicationName"];
     cell.detailTextLabel.text = @"Details about the medicaiton goes here";
     return cell;
@@ -56,7 +55,7 @@
 }
 
 - (IBAction)pushToScheduleViewController:(id)sender {
-    [self performSegueWithIdentifier:@"schedule" sender:self];
+    [self performSegueWithIdentifier:SCHEDULE_REMINDER sender:self];
 }
 
 

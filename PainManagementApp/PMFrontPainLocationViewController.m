@@ -36,7 +36,7 @@
 }
 
 - (IBAction)flipToBackViewController:(id)sender {
-    [self performSegueWithIdentifier:@"back" sender:self];
+    [self performSegueWithIdentifier:FLIP_TO_BACK sender:self];
 }
 
 - (void)didReceiveMemoryWarning

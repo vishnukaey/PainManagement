@@ -29,7 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    descriptionList = [[NSArray alloc] initWithObjects:@"Level of pain today",@"Duration of Morning stiffness",@"Did you have any fatigue",nil];
+    descriptionList = [[NSArray alloc] initWithObjects:
+                       @"Level of pain today",@"Duration of Morning stiffness",@"Did you have any fatigue",nil];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -47,8 +48,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section == 0){
-        static NSString *CellIdentifier = @"sliderCell";
-        PMOverallSliderCell *cell = (PMOverallSliderCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        PMOverallSliderCell *cell = (PMOverallSliderCell *) [tableView dequeueReusableCellWithIdentifier:SliderCellIdentifier forIndexPath:indexPath];
         cell.slider.minimumValue = 0;
         cell.slider.maximumValue = 100;
         NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
@@ -59,9 +59,9 @@
         cell.slider.popUpViewAnimatedColors = @[[UIColor greenColor], [UIColor orangeColor], [UIColor redColor]];
         return cell;
     }
+    
     else{
-        static NSString *CellIdentifier = @"notesCell";
-        PMNotesTableCell *cell = (PMNotesTableCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        PMNotesTableCell *cell = (PMNotesTableCell *) [tableView dequeueReusableCellWithIdentifier:notesCellIdentifier forIndexPath:indexPath];
         return cell;
     }
 }

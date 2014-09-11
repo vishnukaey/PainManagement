@@ -22,8 +22,9 @@
 }
 
 - (void) awakeFromNib {
-    imagesInArray = [[NSMutableArray alloc] init];
     [super awakeFromNib];
+    imagesInArray = [[NSMutableArray alloc] init];
+    [self.collectionView registerClass:[PMConfirmCollectionViewCell class] forCellWithReuseIdentifier:confirmCollectionIdentifier];
 }
 
 
@@ -41,11 +42,11 @@
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identifier = @"collection";
-    PMConfirmCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    PMConfirmCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:confirmCollectionIdentifier forIndexPath:indexPath];
     if (cell==nil){
         cell=[[PMConfirmCollectionViewCell alloc] init];
     }
+    cell.imageView = [[UIImageView alloc] init];
     cell.imageView.image = [imagesInArray objectAtIndex:indexPath.row];
     int pages = floor(_collectionView.contentSize.width / _collectionView.frame.size.width);
     [_pageController setNumberOfPages:pages];
