@@ -11,6 +11,7 @@
 @interface PMSelectDayOrDateViewController (){
     NSArray *arrayDataSource;
     int maximumSelections;
+    NSMutableArray *checkmarkStatus;
 }
 
 @end
@@ -29,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    checkmarkStatus = [[NSMutableArray alloc] init];
     arrayDataSource = [[NSArray alloc] init];
     maximumSelections = [self.numberOfselectionsNeeded intValue];
     NSArray *days=@[@"Sunday",@"Monday",@"Tuesday",@"Wednesday",@"Thursday",@"Friday",@"Saturday"];
@@ -39,6 +41,9 @@
         arrayDataSource = days;
     else
         arrayDataSource = alldays;
+     for ( int i= 0 ; i < arrayDataSource.count; i ++ ){
+         [checkmarkStatus addObject:[NSNumber numberWithBool:NO]];
+     }
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,9 +63,12 @@
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    if(cell == Nil)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:@"Cell"];
     cell.textLabel.text  = [arrayDataSource objectAtIndex:indexPath.row];
+    if ([[checkmarkStatus objectAtIndex:indexPath.row] boolValue] == NO) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
     return cell;
 }
 
@@ -71,16 +79,27 @@
         if(cell2.accessoryType == UITableViewCellAccessoryCheckmark)
             selectionCount++;
     }
-        UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-        if(cell.accessoryType == UITableViewCellAccessoryCheckmark)
-            cell.accessoryType = UITableViewCellAccessoryNone;
-        else{
-            if(selectionCount >= maximumSelections)
-                [Utilities showAlert:@"Selection Limit reached" withTitle:@"Selection Complete"];
-            else
-                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSNumber *newState;
+	if ([[checkmarkStatus objectAtIndex:indexPath.row] boolValue] == NO) {
+        if(selectionCount >= maximumSelections){
+            [Utilities showAlert:@"Maximum days Selected" withTitle:@"Selection Limit"];
         }
+        else{
+		newState = [NSNumber numberWithBool:YES];
+		cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+	}
+    else {
+		newState = [NSNumber numberWithBool:NO];
+		cell.accessoryType = UITableViewCellAccessoryNone;
+	}
+    
+    if(newState)
+	[checkmarkStatus replaceObjectAtIndex:indexPath.row withObject:newState];
 }
+
+
 - (IBAction)done:(id)sender {
     self.medication.days = [[NSMutableArray alloc] init];
     for ( int i= 0 ; i < arrayDataSource.count; i ++ ){

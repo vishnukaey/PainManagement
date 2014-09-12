@@ -50,6 +50,17 @@
 
 
 - (IBAction)nextButtonTapped:(id)sender {
+    bool areAllMedicationsConfirmed = YES;
+    for(int i=0 ;i<self.selectedMedications.count;i++)
+    {
+        if(![[[self.selectedMedications objectAtIndex:i] valueForKey:@"isMedicationConfirmed"] isEqualToString:@"YES"]){
+            areAllMedicationsConfirmed = NO;
+            [self.delegate addAConfirmationViewForMedicationAtIndex:i];
+            [self.navigationController popViewControllerAnimated:YES];
+            break;
+        }
+    }
+    if(areAllMedicationsConfirmed)
     [self performSegueWithIdentifier:SELECT_OSTEO_MEDICATION sender:self];
 }
 
@@ -93,20 +104,15 @@
                     [string appendFormat :@"%@,",[self.medication.days objectAtIndex:i]];
                 cell.detailTextLabel.text = string;
             }
-            else if(self.medication.reminderTimings.count !=0 && [self.medication.reminderReccurence isEqualToString:@"Daily"]){
-                NSMutableString *string= [[NSMutableString alloc]init];;
-                for(int i= 0 ; i< self.medication.reminderTimings.count ; i++)
-                    [string appendFormat :@"%@,",[self.medication.reminderTimings objectAtIndex:i]];
-                cell.detailTextLabel.text = string;
+            else if(self.medication.reminderTimings.length !=0 && [self.medication.reminderReccurence isEqualToString:@"Daily"]){
+                cell.detailTextLabel.text = self.medication.reminderTimings;
             }
             break;
             
         }case 3:{
-            if(self.medication.reminderTimings.count !=0){
-                NSMutableString *string= [[NSMutableString alloc]init];
-            for(int i= 0 ; i< self.medication.reminderTimings.count ; i++)
-                [string appendFormat :@"%@,",[self.medication.reminderTimings objectAtIndex:i]];
-            cell.detailTextLabel.text = string;
+            if(self.medication.reminderTimings.length !=0){
+                cell.detailTextLabel.text = self.medication.reminderTimings;
+
             }
         }
     }

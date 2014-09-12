@@ -16,9 +16,10 @@
 #import "PMDataHandler.h"
 #import "ConfirmView.h"
 
-@interface PMAddMedicationViewController ()<ConfirmMedicationViewDelegate>{
+@interface PMAddMedicationViewController ()<ConfirmMedicationViewDelegate,setRemindersDelegate >{
     NSArray *medicationList;
     NSMutableArray *selectedMedications;
+    PMMedicationModal *confirmedMedication;
 }
 
 @end
@@ -37,7 +38,6 @@
 {
     [super viewDidLoad];
     medicationList = [[NSArray alloc] init];
-    
     [self getAllMedications];
 }
 
@@ -47,23 +47,24 @@
     selectedMedications = [[NSMutableArray alloc] init];
     [self addSelectedmedications];
     if(selectedMedications.count != 0)
-        [self addAConfirmationViewForMedication];
+        [self addAConfirmationViewForMedicationAtIndex:0];
     else
         [Utilities showAlert:@"Select atleast One medication" withTitle:@"No Selection"];
 }
 
-
--(void) addAConfirmationViewForMedication{
+-(void) addAConfirmationViewForMedicationAtIndex:(int)index{
+    confirmedMedication =[[PMMedicationModal alloc] init];
+    PMMedicationModal *med =[[PMMedicationModal alloc]init];
+    med= [selectedMedications objectAtIndex:index];
     ConfirmView *ConfirmMedicationView = [[ConfirmView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     NSArray *views = [[NSBundle mainBundle] loadNibNamed:CONFIRM_VIEW owner:self options:nil];
     ConfirmMedicationView = [views objectAtIndex:0];
-    PMMedicationModal *med = [[PMMedicationModal alloc] init];
-    med = [selectedMedications objectAtIndex:0];
     ConfirmMedicationView.medicationName.text = med.medicationName;
     ConfirmMedicationView.medicationForm.text = med.medicationForm;
     ConfirmMedicationView.imagesArray = med.medicationImages;
     ConfirmMedicationView.delegate = self;
     [self.view addSubview:ConfirmMedicationView];
+    confirmedMedication=med;
 }
 
 
@@ -104,6 +105,7 @@
 #pragma -mark delegate method of ConfirmView
 
 -(void) pushToReminderViewController{
+    confirmedMedication.isMedicationConfirmed = @"YES";
     [self performSegueWithIdentifier:SET_REMINDER sender:self];
 }
 
@@ -140,10 +142,10 @@
 
 #pragma -mark Segue Methods
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
     if([segue.identifier isEqualToString:SET_REMINDER]){
         PMMedicationReminderViewController *reminder = [segue destinationViewController];
-        reminder.medication = [selectedMedications objectAtIndex:0];
+        reminder.delegate = self;
+        reminder.medication = confirmedMedication;
         reminder.selectedMedications = selectedMedications;
         NSLog(@"%@",reminder.medication);
     }

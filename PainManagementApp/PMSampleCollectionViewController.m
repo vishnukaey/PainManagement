@@ -11,6 +11,7 @@
 
 @interface PMSampleCollectionViewController (){
     NSArray *frequencyArray,*reccurenceArray;
+    CGRect selectionFrame;
 }
 
 @end
@@ -31,6 +32,9 @@
     [super viewDidLoad];
     frequencyArray = @[@"",@"",@"1",@"2",@"3",@"4",@"5",@"",@""];
     reccurenceArray = @[@"",@"",@"Daily",@"Weekly",@"Monthly",@"",@""];
+    CGRect selectionFrame2 = self.selectionView.frame ;
+    selectionFrame= [ self.view convertRect:self.selectionView.frame toView:self.frequencyTable];
+    NSLog(@"%f %f",selectionFrame.origin.y,selectionFrame2.origin.y);
 }
 
 #pragma mark - Table view data source
@@ -66,7 +70,23 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+            NSLog(@"%f",cell.contentView.frame.origin.y);
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    for(int i=0;i<frequencyArray.count;i++){
+        NSIndexPath *ind= [NSIndexPath indexPathForRow:i inSection:0];
+        UITableViewCell *cell =[self.frequencyTable cellForRowAtIndexPath:ind];
+        CGRect fr = [self.view convertRect:cell.contentView.frame toView:self.frequencyTable];
+        float top = fr.origin.y;
+        NSLog(@"%f %f",selectionFrame.origin.y,top);
+        if(top > selectionFrame.origin.y)
+            cell.textLabel.textColor = [UIColor whiteColor];
+        else
+            cell.textLabel.textColor = [UIColor greenColor];
+    }
 }
 
 

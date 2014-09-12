@@ -17,4 +17,5 @@
     @synthesize reminderTimings;
     @synthesize days;
     @synthesize medicationImages;
+    @synthesize isMedicationConfirmed;
 @end

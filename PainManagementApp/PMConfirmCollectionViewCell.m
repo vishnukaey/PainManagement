@@ -19,4 +19,9 @@
     return self;
 }
 
+
+- (void)awakeFromNib {
+    self.imageView=[[UIImageView alloc] init];
+}
+
 @end

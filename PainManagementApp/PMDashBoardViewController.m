@@ -33,13 +33,21 @@
     menuItems=[[NSArray alloc]initWithContentsOfFile:
                [[NSBundle mainBundle] pathForResource:
                 DASHBOARD_MENU_ITEMS ofType:@"plist"]];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"logInStatus"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     [self performSegueWithIdentifier:GO_TO_LANDINGVIEW sender:self];
 }
 
-
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"logInStatus"]){
+        self.usernameLabel.text=[[NSUserDefaults standardUserDefaults] valueForKey:@"username"];
+    }
+}
 
 -(void) viewWillDisappear:(BOOL)animated{
-    if(self.sideMenuTableView.frame.origin.x==0)
+    [super viewWillDisappear:animated];
+    if(self.sideMenuView.frame.origin.x==0)
         [self toggleSideMenu:Nil];
 }
 
@@ -56,18 +64,18 @@
 -(void) toggleSideMenulist:(bool)shouldshow{
     int offset;
     if(shouldshow)
-        offset=self.sideMenuTableView.frame.size.width;
+        offset=self.sideMenuView.frame.size.width;
     else
-        offset=-self.sideMenuTableView.frame.size.width;
+        offset=-self.sideMenuView.frame.size.width;
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration: 0.25];
     CGRect dashBoardframe = self.dashBoardTableView.frame;
     dashBoardframe.origin.x += offset;
     self.dashBoardTableView.frame = dashBoardframe;
-    CGRect menuListFrame = self.sideMenuTableView.frame;
+    CGRect menuListFrame = self.sideMenuView.frame;
     menuListFrame.origin.x += offset;
-    self.sideMenuTableView.frame = menuListFrame;
+    self.sideMenuView.frame = menuListFrame;
     [UIView commitAnimations];
 }
 

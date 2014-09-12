@@ -30,6 +30,8 @@
 #define FLIP_TO_BACK @"back"
 #define ADD_AN_APPOINTMENT @"addAppointment"
 #define SAVE_APPOINTMENT @"saveAppointment"
+#define ADD_OSTEO_REMINDER @"osteoReminder"
+#define LOGIN_SIGNUP @"loginOrSignup"
 
 
 #pragma -mark TableViewCell Identifiers
@@ -41,6 +43,7 @@ static NSString *OsteoCellIdentifier = @"osteo-Cell";
 static NSString *SliderCellIdentifier = @"sliderCell";
 static NSString *notesCellIdentifier = @"notesCell";
 static NSString *physicianCellIdentifier = @"physicianCell";
+static NSString *osteoReminderCellIdentifier = @"osteo-reminder";
 
 #pragma -mark CollectionViewCell Identifiers
 static NSString *confirmCollectionIdentifier = @"collection";

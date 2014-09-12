@@ -10,5 +10,9 @@
 
 @interface PMDashBoardViewController : UIViewController
     @property (weak, nonatomic) IBOutlet UITableView *sideMenuTableView;
+@property (weak, nonatomic) IBOutlet UIView *sideMenuView;
     @property (weak, nonatomic) IBOutlet UITableView *dashBoardTableView;
+@property (strong, nonatomic) IBOutlet UIView *userImage;
+@property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *complianceLabel;
 @end

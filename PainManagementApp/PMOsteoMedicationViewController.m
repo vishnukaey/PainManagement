@@ -7,9 +7,13 @@
 //
 
 #import "PMOsteoMedicationViewController.h"
+#import "PMOsteoporosisReminderViewController.h"
 
 @interface PMOsteoMedicationViewController (){
     NSArray *medicationList;
+    NSMutableDictionary *osteoMedication;
+    int selectedMedicationIndex;
+    PMOsteoMedication *OsteomedicationModal;
 }
 @end
 
@@ -27,6 +31,8 @@
 {
     [super viewDidLoad];
     medicationList = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"medication" ofType:@"plist"]];
+    osteoMedication =[[NSMutableDictionary alloc] init];
+    OsteomedicationModal= [[PMOsteoMedication alloc] init];
 }
 
 
@@ -52,10 +58,22 @@
         cell2.accessoryType= UITableViewCellAccessoryNone;
     }
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    selectedMedicationIndex = (int) indexPath.row;
 }
 
+
 - (IBAction)pushToScheduleViewController:(id)sender {
+    OsteomedicationModal.medicationName = [[medicationList objectAtIndex:selectedMedicationIndex] valueForKey:@"medicationName"];
     [self performSegueWithIdentifier:SCHEDULE_REMINDER sender:self];
+}
+
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:SCHEDULE_REMINDER]){
+        PMOsteoporosisReminderViewController *reminder = [segue destinationViewController];
+        reminder.medication = self.medication;
+        reminder.osteoMedication = OsteomedicationModal;
+    }
 }
 
 

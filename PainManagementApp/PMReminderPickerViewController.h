@@ -10,9 +10,7 @@
 
 
 @interface PMReminderPickerViewController : UIViewController
-    @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+    @property (weak, nonatomic) IBOutlet UITextField *reminderTimeTextField;
     @property (assign, nonatomic)  PMMedicationModal *medication;
-    @property (weak, nonatomic) IBOutlet UITableView *reminderView;
-    @property (weak, nonatomic) IBOutlet UIView *pickerContainerView;
 @end
 

@@ -22,9 +22,32 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+
+- (void)viewDidLoad{
     [super viewDidLoad];
+}
+
+
+- (IBAction)logIn:(id)sender {
+        if([self.username.text isEqualToString:@"kaey"] && [self.password.text isEqualToString:@"kaey"]){
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setBool:YES forKey:@"logInStatus"];
+            [defaults setValue:self.username.text forKey:@"username"];
+            [defaults synchronize];
+            [self.delegate saveMyMedications];
+            [self.navigationController dismissViewControllerAnimated:YES completion:Nil];
+    }
+    else
+        [Utilities showAlert:@"Wrong Entry" withTitle:@"Error"];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if(textField == self.username )
+       [self.password becomeFirstResponder];
+    else
+        [self logIn:self];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning

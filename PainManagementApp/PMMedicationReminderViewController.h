@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol setRemindersDelegate <NSObject>
+
+-(void) addAConfirmationViewForMedicationAtIndex:(int) index;
+
+@end
+
 @interface PMMedicationReminderViewController : UIViewController
+@property(weak,nonatomic) id <setRemindersDelegate> delegate;
     @property (weak, nonatomic) IBOutlet UILabel *medicationName;
     @property (weak, nonatomic) IBOutlet UITableView *medicationTableView;
     @property (assign, nonatomic) PMMedicationModal *medication;
