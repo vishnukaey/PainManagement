@@ -57,7 +57,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSLog(@"connectionDidFinishLoading");
-    NSLog(@"Succeeded! Received %d bytes of data",[responseData length]);
+    NSLog(@"Succeeded! Received %lu bytes of data",(unsigned long)[responseData length]);
     if([responseData length] != 0){
         NSArray *array = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:Nil];
         self.successRequestCallBack(array);

@@ -15,8 +15,11 @@
 		221D394619BEDFEB001690C4 /* PMAddAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D394519BEDFEB001690C4 /* PMAddAppointmentViewController.m */; };
 		221D394919BEDFFE001690C4 /* PMSaveAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D394819BEDFFE001690C4 /* PMSaveAppointmentViewController.m */; };
 		221D394C19BEE025001690C4 /* PMAppointmentRemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D394B19BEE025001690C4 /* PMAppointmentRemindersViewController.m */; };
+		2269885219C6EA2C0042561A /* PMFrequencyPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2269885119C6EA2C0042561A /* PMFrequencyPickerView.xib */; };
+		2269885519C6EA480042561A /* PMFrequencyPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2269885419C6EA480042561A /* PMFrequencyPickerView.m */; };
 		226C0DB619C0AD9D0081E7BD /* ConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226C0DB519C0AD9D0081E7BD /* ConfirmView.xib */; };
 		226C0DBC19C0AEAA0081E7BD /* ConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 226C0DBB19C0AEAA0081E7BD /* ConfirmView.m */; };
+		2277390019C7145700DE8965 /* OsteoporosisMedication.plist in Resources */ = {isa = PBXBuildFile; fileRef = 227738FF19C7145700DE8965 /* OsteoporosisMedication.plist */; };
 		2279D7DA19BF03D800DCFF33 /* ball-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 2279D7D719BF03D800DCFF33 /* ball-green.png */; };
 		2279D7DF19BF04BA00DCFF33 /* ball-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 2279D7DD19BF04BA00DCFF33 /* ball-orange.png */; };
 		2279D7E019BF04BA00DCFF33 /* Blue_2DGlass_2DButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2279D7DE19BF04BA00DCFF33 /* Blue_2DGlass_2DButton.png */; };
@@ -95,9 +98,13 @@
 		221D394819BEDFFE001690C4 /* PMSaveAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSaveAppointmentViewController.m; sourceTree = "<group>"; };
 		221D394A19BEE025001690C4 /* PMAppointmentRemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMAppointmentRemindersViewController.h; sourceTree = "<group>"; };
 		221D394B19BEE025001690C4 /* PMAppointmentRemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMAppointmentRemindersViewController.m; sourceTree = "<group>"; };
+		2269885119C6EA2C0042561A /* PMFrequencyPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMFrequencyPickerView.xib; sourceTree = "<group>"; };
+		2269885319C6EA480042561A /* PMFrequencyPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMFrequencyPickerView.h; sourceTree = "<group>"; };
+		2269885419C6EA480042561A /* PMFrequencyPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMFrequencyPickerView.m; sourceTree = "<group>"; };
 		226C0DB519C0AD9D0081E7BD /* ConfirmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmView.xib; sourceTree = "<group>"; };
 		226C0DBA19C0AEAA0081E7BD /* ConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmView.h; sourceTree = "<group>"; };
 		226C0DBB19C0AEAA0081E7BD /* ConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmView.m; sourceTree = "<group>"; };
+		227738FF19C7145700DE8965 /* OsteoporosisMedication.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OsteoporosisMedication.plist; sourceTree = "<group>"; };
 		2279D7D719BF03D800DCFF33 /* ball-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball-green.png"; sourceTree = "<group>"; };
 		2279D7DD19BF04BA00DCFF33 /* ball-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball-orange.png"; sourceTree = "<group>"; };
 		2279D7DE19BF04BA00DCFF33 /* Blue_2DGlass_2DButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue_2DGlass_2DButton.png; sourceTree = "<group>"; };
@@ -221,6 +228,16 @@
 				221D394B19BEE025001690C4 /* PMAppointmentRemindersViewController.m */,
 			);
 			name = AppoinmentsViewController;
+			sourceTree = "<group>";
+		};
+		2269885019C6E9D40042561A /* FrequencyPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				2269885119C6EA2C0042561A /* PMFrequencyPickerView.xib */,
+				2269885319C6EA480042561A /* PMFrequencyPickerView.h */,
+				2269885419C6EA480042561A /* PMFrequencyPickerView.m */,
+			);
+			name = FrequencyPickerView;
 			sourceTree = "<group>";
 		};
 		2279D7E119BF182100DCFF33 /* frequencyViewcontroller */ = {
@@ -361,6 +378,7 @@
 		22A79E7B19B4609E00E00023 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2269885019C6E9D40042561A /* FrequencyPickerView */,
 				22FC58DD19C19D1A008DF361 /* CollectionViewCells */,
 				22FC58DC19C19CFA008DF361 /* TableViewCells */,
 				22FC58DB19C19C15008DF361 /* ConfirmMedicationView */,
@@ -541,6 +559,7 @@
 			children = (
 				22FC58DF19C19E73008DF361 /* DashBoardMenuItems.plist */,
 				22FC58E119C1A198008DF361 /* Constants.h */,
+				227738FF19C7145700DE8965 /* OsteoporosisMedication.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -648,6 +667,7 @@
 				221D394319BEDDAC001690C4 /* blank-clipboard-and-pen-with-stethoscope-870505.jpg in Resources */,
 				2299D03319B5E56A00AA6252 /* methotrexate.jpeg in Resources */,
 				226C0DB619C0AD9D0081E7BD /* ConfirmView.xib in Resources */,
+				2277390019C7145700DE8965 /* OsteoporosisMedication.plist in Resources */,
 				2299D02319B5947700AA6252 /* flip.png in Resources */,
 				22A79E5019B45D7900E00023 /* InfoPlist.strings in Resources */,
 				22F883DC19C2BF2000C4363C /* userplaceholder.png in Resources */,
@@ -659,6 +679,7 @@
 				2299D03419B5E56A00AA6252 /* Plaquenil.jpg in Resources */,
 				2299D03519B5E56A00AA6252 /* sulfasalazine.jpeg in Resources */,
 				22FC58E019C19E73008DF361 /* DashBoardMenuItems.plist in Resources */,
+				2269885219C6EA2C0042561A /* PMFrequencyPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,6 +737,7 @@
 				221D393C19BECCAA001690C4 /* PMPhysicianCell.m in Sources */,
 				22F883E419C2C87E00C4363C /* PMGetNewUsernameViewController.m in Sources */,
 				22A79E5219B45D7900E00023 /* main.m in Sources */,
+				2269885519C6EA480042561A /* PMFrequencyPickerView.m in Sources */,
 				2299D04419B5FEA800AA6252 /* PMMedicationReminderViewController.m in Sources */,
 				22A79E8619B48A4200E00023 /* PMOverallPainViewController.m in Sources */,
 				22952ECC19B6FFFF0073E131 /* PMFrequencyViewController.m in Sources */,
@@ -877,7 +899,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PainManagementApp/PainManagementApp-Prefix.pch";
 				INFOPLIST_FILE = "PainManagementApp/PainManagementApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -894,7 +916,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PainManagementApp/PainManagementApp-Prefix.pch";
 				INFOPLIST_FILE = "PainManagementApp/PainManagementApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

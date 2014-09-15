@@ -34,11 +34,15 @@
 
 
 -(void) saveMyMedications{
+    if(self.osteoMedication.nextReminder){
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if([defaults boolForKey:@"logInStatus"])
         [Utilities showAlert:@"Save Data" withTitle:@"Success"];
     else
         [self performSegueWithIdentifier:LOGIN_SIGNUP sender:self];
+    }
+    else
+        [Utilities showAlert:@"Please Select next reminder" withTitle:@"No Selection"];
 }
 
 -(void) viewWillAppear:(BOOL)animated{

@@ -46,6 +46,7 @@
     if (cell==nil){
         cell=[[PMConfirmCollectionViewCell alloc] init];
     }
+    
     cell.imageView = [[UIImageView alloc] init];
     cell.imageView.image = [imagesInArray objectAtIndex:indexPath.row];
     int pages = floor(_collectionView.contentSize.width / _collectionView.frame.size.width);

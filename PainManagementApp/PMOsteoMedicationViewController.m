@@ -30,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    medicationList = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"medication" ofType:@"plist"]];
+    medicationList = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"OsteoporosisMedication" ofType:@"plist"]];
     osteoMedication =[[NSMutableDictionary alloc] init];
     OsteomedicationModal= [[PMOsteoMedication alloc] init];
 }
@@ -45,7 +45,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:OsteoCellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text=[[medicationList objectAtIndex:indexPath.row] valueForKey:@"medicationName"];
+    cell.textLabel.text=[medicationList objectAtIndex:indexPath.row];
     cell.detailTextLabel.text = @"Details about the medicaiton goes here";
     return cell;
 }
@@ -63,8 +63,12 @@
 
 
 - (IBAction)pushToScheduleViewController:(id)sender {
-    OsteomedicationModal.medicationName = [[medicationList objectAtIndex:selectedMedicationIndex] valueForKey:@"medicationName"];
+    if(selectedMedicationIndex ){
+    OsteomedicationModal.medicationName = [medicationList objectAtIndex:selectedMedicationIndex];
     [self performSegueWithIdentifier:SCHEDULE_REMINDER sender:self];
+    }
+    else
+        [Utilities showAlert:@"Please Select a medication" withTitle:@"No Selection"];
 }
 
 

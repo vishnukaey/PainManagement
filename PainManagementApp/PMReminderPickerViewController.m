@@ -33,6 +33,7 @@
     [datePicker addTarget:self action:@selector(dateChanged:)
      forControlEvents:UIControlEventValueChanged];
     self.reminderTimeTextField.inputView = datePicker;
+    [self.reminderTimeTextField becomeFirstResponder];
 }
 
 

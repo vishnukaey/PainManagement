@@ -50,18 +50,22 @@
 
 
 - (IBAction)nextButtonTapped:(id)sender {
-    bool areAllMedicationsConfirmed = YES;
-    for(int i=0 ;i<self.selectedMedications.count;i++)
-    {
-        if(![[[self.selectedMedications objectAtIndex:i] valueForKey:@"isMedicationConfirmed"] isEqualToString:@"YES"]){
-            areAllMedicationsConfirmed = NO;
-            [self.delegate addAConfirmationViewForMedicationAtIndex:i];
-            [self.navigationController popViewControllerAnimated:YES];
-            break;
+    if(self.medication.reminderFrequency && self.medication.reminderReccurence && self.medication.reminderTimings){
+        bool areAllMedicationsConfirmed = YES;
+        for(int i=0 ;i<self.selectedMedications.count;i++)
+        {
+            if(![[[self.selectedMedications objectAtIndex:i] valueForKey:@"isMedicationConfirmed"] isEqualToString:@"YES"]){
+                areAllMedicationsConfirmed = NO;
+                [self.delegate addAConfirmationViewForMedicationAtIndex:i];
+                [self.navigationController popViewControllerAnimated:YES];
+                break;
+            }
         }
+        if(areAllMedicationsConfirmed)
+            [self performSegueWithIdentifier:SELECT_OSTEO_MEDICATION sender:self];
     }
-    if(areAllMedicationsConfirmed)
-    [self performSegueWithIdentifier:SELECT_OSTEO_MEDICATION sender:self];
+    else
+        [Utilities showAlert:@"Please select all the fields" withTitle:@"Incomplete Selection"];
 }
 
 
@@ -112,7 +116,6 @@
         }case 3:{
             if(self.medication.reminderTimings.length !=0){
                 cell.detailTextLabel.text = self.medication.reminderTimings;
-
             }
         }
     }

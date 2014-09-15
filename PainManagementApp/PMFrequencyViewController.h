@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface PMFrequencyViewController : UIViewController
-    @property (weak, nonatomic) IBOutlet UIPickerView *frequecyPickerView;
     @property (weak, nonatomic) IBOutlet UILabel *frequencyLabel;
     @property (weak, nonatomic) IBOutlet UILabel *reccurenceLabel;
     @property (assign,nonatomic)  PMMedicationModal *medication;
+    @property (weak, nonatomic) IBOutlet UITableView *frequencyTable;
+    @property (weak, nonatomic) IBOutlet UITableView *reccurenceTable;
+@property (weak, nonatomic) IBOutlet UIView *selectionView;
+
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+
+
 @end

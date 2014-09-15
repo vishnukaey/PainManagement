@@ -1,52 +1,37 @@
 //
-//  PMFrequencyViewController.m
+//  PMFrequencyPickerView.m
 //  PainManagementApp
 //
-//  Created by Vishnu on 03/09/14.
+//  Created by Vishnu on 15/09/14.
 //  Copyright (c) 2014 DenovoNow. All rights reserved.
 //
 
-#import "PMFrequencyViewController.h"
-#import "PMReminderPickerViewController.h"
+#import "PMFrequencyPickerView.h"
 
-/* 
- 
- Sets the frequency of intake of medication
- 
- */
-
-
-@interface PMFrequencyViewController ()  {
+@implementation PMFrequencyPickerView{
     NSArray *frequencyArray,*reccurenceArray;
     CGRect selectionFrame;
 }
 
-@end
-
-@implementation PMFrequencyViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithFrame:frame];
     if (self) {
+        // Initialization code
     }
     return self;
 }
 
-- (void)viewDidLoad{
-    [super viewDidLoad];
+- (void) awakeFromNib {
+    [super awakeFromNib];
     frequencyArray = @[@"",@"",@"1",@"2",@"3",@"4",@"5",@"",@""];
     reccurenceArray = @[@"",@"",@"Daily",@"Weekly",@"Monthly",@"",@""];
+    [self.frequencyTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"frequency"];
+    [self.reccurenceTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"reccurence"];
     selectionFrame = self.containerView.frame;
 }
 
-- (IBAction)doneAddingFrequency:(id)sender {
-    self.medication.reminderReccurence = self.reccurenceLabel.text;
-    self.medication.reminderFrequency = self.frequencyLabel.text ;
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-#pragma -mark PickerView delegates
+#pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -95,7 +80,6 @@
             if(top > selectionFrame.origin.y-100 && top < selectionFrame.origin.y-56){
                 cell.textLabel.textColor = [UIColor whiteColor];
                 cell.textLabel.alpha = 1.0;
-                self.frequencyLabel.text = cell.textLabel.text;
             }
             else{
                 cell.textLabel.textColor = [UIColor blackColor];
@@ -113,7 +97,6 @@
             if(top > selectionFrame.origin.y-100 && top < selectionFrame.origin.y-56){
                 cell.textLabel.textColor = [UIColor whiteColor];
                 cell.textLabel.alpha = 1.0;
-                self.reccurenceLabel.text = cell.textLabel.text;
             }
             else{
                 cell.textLabel.textColor = [UIColor blackColor];
@@ -122,12 +105,6 @@
         }
     }
     
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
 }
 
 @end
