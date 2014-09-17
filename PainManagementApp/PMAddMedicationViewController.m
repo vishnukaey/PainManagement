@@ -53,20 +53,57 @@
 }
 
 -(void) addAConfirmationViewForMedicationAtIndex:(int)index{
-    confirmedMedication =[[PMMedicationModal alloc] init];
-    PMMedicationModal *med =[[PMMedicationModal alloc]init];
-    med= [selectedMedications objectAtIndex:index];
-    ConfirmView *ConfirmMedicationView = [[ConfirmView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
-    NSArray *views = [[NSBundle mainBundle] loadNibNamed:CONFIRM_VIEW owner:self options:nil];
-    ConfirmMedicationView = [views objectAtIndex:0];
-    ConfirmMedicationView.medicationName.text = med.medicationName;
-    ConfirmMedicationView.medicationForm.text = med.medicationForm;
-    ConfirmMedicationView.imagesArray = med.medicationImages;
-    ConfirmMedicationView.delegate = self;
-    [self.view addSubview:ConfirmMedicationView];
-    confirmedMedication=med;
+    self.navigationItem.rightBarButtonItem.enabled=NO;
+    confirmedMedication = [selectedMedications objectAtIndex:index];
+    ConfirmView *confirmMedicationView = [ConfirmView initFromNib];
+    confirmMedicationView.delegate = self;
+    [self.view addSubview:confirmMedicationView];
+    [self performAutoLayoutForView:confirmMedicationView];
+    confirmMedicationView.medicationName.text = confirmedMedication.medicationName;
+    confirmMedicationView.medicationForm.text = confirmedMedication.medicationForm;
+    confirmMedicationView.imagesArray = confirmedMedication.medicationImages;
+    [confirmMedicationView.collectionView reloadData];
 }
 
+
+-(void) performAutoLayoutForView:(ConfirmView*) confirmMedicationView{
+    [confirmMedicationView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:confirmMedicationView
+                                                          attribute:NSLayoutAttributeWidth
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeWidth
+                                                         multiplier:1
+                                                           constant:0]];
+    
+    // Height constraint, half of parent view height
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:confirmMedicationView
+                                                          attribute:NSLayoutAttributeHeight
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeHeight
+                                                         multiplier:1
+                                                           constant:0]];
+    
+    // Center horizontally
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:confirmMedicationView
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    
+    // Center vertically
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:confirmMedicationView
+                                                          attribute:NSLayoutAttributeCenterY
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterY
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    
+}
 
 -(void) getAllMedications{
     PMDataHandler *cloud = [[PMDataHandler alloc] init];
@@ -89,11 +126,10 @@
         if(cell2.accessoryType == UITableViewCellAccessoryCheckmark){
             PMMedicationModal *medication = [[PMMedicationModal alloc] init];
             medication.medicationName =[[medicationList objectAtIndex:index ] valueForKey:@"name"];
-            NSURL *url = [NSURL URLWithString:[[medicationList objectAtIndex:index ] valueForKey:@"imageUrl"]];
-            NSData *data = [NSData dataWithContentsOfURL:url];
             medication.medicationImages = [[NSMutableArray alloc] init];
-            [medication.medicationImages addObject:[[UIImage alloc] initWithData:data]];
-            [medication.medicationImages addObject:[UIImage imageNamed:@"ball-orange.png"]];
+            NSString *url = [[medicationList objectAtIndex:index] valueForKey:@"imageUrl"];
+            [medication.medicationImages addObject:url];
+            [medication.medicationImages addObject:url];
             medication.medicationForm= [[medicationList objectAtIndex:index ] valueForKey:@"form"];
             [selectedMedications addObject:medication];
         }
@@ -105,6 +141,7 @@
 #pragma -mark delegate method of ConfirmView
 
 -(void) pushToReminderViewController{
+    self.navigationItem.rightBarButtonItem.enabled =YES;
     confirmedMedication.isMedicationConfirmed = @"YES";
     [self performSegueWithIdentifier:SET_REMINDER sender:self];
 }

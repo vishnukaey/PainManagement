@@ -19,5 +19,6 @@
     @property (weak, nonatomic) IBOutlet UIButton *confirmMedication;
     @property (weak, nonatomic) IBOutlet UIPageControl *pageController;
     @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-    @property  (assign,nonatomic) NSArray *imagesArray;
+    @property  (weak, nonatomic) NSArray *imagesArray;
++ (id)initFromNib;
 @end

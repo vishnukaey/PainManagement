@@ -9,7 +9,7 @@
 #import "PMOsteoMedication.h"
 
 @implementation PMOsteoMedication
-@synthesize medicationName;
-@synthesize lastReminder;
-@synthesize nextReminder;
+    @synthesize medicationName;
+    @synthesize lastReminder;
+    @synthesize nextReminder;
 @end

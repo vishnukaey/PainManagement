@@ -53,9 +53,25 @@
 
 - (IBAction)Done:(id)sender {
     if(self.reminderTimeTextField.text .length !=0){
-    self.medication.reminderTimings = self.reminderTimeTextField.text;
-    [self.navigationController popViewControllerAnimated:YES];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"MM/dd/yyyy"];
+        NSDate *date = [dateFormat dateFromString:self.reminderTimeTextField.text];
+        if([date isKindOfClass:[NSDate class]]) {
+            self.medication.reminderTimings = self.reminderTimeTextField.text;
+            [self.navigationController popViewControllerAnimated:YES];
+        }
     }
+    else{
+        [Utilities showAlert:@"Please select a time" withTitle:@"No selection"];
+    }
+}
+
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    if (action == @selector(paste:))
+        return NO;
+    return [super canPerformAction:action withSender:sender];
 }
 
 

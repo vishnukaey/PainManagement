@@ -70,6 +70,8 @@
 		22FC58E019C19E73008DF361 /* DashBoardMenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22FC58DF19C19E73008DF361 /* DashBoardMenuItems.plist */; };
 		22FC58E619C1A355008DF361 /* PMDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FC58E519C1A355008DF361 /* PMDataHandler.m */; };
 		22FC58ED19C1A4EC008DF361 /* PMSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FC58EC19C1A4EC008DF361 /* PMSignInViewController.m */; };
+		22FED67819C80BD2003015F7 /* PMCouponedMedicationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FED67719C80BD2003015F7 /* PMCouponedMedicationCell.m */; };
+		22FED67B19C80E3F003015F7 /* PMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FED67A19C80E3F003015F7 /* PMUser.m */; };
 		CD2C4DCCF3C74B03BE1A08D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EE4E37EE644B3E90371A78 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +188,10 @@
 		22FC58E519C1A355008DF361 /* PMDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMDataHandler.m; sourceTree = "<group>"; };
 		22FC58EB19C1A4EC008DF361 /* PMSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSignInViewController.h; sourceTree = "<group>"; };
 		22FC58EC19C1A4EC008DF361 /* PMSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSignInViewController.m; sourceTree = "<group>"; };
+		22FED67619C80BD2003015F7 /* PMCouponedMedicationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCouponedMedicationCell.h; sourceTree = "<group>"; };
+		22FED67719C80BD2003015F7 /* PMCouponedMedicationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCouponedMedicationCell.m; sourceTree = "<group>"; };
+		22FED67919C80E3F003015F7 /* PMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMUser.h; sourceTree = "<group>"; };
+		22FED67A19C80E3F003015F7 /* PMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMUser.m; sourceTree = "<group>"; };
 		38F0E8513E42460F853CF309 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C4EE4E37EE644B3E90371A78 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -378,6 +384,7 @@
 		22A79E7B19B4609E00E00023 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				22FED67519C80B97003015F7 /* CouponedMedicationView */,
 				2269885019C6E9D40042561A /* FrequencyPickerView */,
 				22FC58DD19C19D1A008DF361 /* CollectionViewCells */,
 				22FC58DC19C19CFA008DF361 /* TableViewCells */,
@@ -393,6 +400,8 @@
 				229A13AE19B97C020002BEA7 /* PMMedicationModal.m */,
 				22F883F119C307DC00C4363C /* PMOsteoMedication.h */,
 				22F883F219C307DC00C4363C /* PMOsteoMedication.m */,
+				22FED67919C80E3F003015F7 /* PMUser.h */,
+				22FED67A19C80E3F003015F7 /* PMUser.m */,
 			);
 			name = "Modal Classes";
 			sourceTree = "<group>";
@@ -582,6 +591,15 @@
 			name = LoginViewControllers;
 			sourceTree = "<group>";
 		};
+		22FED67519C80B97003015F7 /* CouponedMedicationView */ = {
+			isa = PBXGroup;
+			children = (
+				22FED67619C80BD2003015F7 /* PMCouponedMedicationCell.h */,
+				22FED67719C80BD2003015F7 /* PMCouponedMedicationCell.m */,
+			);
+			name = CouponedMedicationView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -740,6 +758,7 @@
 				2269885519C6EA480042561A /* PMFrequencyPickerView.m in Sources */,
 				2299D04419B5FEA800AA6252 /* PMMedicationReminderViewController.m in Sources */,
 				22A79E8619B48A4200E00023 /* PMOverallPainViewController.m in Sources */,
+				22FED67B19C80E3F003015F7 /* PMUser.m in Sources */,
 				22952ECC19B6FFFF0073E131 /* PMFrequencyViewController.m in Sources */,
 				22F883E719C2C89200C4363C /* PMGetNewPasswordViewController.m in Sources */,
 				229A13AF19B97C020002BEA7 /* PMMedicationModal.m in Sources */,
@@ -752,6 +771,7 @@
 				221D394619BEDFEB001690C4 /* PMAddAppointmentViewController.m in Sources */,
 				22BB7AF019C0718700DD7D53 /* PMConfirmCollectionViewCell.m in Sources */,
 				22FC58ED19C1A4EC008DF361 /* PMSignInViewController.m in Sources */,
+				22FED67819C80BD2003015F7 /* PMCouponedMedicationCell.m in Sources */,
 				221D394C19BEE025001690C4 /* PMAppointmentRemindersViewController.m in Sources */,
 				22F883F319C307DC00C4363C /* PMOsteoMedication.m in Sources */,
 				221D393519BEBD47001690C4 /* PMLandingViewController.m in Sources */,

@@ -1,67 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PMAddMedicationViewController"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmView"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1" customClass="ConfirmView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view alpha="0.69999999999999973" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1F-tQ-jMP">
+                <view alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1F-tQ-jMP">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ckt-Lg-vWm">
-                    <rect key="frame" x="40" y="39" width="239" height="384"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckt-Lg-vWm">
+                    <rect key="frame" x="40" y="52" width="239" height="454"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5N-Ui-1xV">
-                            <rect key="frame" x="29" y="325" width="190" height="39"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.115450233" green="0.59625194500000001" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                            <state key="normal" title="Confirm">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="confirmMedication:" destination="1" eventType="touchUpInside" id="Txj-mP-8YU"/>
-                            </connections>
-                        </button>
-                        <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eg2-em-XuT">
-                            <rect key="frame" x="26" y="70" width="193" height="247"/>
+                        <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eg2-em-XuT">
+                            <rect key="frame" x="22" y="85" width="210" height="279"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6ir-qT-gEw">
-                                <size key="itemSize" width="198" height="257"/>
+                                <size key="itemSize" width="198" height="190"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
                             <cells>
-                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collection" id="eAd-oJ-2if" customClass="PMConfirmCollectionViewCell">
-                                    <rect key="frame" x="0.0" y="-5" width="198" height="257"/>
+                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PMConfirmCollectionViewCell" reuseIdentifier="PMConfirmCollectionViewCell" id="eAd-oJ-2if" customClass="PMConfirmCollectionViewCell">
+                                    <rect key="frame" x="0.0" y="45" width="198" height="190"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                        <rect key="frame" x="0.0" y="0.0" width="198" height="257"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="190"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball-green.png" translatesAutoresizingMaskIntoConstraints="NO" id="aY7-rx-lSC">
-                                                <rect key="frame" x="-5" y="-7" width="203" height="257"/>
+                                            <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aY7-rx-lSC">
+                                                <rect key="frame" x="9" y="14" width="180" height="163"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </imageView>
-                                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2Ro-6R-WnA">
-                                                <rect key="frame" x="80" y="213" width="39" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </pageControl>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="aY7-rx-lSC" secondAttribute="trailing" constant="9" id="0lp-Sr-Mj7"/>
+                                        <constraint firstItem="aY7-rx-lSC" firstAttribute="leading" secondItem="eAd-oJ-2if" secondAttribute="leading" constant="9" id="7Sx-dd-m4R"/>
+                                        <constraint firstItem="aY7-rx-lSC" firstAttribute="top" secondItem="eAd-oJ-2if" secondAttribute="top" constant="14" id="ZIj-Cy-jQ2"/>
+                                        <constraint firstAttribute="bottom" secondItem="aY7-rx-lSC" secondAttribute="bottom" constant="13" id="r0d-c7-en5"/>
+                                    </constraints>
                                     <connections>
                                         <outlet property="imageView" destination="aY7-rx-lSC" id="h3A-wN-BV8"/>
                                     </connections>
@@ -79,16 +68,58 @@
                             <color key="textColor" red="0.115450233" green="0.59625194500000001" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2Ro-6R-WnA">
+                            <rect key="frame" x="103" y="320" width="34" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="34" id="K11-VA-iMW"/>
+                                <constraint firstAttribute="height" constant="37" id="hVo-m7-9ex"/>
+                            </constraints>
+                        </pageControl>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I74-UB-6Kh">
                             <rect key="frame" x="20" y="35" width="204" height="27"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5N-Ui-1xV">
+                            <rect key="frame" x="27" y="389" width="190" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.115450233" green="0.59625194500000001" blue="0.65306122450000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <state key="normal" title="Confirm">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="confirmMedication:" destination="1" eventType="touchUpInside" id="b7e-BA-d3v"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="H5N-Ui-1xV" secondAttribute="trailing" constant="22" id="1rY-2j-iVW"/>
+                        <constraint firstItem="eg2-em-XuT" firstAttribute="top" secondItem="ckt-Lg-vWm" secondAttribute="top" constant="85" id="4Ap-t7-cdQ"/>
+                        <constraint firstAttribute="centerX" secondItem="2Ro-6R-WnA" secondAttribute="centerX" id="89X-U1-0vK"/>
+                        <constraint firstAttribute="trailing" secondItem="eg2-em-XuT" secondAttribute="trailing" constant="7" id="R5s-9e-X9D"/>
+                        <constraint firstAttribute="bottom" secondItem="eg2-em-XuT" secondAttribute="bottom" constant="90" id="VLp-4p-Pgi"/>
+                        <constraint firstItem="H5N-Ui-1xV" firstAttribute="top" secondItem="2Ro-6R-WnA" secondAttribute="bottom" constant="32" id="bvt-i4-XKv"/>
+                        <constraint firstItem="2Ro-6R-WnA" firstAttribute="top" secondItem="eg2-em-XuT" secondAttribute="bottom" constant="-44" id="fXK-Ej-G9Z"/>
+                        <constraint firstItem="H5N-Ui-1xV" firstAttribute="leading" secondItem="ckt-Lg-vWm" secondAttribute="leading" constant="27" id="oN0-Yq-QJk"/>
+                        <constraint firstItem="eg2-em-XuT" firstAttribute="leading" secondItem="ckt-Lg-vWm" secondAttribute="leading" constant="22" id="wvX-6l-Pe1"/>
+                    </constraints>
                 </view>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ckt-Lg-vWm" secondAttribute="bottom" constant="62" id="4az-fo-H58"/>
+                <constraint firstItem="ckt-Lg-vWm" firstAttribute="top" secondItem="1" secondAttribute="top" constant="52" id="5E3-Aq-lgL"/>
+                <constraint firstItem="a1F-tQ-jMP" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="6Mf-Ru-UcX"/>
+                <constraint firstItem="ckt-Lg-vWm" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="40" id="WYh-sn-mWh"/>
+                <constraint firstAttribute="bottom" secondItem="a1F-tQ-jMP" secondAttribute="bottom" id="frj-JV-JxH"/>
+                <constraint firstItem="a1F-tQ-jMP" firstAttribute="top" secondItem="1" secondAttribute="top" id="k7K-t6-ATe"/>
+                <constraint firstAttribute="trailing" secondItem="a1F-tQ-jMP" secondAttribute="trailing" id="qZa-W9-UHA"/>
+                <constraint firstAttribute="trailing" secondItem="ckt-Lg-vWm" secondAttribute="trailing" constant="41" id="zpc-tD-neL"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
@@ -100,7 +131,4 @@
             </connections>
         </view>
     </objects>
-    <resources>
-        <image name="ball-green.png" width="250" height="250"/>
-    </resources>
 </document>

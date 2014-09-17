@@ -46,7 +46,7 @@ static NSString *physicianCellIdentifier = @"physicianCell";
 static NSString *osteoReminderCellIdentifier = @"osteo-reminder";
 
 #pragma -mark CollectionViewCell Identifiers
-static NSString *confirmCollectionIdentifier = @"collection";
+static NSString *confirmCollectionIdentifier = @"PMConfirmCollectionViewCell";
 
 #pragma - mark Resource Names
 #define DASHBOARD_MENU_ITEMS @"DashBoardMenuItems"

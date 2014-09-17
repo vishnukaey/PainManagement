@@ -21,7 +21,7 @@
 
 
 - (void)awakeFromNib {
-    self.imageView=[[UIImageView alloc] init];
+    [super awakeFromNib];
 }
 
 @end

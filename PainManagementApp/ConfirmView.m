@@ -9,22 +9,43 @@
 #import "ConfirmView.h"
 #import "PMConfirmCollectionViewCell.h"
 
-@implementation ConfirmView{
-    NSMutableArray *imagesInArray;
+@interface ConfirmView () <UICollectionViewDataSource,UICollectionViewDelegate>
+
+@end
+
+@implementation ConfirmView
+
++ (id)initFromNib
+{
+    ConfirmView *view =  nil;
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"ConfirmView" owner:nil options:nil];
+    for (int i = 0; i < nibs.count; i++) {
+        id object = [nibs objectAtIndex:i];
+        if ([object isKindOfClass:[ConfirmView class]]) {
+            view = object;
+            break;
+        }
+    }
+    
+    [view initialise];
+    return view;
+}
+
+- (void)initialise
+{
+    [self.collectionView registerClass:[PMConfirmCollectionViewCell class] forCellWithReuseIdentifier:@"PMConfirmCollectionViewCell"];
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
 }
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-    }
-    return self;
+    [self doesNotRecognizeSelector:_cmd];
+    return nil;
 }
 
 - (void) awakeFromNib {
     [super awakeFromNib];
-    imagesInArray = [[NSMutableArray alloc] init];
-    [self.collectionView registerClass:[PMConfirmCollectionViewCell class] forCellWithReuseIdentifier:confirmCollectionIdentifier];
 }
 
 
@@ -36,24 +57,33 @@
 #pragma mark-  Collection View Delegates
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    imagesInArray = [self.imagesArray mutableCopy];
-    return imagesInArray.count;
+
+    return self.imagesArray.count;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    PMConfirmCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:confirmCollectionIdentifier forIndexPath:indexPath];
-    if (cell==nil){
-        cell=[[PMConfirmCollectionViewCell alloc] init];
-    }
-    
-    cell.imageView = [[UIImageView alloc] init];
-    cell.imageView.image = [imagesInArray objectAtIndex:indexPath.row];
+    PMConfirmCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PMConfirmCollectionViewCell" forIndexPath:indexPath];
+    cell.imageView=nil;
+    dispatch_queue_t q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    dispatch_async(q, ^{
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[self.imagesArray objectAtIndex:indexPath.row]]];
+        UIImage *img = [[UIImage alloc] initWithData:data];
+        dispatch_async(dispatch_get_main_queue(), ^{
+             cell.backgroundColor = [UIColor colorWithPatternImage:img];
+        });
+    });
     int pages = floor(_collectionView.contentSize.width / _collectionView.frame.size.width);
     [_pageController setNumberOfPages:pages];
     return cell;
 }
 
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout*)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(self.collectionView.frame.size.width, self.collectionView.frame.size.height);
+}
 
 #pragma mark - UIScrollVewDelegate for UIPageControl
 
@@ -66,6 +96,7 @@
         _pageController.currentPage = currentPage;
     }
 }
+
 
 
 @end

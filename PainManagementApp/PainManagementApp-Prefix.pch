@@ -17,4 +17,5 @@
     #import "PMOsteoMedication.h"
     #import "Utilities.h"
     #import "Constants.h"
+    #import "PMUser.h"
 #endif
