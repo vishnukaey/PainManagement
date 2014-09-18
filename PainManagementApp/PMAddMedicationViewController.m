@@ -15,6 +15,7 @@
 #import "PMMedicationReminderViewController.h"
 #import "PMDataHandler.h"
 #import "ConfirmView.h"
+#import "PMCouponedMedicationCell.h"
 
 @interface PMAddMedicationViewController ()<ConfirmMedicationViewDelegate,setRemindersDelegate >{
     NSArray *medicationList;
@@ -43,6 +44,7 @@
 
 
 
+
 - (IBAction)confirmMedication:(id)sender {
     selectedMedications = [[NSMutableArray alloc] init];
     [self addSelectedmedications];
@@ -57,7 +59,7 @@
     confirmedMedication = [selectedMedications objectAtIndex:index];
     ConfirmView *confirmMedicationView = [ConfirmView initFromNib];
     confirmMedicationView.delegate = self;
-    [self.view addSubview:confirmMedicationView];
+    [self addConfirmViewWithAnimation:confirmMedicationView];
     [self performAutoLayoutForView:confirmMedicationView];
     confirmMedicationView.medicationName.text = confirmedMedication.medicationName;
     confirmMedicationView.medicationForm.text = confirmedMedication.medicationForm;
@@ -65,6 +67,17 @@
     [confirmMedicationView.collectionView reloadData];
 }
 
+-(void) addConfirmViewWithAnimation:(ConfirmView *)confirmView{
+    [self.view addSubview:confirmView];
+    
+    
+}
+
+
+-(void) removeConfirmViewWithAnimation:(ConfirmView *)confirmView{
+    [self.view addSubview:confirmView];
+    
+}
 
 -(void) performAutoLayoutForView:(ConfirmView*) confirmMedicationView{
     [confirmMedicationView setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -120,18 +133,20 @@
 
 
 - (void) addSelectedmedications{
-    for ( int index= 0 ; index < medicationList.count; index ++ ){
-        UITableViewCell * cell2 = [self.medicationTableView cellForRowAtIndexPath:
-                                   [NSIndexPath indexPathForRow:index inSection:0]];
-        if(cell2.accessoryType == UITableViewCellAccessoryCheckmark){
-            PMMedicationModal *medication = [[PMMedicationModal alloc] init];
-            medication.medicationName =[[medicationList objectAtIndex:index ] valueForKey:@"name"];
-            medication.medicationImages = [[NSMutableArray alloc] init];
-            NSString *url = [[medicationList objectAtIndex:index] valueForKey:@"imageUrl"];
-            [medication.medicationImages addObject:url];
-            [medication.medicationImages addObject:url];
-            medication.medicationForm= [[medicationList objectAtIndex:index ] valueForKey:@"form"];
-            [selectedMedications addObject:medication];
+    for ( int section= 0 ; section < medicationList.count; section ++ ){
+        for ( int row= 0 ; row < medicationList.count; row ++ ){
+            UITableViewCell * cell2 = [self.medicationTableView cellForRowAtIndexPath:
+                                   [NSIndexPath indexPathForRow:row inSection:section]];
+            if(cell2.accessoryType == UITableViewCellAccessoryCheckmark){
+                PMMedicationModal *medication = [[PMMedicationModal alloc] init];
+                medication.medicationName =[[medicationList objectAtIndex:row ] valueForKey:@"name"];
+                medication.medicationImages = [[NSMutableArray alloc] init];
+                NSString *url = [[medicationList objectAtIndex:row] valueForKey:@"imageUrl"];
+                [medication.medicationImages addObject:url];
+                [medication.medicationImages addObject:url];
+                medication.medicationForm= [[medicationList objectAtIndex:row ] valueForKey:@"form"];
+                [selectedMedications addObject:medication];
+            }
         }
     }
 }
@@ -148,30 +163,58 @@
 
 
 #pragma -mark TableView Delagate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if(section == 0)
     return medicationList.count;
+    else
+        return medicationList.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if(indexPath.section ==0){
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AddNewCellIdentifier forIndexPath:indexPath];
     cell.textLabel.text=[[medicationList objectAtIndex:indexPath.row] valueForKey:@"name"];
     cell.detailTextLabel.hidden =YES;
     return cell;
+    }
+    else{
+        PMCouponedMedicationCell *cell = (PMCouponedMedicationCell*)[tableView dequeueReusableCellWithIdentifier:@"PMCouponedMedicationCell" forIndexPath:indexPath];
+        cell.medicationName.text=[[medicationList objectAtIndex:indexPath.row] valueForKey:@"name"];
+        return cell;
+    }
 }
 
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-    if(cell.accessoryType == UITableViewCellAccessoryCheckmark){
-        cell.accessoryType = UITableViewCellAccessoryNone;
-        cell.detailTextLabel.hidden=YES;
+    if(indexPath.section == 0){
+        UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+        if(cell.accessoryType == UITableViewCellAccessoryCheckmark){
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            cell.detailTextLabel.hidden=YES;
+        }
+        else{
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            cell.detailTextLabel.hidden=NO;
+        }
     }
     else{
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        cell.detailTextLabel.hidden=NO;
+        PMCouponedMedicationCell * cell = (PMCouponedMedicationCell*)[tableView cellForRowAtIndexPath:indexPath];
+        if(cell.accessoryType == UITableViewCellAccessoryCheckmark){
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        else{
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
     }
 }
 

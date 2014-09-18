@@ -63,14 +63,16 @@
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    PMConfirmCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PMConfirmCollectionViewCell" forIndexPath:indexPath];
-    cell.imageView=nil;
+    PMConfirmCollectionViewCell *cell = (PMConfirmCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"PMConfirmCollectionViewCell" forIndexPath:indexPath];
+    if(!cell.imageView){
+        cell.imageView= nil;
+    }
     dispatch_queue_t q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
     dispatch_async(q, ^{
         NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[self.imagesArray objectAtIndex:indexPath.row]]];
         UIImage *img = [[UIImage alloc] initWithData:data];
         dispatch_async(dispatch_get_main_queue(), ^{
-             cell.backgroundColor = [UIColor colorWithPatternImage:img];
+            [cell.imageView setImage:img];
         });
     });
     int pages = floor(_collectionView.contentSize.width / _collectionView.frame.size.width);

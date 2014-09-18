@@ -23,10 +23,17 @@
 {
     [super setSelected:selected animated:animated];
     self.nurseNavigation.layer.cornerRadius = self.nurseNavigation.frame.size.height /2;
-    self.nurseNavigation.layer.masksToBounds = YES;
-   self.nurseNavigation.layer.borderWidth = 0;
+    self.nurseNavigation.clipsToBounds = YES;
+    
+    
+   self.coupon.layer.borderWidth = 0;
+
+    self.coupon.layer.cornerRadius = self.coupon.frame.size.height /2;
+    self.coupon.clipsToBounds = YES;
+    self.coupon.layer.borderWidth = 0;
 
     // Configure the view for the selected state
 }
+
 
 @end

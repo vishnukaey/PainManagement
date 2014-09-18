@@ -54,7 +54,7 @@
 - (IBAction)Done:(id)sender {
     if(self.reminderTimeTextField.text .length !=0){
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"MM/dd/yyyy"];
+        [dateFormat setDateFormat:@"hh:mm a"];
         NSDate *date = [dateFormat dateFromString:self.reminderTimeTextField.text];
         if([date isKindOfClass:[NSDate class]]) {
             self.medication.reminderTimings = self.reminderTimeTextField.text;

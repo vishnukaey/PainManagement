@@ -109,8 +109,8 @@
             UITableViewCell *cell =[self.reccurenceTable cellForRowAtIndexPath:ind];
             CGRect fr = [cell.contentView convertRect:cell.contentView.frame fromView:self.containerView];
             float top = fr.origin.y;
-            NSLog(@"%f %f",selectionFrame.origin.y,top);
             if(top > selectionFrame.origin.y-100 && top < selectionFrame.origin.y-56){
+                NSLog(@"%f %f",selectionFrame.origin.y,top);
                 cell.textLabel.textColor = [UIColor whiteColor];
                 cell.textLabel.alpha = 1.0;
                 self.reccurenceLabel.text = cell.textLabel.text;

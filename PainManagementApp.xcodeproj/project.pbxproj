@@ -58,6 +58,7 @@
 		22A79E8C19B490B500E00023 /* PMNotesTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E8B19B490B500E00023 /* PMNotesTableCell.m */; };
 		22BB7AED19C0498D00DD7D53 /* PMSelectDayOrDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB7AEC19C0498D00DD7D53 /* PMSelectDayOrDateViewController.m */; };
 		22BB7AF019C0718700DD7D53 /* PMConfirmCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB7AEF19C0718700DD7D53 /* PMConfirmCollectionViewCell.m */; };
+		22DB4E4319CAB74D008F7FB4 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22DB4E4219CAB74D008F7FB4 /* images.jpeg */; };
 		22E7DFBC19C01BD8000A1E7F /* PMSampleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */; };
 		22F883DA19C2B8C300C4363C /* PMOsteoporosisReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F883D919C2B8C300C4363C /* PMOsteoporosisReminderViewController.m */; };
 		22F883DC19C2BF2000C4363C /* userplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F883DB19C2BF2000C4363C /* userplaceholder.png */; };
@@ -166,6 +167,7 @@
 		22BB7AEC19C0498D00DD7D53 /* PMSelectDayOrDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSelectDayOrDateViewController.m; sourceTree = "<group>"; };
 		22BB7AEE19C0718600DD7D53 /* PMConfirmCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMConfirmCollectionViewCell.h; sourceTree = "<group>"; };
 		22BB7AEF19C0718700DD7D53 /* PMConfirmCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMConfirmCollectionViewCell.m; sourceTree = "<group>"; };
+		22DB4E4219CAB74D008F7FB4 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
 		22E7DFBA19C01BD8000A1E7F /* PMSampleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMSampleCollectionViewController.h; path = PainManagementApp/PMSampleCollectionViewController.h; sourceTree = "<group>"; };
 		22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PMSampleCollectionViewController.m; path = PainManagementApp/PMSampleCollectionViewController.m; sourceTree = "<group>"; };
 		22F883D819C2B8C300C4363C /* PMOsteoporosisReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOsteoporosisReminderViewController.h; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 		22A79E8319B4635100E00023 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				22DB4E4219CAB74D008F7FB4 /* images.jpeg */,
 				22F883DD19C2C53400C4363C /* passwordPlaceholder.png */,
 				22F883DB19C2BF2000C4363C /* userplaceholder.png */,
 				2279D7DD19BF04BA00DCFF33 /* ball-orange.png */,
@@ -695,6 +698,7 @@
 				2279D7E019BF04BA00DCFF33 /* Blue_2DGlass_2DButton.png in Resources */,
 				22A79E8219B4634400E00023 /* list.png in Resources */,
 				2299D03419B5E56A00AA6252 /* Plaquenil.jpg in Resources */,
+				22DB4E4319CAB74D008F7FB4 /* images.jpeg in Resources */,
 				2299D03519B5E56A00AA6252 /* sulfasalazine.jpeg in Resources */,
 				22FC58E019C19E73008DF361 /* DashBoardMenuItems.plist in Resources */,
 				2269885219C6EA2C0042561A /* PMFrequencyPickerView.xib in Resources */,
