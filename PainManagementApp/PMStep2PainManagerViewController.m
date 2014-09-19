@@ -1,24 +1,23 @@
 //
-//  PMBackPainLocationViewController.m
+//  PMStep2PainManagerViewController.m
 //  PainManagementApp
 //
-//  Created by Vishnu on 02/09/14.
+//  Created by Vishnu on 19/09/14.
 //  Copyright (c) 2014 DenovoNow. All rights reserved.
 //
 
-#import "PMBackPainLocationViewController.h"
+#import "PMStep2PainManagerViewController.h"
 
-@interface PMBackPainLocationViewController ()
+@interface PMStep2PainManagerViewController ()
 
 @end
 
-@implementation PMBackPainLocationViewController
+@implementation PMStep2PainManagerViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -26,15 +25,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-}
-- (IBAction)dismissToOverallPainVC:(id)sender {
-    [self dismissViewControllerAnimated:NO completion:^{
-        [self.delegate goToOverallViewController];
-    }];
+    self.imageView.layer.cornerRadius = self.imageView.frame.size.height /2;
+    self.imageView.clipsToBounds = YES;
 }
 
-- (IBAction)flipToFrontPainLocator:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+- (IBAction)goToPainRecorder:(id)sender {
+    [self dismissViewControllerAnimated:NO completion:^{
+        [self.delegate goTopainRecorder];
+    }];
 }
 
 - (void)didReceiveMemoryWarning

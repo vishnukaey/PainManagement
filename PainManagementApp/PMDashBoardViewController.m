@@ -35,7 +35,9 @@
                 DASHBOARD_MENU_ITEMS ofType:@"plist"]];
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"logInStatus"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    [self performSegueWithIdentifier:GO_TO_LANDINGVIEW sender:self];
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"logInStatus"]){
+        [self performSegueWithIdentifier:GO_TO_LANDINGVIEW sender:self];
+    }
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -83,20 +85,13 @@
 
 #pragma -mark LandingViewDelegateMethods
 
+-(void) performSegueToLoginViewController{
+    [self performSegueWithIdentifier:SIGN_IN sender:self];
+}
+
 -(void) performSegueToMedicationViewController{
     [self performSegueWithIdentifier:ADD_MEDICATION sender:self];
 }
-
--(void) performSegueToPainManagementViewController{
-    [self performSegueWithIdentifier:MANAGE_PAIN sender:self];
-    
-}
-
--(void) performSegueToAppoinmentsViewController{
-    [self performSegueWithIdentifier:ADD_APPOINTMENT sender:self];
-    
-}
-
 
 
 #pragma -mark TableView Delagate

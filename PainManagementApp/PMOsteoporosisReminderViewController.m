@@ -39,7 +39,7 @@
     if([defaults boolForKey:@"logInStatus"])
         [Utilities showAlert:@"Save Data" withTitle:@"Success"];
     else
-        [self performSegueWithIdentifier:LOGIN_SIGNUP sender:self];
+        [self.navigationController popToViewController:[self.navigationController.childViewControllers objectAtIndex:0] animated:YES];
     }
     else
         [Utilities showAlert:@"Please Select next reminder" withTitle:@"No Selection"];
@@ -97,7 +97,7 @@
         PMScheduleNewOsteoReminderViewController *scheduleReminder = [segue destinationViewController];
         scheduleReminder.osteoMedication  = self.osteoMedication;
     }
-    else if ([segue.identifier isEqualToString:LOGIN_SIGNUP]){
+    else if ([segue.identifier isEqualToString:SIGN_UP]){
     }
 }
 

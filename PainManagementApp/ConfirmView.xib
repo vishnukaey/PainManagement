@@ -52,7 +52,7 @@
                                         <constraint firstAttribute="bottom" secondItem="aY7-rx-lSC" secondAttribute="bottom" constant="13" id="r0d-c7-en5"/>
                                     </constraints>
                                     <connections>
-                                        <outlet property="imageView1" destination="aY7-rx-lSC" id="AT2-Hm-tdK"/>
+                                        <outlet property="imageView" destination="aY7-rx-lSC" id="Dq7-6y-lef"/>
                                     </connections>
                                 </collectionViewCell>
                             </cells>

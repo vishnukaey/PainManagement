@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PainRecorderDelegate <NSObject>
+
+-(void) goToOverallViewController;
+
+@end
+
 @interface PMBackPainLocationViewController : UIViewController
+@property (weak, nonatomic) id <PainRecorderDelegate> delegate;
 
 @end

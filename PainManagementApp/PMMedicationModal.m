@@ -18,4 +18,6 @@
     @synthesize days;
     @synthesize medicationImages;
     @synthesize isMedicationConfirmed;
+    @synthesize redeemCoupon;
+    @synthesize nurseNavigation;
 @end

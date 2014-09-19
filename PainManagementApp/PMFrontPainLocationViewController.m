@@ -10,7 +10,7 @@
 #import "PMFrontPainLocationViewController.h"
 #import "PMBackPainLocationViewController.h"
 
-@interface PMFrontPainLocationViewController ()
+@interface PMFrontPainLocationViewController () <PainRecorderDelegate>
 
 @end
 
@@ -31,12 +31,25 @@
 	// Do any additional setup after loading the view.
 }
 - (IBAction)dismissToOverallPainVC:(id)sender {
-    [self.delegate manageOverallPain];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self goToOverallViewController];
 }
 
 - (IBAction)flipToBackViewController:(id)sender {
     [self performSegueWithIdentifier:FLIP_TO_BACK sender:self];
+}
+
+-(void) goToOverallViewController{
+    [self dismissViewControllerAnimated:NO completion:^{
+        [self.delegate manageOverallPain];
+    } ];
+}
+
+-(void)  prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:FLIP_TO_BACK])
+    {
+        PMBackPainLocationViewController *back = [segue destinationViewController];
+        back.delegate =self;
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,9 +10,8 @@
 
 #pragma -mark LandingViewDelegateMethods
 @protocol LandingViewDelegate <NSObject>
+    -(void) performSegueToLoginViewController;
     -(void) performSegueToMedicationViewController;
-    -(void) performSegueToPainManagementViewController;
-    -(void) performSegueToAppoinmentsViewController;
 @end
 
 

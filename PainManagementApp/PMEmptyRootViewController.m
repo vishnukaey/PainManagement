@@ -8,8 +8,9 @@
 
 #import "PMEmptyRootViewController.h"
 #import "PMFrontPainLocationViewController.h"
+#import "PMStep2PainManagerViewController.h"
 
-@interface PMEmptyRootViewController ()<PMFrontPainLocationViewControllerDelegate>
+@interface PMEmptyRootViewController ()<PMFrontPainLocationViewControllerDelegate,Step2VCDelegate>
 
 @end
 
@@ -31,8 +32,17 @@
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"logInStatus"])
+        [self performSegueWithIdentifier:@"PMStep2PainManagerViewController" sender:self];
+    else
+        [self performSegueWithIdentifier:LOCATE_PAIN sender:self];
+}
+
+
+-(void) goTopainRecorder{
     [self performSegueWithIdentifier:LOCATE_PAIN sender:self];
 }
+
 
 -(void) manageOverallPain{
     [self performSegueWithIdentifier:OVERALL sender:self];
@@ -42,6 +52,10 @@
     if([segue.identifier isEqualToString:LOCATE_PAIN]){
         PMFrontPainLocationViewController *front = [segue destinationViewController];
         front.delegate = self;
+    }
+    else if([segue.identifier isEqualToString:@"PMStep2PainManagerViewController"]){
+        PMStep2PainManagerViewController *help = [segue destinationViewController];
+        help.delegate = self;
     }
 }
 

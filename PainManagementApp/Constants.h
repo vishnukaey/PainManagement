@@ -16,8 +16,6 @@
 #define SIGN_IN @"signIn"
 #define GO_TO_LANDINGVIEW @"landingView"
 #define ADD_MEDICATION @"MEDICATION"
-#define MANAGE_PAIN @"PAIN MANAGEMENT"
-#define ADD_APPOINTMENT @"APPOINTMENTS"
 #define SET_REMINDER @"reminder"
 #define SET_REMINDER_FREQUENCY @"frequency"
 #define SET_MEDICATION_FORM @"form"
@@ -31,7 +29,6 @@
 #define ADD_AN_APPOINTMENT @"addAppointment"
 #define SAVE_APPOINTMENT @"saveAppointment"
 #define ADD_OSTEO_REMINDER @"osteoReminder"
-#define LOGIN_SIGNUP @"loginOrSignup"
 
 
 #pragma -mark TableViewCell Identifiers

@@ -1,18 +1,18 @@
 //
-//  PMBackPainLocationViewController.m
+//  PMStep1MedicationViewController.m
 //  PainManagementApp
 //
-//  Created by Vishnu on 02/09/14.
+//  Created by Vishnu on 19/09/14.
 //  Copyright (c) 2014 DenovoNow. All rights reserved.
 //
 
-#import "PMBackPainLocationViewController.h"
+#import "PMStep1MedicationViewController.h"
 
-@interface PMBackPainLocationViewController ()
+@interface PMStep1MedicationViewController ()
 
 @end
 
-@implementation PMBackPainLocationViewController
+@implementation PMStep1MedicationViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,14 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-}
-- (IBAction)dismissToOverallPainVC:(id)sender {
-    [self dismissViewControllerAnimated:NO completion:^{
-        [self.delegate goToOverallViewController];
-    }];
+	self.medicationImage.layer.cornerRadius = self.medicationImage.frame.size.height /2;
+    self.medicationImage.clipsToBounds = YES;
 }
 
-- (IBAction)flipToFrontPainLocator:(id)sender {
+
+- (IBAction)continueToMedication:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

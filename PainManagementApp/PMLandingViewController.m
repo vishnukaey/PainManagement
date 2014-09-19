@@ -29,21 +29,16 @@
 }
 
 
-- (IBAction)pushToMedication:(id)sender {
-    [self.delegate performSegueToMedicationViewController];
-    [self dismissViewControllerAnimated:YES completion:Nil];
+- (IBAction)pushToLogInScreen:(id)sender {
+    [self.delegate performSegueToLoginViewController];
+    [self dismissViewControllerAnimated:NO completion:Nil];
 }
 
 
-- (IBAction)pustToAppoinment:(id)sender {
-    [self.delegate performSegueToAppoinmentsViewController];
-    [self dismissViewControllerAnimated:YES completion:Nil];
-}
-
-
-- (IBAction)pushToPainManagement:(id)sender {
-    [self.delegate performSegueToPainManagementViewController];
-    [self dismissViewControllerAnimated:YES completion:Nil];
+- (IBAction)GotoStep1Medication:(id)sender {
+    [self dismissViewControllerAnimated:NO completion:^{
+        [self.delegate performSegueToMedicationViewController];
+    } ];
 }
 
 

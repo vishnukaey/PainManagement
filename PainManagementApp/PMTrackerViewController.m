@@ -1,18 +1,18 @@
 //
-//  PMBackPainLocationViewController.m
+//  PMTrackerViewController.m
 //  PainManagementApp
 //
-//  Created by Vishnu on 02/09/14.
+//  Created by Vishnu on 19/09/14.
 //  Copyright (c) 2014 DenovoNow. All rights reserved.
 //
 
-#import "PMBackPainLocationViewController.h"
+#import "PMTrackerViewController.h"
 
-@interface PMBackPainLocationViewController ()
+@interface PMTrackerViewController ()
 
 @end
 
-@implementation PMBackPainLocationViewController
+@implementation PMTrackerViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,15 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	// Do any additional setup after loading the view.
 }
-- (IBAction)dismissToOverallPainVC:(id)sender {
-    [self dismissViewControllerAnimated:NO completion:^{
-        [self.delegate goToOverallViewController];
-    }];
+- (IBAction)redeemCoupon:(id)sender {
 }
-
-- (IBAction)flipToFrontPainLocator:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (IBAction)doneAndSave:(id)sender {
+    [self.navigationController popToViewController:[self.navigationController.childViewControllers objectAtIndex:0] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

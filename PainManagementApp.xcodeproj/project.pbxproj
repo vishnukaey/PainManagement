@@ -56,9 +56,16 @@
 		22A79E8619B48A4200E00023 /* PMOverallPainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E8519B48A4200E00023 /* PMOverallPainViewController.m */; };
 		22A79E8919B48AC800E00023 /* PMOverallSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E8819B48AC800E00023 /* PMOverallSliderCell.m */; };
 		22A79E8C19B490B500E00023 /* PMNotesTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A79E8B19B490B500E00023 /* PMNotesTableCell.m */; };
+		22ABDAAE19CBF48D00E30FC4 /* PMStep1MedicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDAAD19CBF48D00E30FC4 /* PMStep1MedicationViewController.m */; };
+		22ABDAB119CC006F00E30FC4 /* PMJointPain.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDAB019CC006F00E30FC4 /* PMJointPain.m */; };
+		22ABDAB419CC008700E30FC4 /* PMAppointment.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDAB319CC008700E30FC4 /* PMAppointment.m */; };
+		22ABDAB719CC031C00E30FC4 /* PMStep2PainManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDAB619CC031C00E30FC4 /* PMStep2PainManagerViewController.m */; };
+		22ABDABA19CC23FB00E30FC4 /* PMTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ABDAB919CC23FB00E30FC4 /* PMTrackerViewController.m */; };
 		22BB7AED19C0498D00DD7D53 /* PMSelectDayOrDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB7AEC19C0498D00DD7D53 /* PMSelectDayOrDateViewController.m */; };
 		22BB7AF019C0718700DD7D53 /* PMConfirmCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB7AEF19C0718700DD7D53 /* PMConfirmCollectionViewCell.m */; };
 		22DB4E4319CAB74D008F7FB4 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22DB4E4219CAB74D008F7FB4 /* images.jpeg */; };
+		22DB4E4519CAF03B008F7FB4 /* shin_pain_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 22DB4E4419CAF03B008F7FB4 /* shin_pain_2.png */; };
+		22DB4E4719CB13AE008F7FB4 /* images (1).jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22DB4E4619CB13AE008F7FB4 /* images (1).jpeg */; };
 		22E7DFBC19C01BD8000A1E7F /* PMSampleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */; };
 		22F883DA19C2B8C300C4363C /* PMOsteoporosisReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F883D919C2B8C300C4363C /* PMOsteoporosisReminderViewController.m */; };
 		22F883DC19C2BF2000C4363C /* userplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F883DB19C2BF2000C4363C /* userplaceholder.png */; };
@@ -163,11 +170,23 @@
 		22A79E8819B48AC800E00023 /* PMOverallSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOverallSliderCell.m; sourceTree = "<group>"; };
 		22A79E8A19B490B500E00023 /* PMNotesTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMNotesTableCell.h; sourceTree = "<group>"; };
 		22A79E8B19B490B500E00023 /* PMNotesTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMNotesTableCell.m; sourceTree = "<group>"; };
+		22ABDAAC19CBF48D00E30FC4 /* PMStep1MedicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMStep1MedicationViewController.h; sourceTree = "<group>"; };
+		22ABDAAD19CBF48D00E30FC4 /* PMStep1MedicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMStep1MedicationViewController.m; sourceTree = "<group>"; };
+		22ABDAAF19CC006F00E30FC4 /* PMJointPain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMJointPain.h; sourceTree = "<group>"; };
+		22ABDAB019CC006F00E30FC4 /* PMJointPain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMJointPain.m; sourceTree = "<group>"; };
+		22ABDAB219CC008700E30FC4 /* PMAppointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMAppointment.h; sourceTree = "<group>"; };
+		22ABDAB319CC008700E30FC4 /* PMAppointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMAppointment.m; sourceTree = "<group>"; };
+		22ABDAB519CC031C00E30FC4 /* PMStep2PainManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMStep2PainManagerViewController.h; sourceTree = "<group>"; };
+		22ABDAB619CC031C00E30FC4 /* PMStep2PainManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMStep2PainManagerViewController.m; sourceTree = "<group>"; };
+		22ABDAB819CC23FB00E30FC4 /* PMTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMTrackerViewController.h; sourceTree = "<group>"; };
+		22ABDAB919CC23FB00E30FC4 /* PMTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMTrackerViewController.m; sourceTree = "<group>"; };
 		22BB7AEB19C0498D00DD7D53 /* PMSelectDayOrDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMSelectDayOrDateViewController.h; sourceTree = "<group>"; };
 		22BB7AEC19C0498D00DD7D53 /* PMSelectDayOrDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMSelectDayOrDateViewController.m; sourceTree = "<group>"; };
 		22BB7AEE19C0718600DD7D53 /* PMConfirmCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMConfirmCollectionViewCell.h; sourceTree = "<group>"; };
 		22BB7AEF19C0718700DD7D53 /* PMConfirmCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMConfirmCollectionViewCell.m; sourceTree = "<group>"; };
 		22DB4E4219CAB74D008F7FB4 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
+		22DB4E4419CAF03B008F7FB4 /* shin_pain_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shin_pain_2.png; sourceTree = "<group>"; };
+		22DB4E4619CB13AE008F7FB4 /* images (1).jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images (1).jpeg"; sourceTree = "<group>"; };
 		22E7DFBA19C01BD8000A1E7F /* PMSampleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMSampleCollectionViewController.h; path = PainManagementApp/PMSampleCollectionViewController.h; sourceTree = "<group>"; };
 		22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PMSampleCollectionViewController.m; path = PainManagementApp/PMSampleCollectionViewController.m; sourceTree = "<group>"; };
 		22F883D819C2B8C300C4363C /* PMOsteoporosisReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOsteoporosisReminderViewController.h; sourceTree = "<group>"; };
@@ -268,12 +287,14 @@
 			children = (
 				2299D02519B5994600AA6252 /* PMEmptyRootViewController.h */,
 				2299D02619B5994600AA6252 /* PMEmptyRootViewController.m */,
-				22A79E8419B48A4200E00023 /* PMOverallPainViewController.h */,
-				22A79E8519B48A4200E00023 /* PMOverallPainViewController.m */,
 				2299D02819B599AF00AA6252 /* PMFrontPainLocationViewController.h */,
 				2299D02919B599AF00AA6252 /* PMFrontPainLocationViewController.m */,
 				2299D02B19B599C200AA6252 /* PMBackPainLocationViewController.h */,
 				2299D02C19B599C200AA6252 /* PMBackPainLocationViewController.m */,
+				22A79E8419B48A4200E00023 /* PMOverallPainViewController.h */,
+				22A79E8519B48A4200E00023 /* PMOverallPainViewController.m */,
+				22ABDAB819CC23FB00E30FC4 /* PMTrackerViewController.h */,
+				22ABDAB919CC23FB00E30FC4 /* PMTrackerViewController.m */,
 			);
 			name = PainManagementViewControllers;
 			sourceTree = "<group>";
@@ -373,6 +394,7 @@
 		22A79E7A19B4609300E00023 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				22ABDAAA19CBF40B00E30FC4 /* TutorialViewControllers */,
 				22FC58E719C1A48E008DF361 /* LoginViewControllers */,
 				22FC58D519C18387008DF361 /* DashBoardViewController */,
 				22FC58D619C183A7008DF361 /* LandingPageViewController */,
@@ -386,7 +408,6 @@
 		22A79E7B19B4609E00E00023 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				22FED67519C80B97003015F7 /* CouponedMedicationView */,
 				2269885019C6E9D40042561A /* FrequencyPickerView */,
 				22FC58DD19C19D1A008DF361 /* CollectionViewCells */,
 				22FC58DC19C19CFA008DF361 /* TableViewCells */,
@@ -404,6 +425,10 @@
 				22F883F219C307DC00C4363C /* PMOsteoMedication.m */,
 				22FED67919C80E3F003015F7 /* PMUser.h */,
 				22FED67A19C80E3F003015F7 /* PMUser.m */,
+				22ABDAAF19CC006F00E30FC4 /* PMJointPain.h */,
+				22ABDAB019CC006F00E30FC4 /* PMJointPain.m */,
+				22ABDAB219CC008700E30FC4 /* PMAppointment.h */,
+				22ABDAB319CC008700E30FC4 /* PMAppointment.m */,
 			);
 			name = "Modal Classes";
 			sourceTree = "<group>";
@@ -420,6 +445,8 @@
 		22A79E8319B4635100E00023 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				22DB4E4619CB13AE008F7FB4 /* images (1).jpeg */,
+				22DB4E4419CAF03B008F7FB4 /* shin_pain_2.png */,
 				22DB4E4219CAB74D008F7FB4 /* images.jpeg */,
 				22F883DD19C2C53400C4363C /* passwordPlaceholder.png */,
 				22F883DB19C2BF2000C4363C /* userplaceholder.png */,
@@ -435,6 +462,17 @@
 				22A79E8119B4634400E00023 /* list.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		22ABDAAA19CBF40B00E30FC4 /* TutorialViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				22ABDAAC19CBF48D00E30FC4 /* PMStep1MedicationViewController.h */,
+				22ABDAAD19CBF48D00E30FC4 /* PMStep1MedicationViewController.m */,
+				22ABDAB519CC031C00E30FC4 /* PMStep2PainManagerViewController.h */,
+				22ABDAB619CC031C00E30FC4 /* PMStep2PainManagerViewController.m */,
+			);
+			name = TutorialViewControllers;
 			sourceTree = "<group>";
 		};
 		22F883D619C2B78F00C4363C /* RAMedicationVC */ = {
@@ -547,6 +585,7 @@
 		22FC58DC19C19CFA008DF361 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				22FED67519C80B97003015F7 /* CouponedMedicationView */,
 				221D393A19BECCAA001690C4 /* PMPhysicianCell.h */,
 				221D393B19BECCAA001690C4 /* PMPhysicianCell.m */,
 				22A79E8719B48AC800E00023 /* PMOverallSliderCell.h */,
@@ -689,6 +728,7 @@
 				2299D03319B5E56A00AA6252 /* methotrexate.jpeg in Resources */,
 				226C0DB619C0AD9D0081E7BD /* ConfirmView.xib in Resources */,
 				2277390019C7145700DE8965 /* OsteoporosisMedication.plist in Resources */,
+				22DB4E4719CB13AE008F7FB4 /* images (1).jpeg in Resources */,
 				2299D02319B5947700AA6252 /* flip.png in Resources */,
 				22A79E5019B45D7900E00023 /* InfoPlist.strings in Resources */,
 				22F883DC19C2BF2000C4363C /* userplaceholder.png in Resources */,
@@ -701,6 +741,7 @@
 				22DB4E4319CAB74D008F7FB4 /* images.jpeg in Resources */,
 				2299D03519B5E56A00AA6252 /* sulfasalazine.jpeg in Resources */,
 				22FC58E019C19E73008DF361 /* DashBoardMenuItems.plist in Resources */,
+				22DB4E4519CAF03B008F7FB4 /* shin_pain_2.png in Resources */,
 				2269885219C6EA2C0042561A /* PMFrequencyPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -755,9 +796,11 @@
 			files = (
 				22F883F019C2CBEF00C4363C /* PMScheduleNewOsteoReminderViewController.m in Sources */,
 				2299D02D19B599C200AA6252 /* PMBackPainLocationViewController.m in Sources */,
+				22ABDAB419CC008700E30FC4 /* PMAppointment.m in Sources */,
 				22F883DA19C2B8C300C4363C /* PMOsteoporosisReminderViewController.m in Sources */,
 				221D393C19BECCAA001690C4 /* PMPhysicianCell.m in Sources */,
 				22F883E419C2C87E00C4363C /* PMGetNewUsernameViewController.m in Sources */,
+				22ABDAAE19CBF48D00E30FC4 /* PMStep1MedicationViewController.m in Sources */,
 				22A79E5219B45D7900E00023 /* main.m in Sources */,
 				2269885519C6EA480042561A /* PMFrequencyPickerView.m in Sources */,
 				2299D04419B5FEA800AA6252 /* PMMedicationReminderViewController.m in Sources */,
@@ -769,6 +812,7 @@
 				22A79E8019B4610800E00023 /* PMDashBoardViewController.m in Sources */,
 				22FC58E619C1A355008DF361 /* PMDataHandler.m in Sources */,
 				22952ECF19B700130073E131 /* PMReminderPickerViewController.m in Sources */,
+				22ABDAB119CC006F00E30FC4 /* PMJointPain.m in Sources */,
 				22A79E5619B45D7900E00023 /* PMAppDelegate.m in Sources */,
 				2299D02A19B599AF00AA6252 /* PMFrontPainLocationViewController.m in Sources */,
 				226C0DBC19C0AEAA0081E7BD /* ConfirmView.m in Sources */,
@@ -778,6 +822,7 @@
 				22FED67819C80BD2003015F7 /* PMCouponedMedicationCell.m in Sources */,
 				221D394C19BEE025001690C4 /* PMAppointmentRemindersViewController.m in Sources */,
 				22F883F319C307DC00C4363C /* PMOsteoMedication.m in Sources */,
+				22ABDAB719CC031C00E30FC4 /* PMStep2PainManagerViewController.m in Sources */,
 				221D393519BEBD47001690C4 /* PMLandingViewController.m in Sources */,
 				22F883EA19C2C89F00C4363C /* PMGetNewEmailViewController.m in Sources */,
 				221D393F19BECDF6001690C4 /* PMPhysiciansViewController.m in Sources */,
@@ -788,6 +833,7 @@
 				2299D03919B5E69600AA6252 /* PMAddMedicationViewController.m in Sources */,
 				22952EC919B6F2A60073E131 /* Utilities.m in Sources */,
 				22A79E8C19B490B500E00023 /* PMNotesTableCell.m in Sources */,
+				22ABDABA19CC23FB00E30FC4 /* PMTrackerViewController.m in Sources */,
 				221D394919BEDFFE001690C4 /* PMSaveAppointmentViewController.m in Sources */,
 				2279D7E419BF19DB00DCFF33 /* PMGetDayViewController.m in Sources */,
 				22BB7AED19C0498D00DD7D53 /* PMSelectDayOrDateViewController.m in Sources */,

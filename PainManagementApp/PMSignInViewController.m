@@ -34,8 +34,7 @@
             [defaults setBool:YES forKey:@"logInStatus"];
             [defaults setValue:self.username.text forKey:@"username"];
             [defaults synchronize];
-            [self.delegate saveMyMedications];
-            [self.navigationController dismissViewControllerAnimated:YES completion:Nil];
+            [self.navigationController popViewControllerAnimated:YES];
     }
     else
         [Utilities showAlert:@"Wrong Entry" withTitle:@"Error"];

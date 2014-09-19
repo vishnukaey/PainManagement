@@ -40,8 +40,9 @@
     [super viewDidLoad];
     medicationList = [[NSArray alloc] init];
     [self getAllMedications];
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"logInStatus"])
+        [self performSegueWithIdentifier:@"PMStep1MedicationViewController" sender:self];
 }
-
 
 
 

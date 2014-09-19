@@ -44,6 +44,9 @@
         return 1;
 }
 
+- (IBAction)recordPain:(id)sender {
+    [self performSegueWithIdentifier:@"redeem" sender:self];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
