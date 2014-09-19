@@ -1067,9 +1067,6 @@ asfknafadknf</string>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="ETy-Yx-fHU" kind="modal" identifier="PMStep1MedicationViewController" animates="NO" id="weM-i0-ghc"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PMCouponedMedicationCell" rowHeight="100" id="3Zz-lK-MQP" customClass="PMCouponedMedicationCell">
                                         <rect key="frame" x="0.0" y="122" width="320" height="100"/>
@@ -1127,11 +1124,12 @@ asfknafadknf</string>
                     <connections>
                         <outlet property="medicationTableView" destination="6nH-Yq-KJn" id="1vq-k1-UYG"/>
                         <segue destination="i5L-TF-EQF" kind="push" identifier="reminder" id="TGb-2q-t83"/>
+                        <segue destination="ETy-Yx-fHU" kind="modal" identifier="PMStep1MedicationViewController" id="pPB-WW-Y5s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nY9-m5-afh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-850" y="-2924"/>
+            <point key="canvasLocation" x="-860" y="-2974"/>
         </scene>
         <!--Empty Root View Controller - PAIN MANAGEMENT-->
         <scene sceneID="fyh-pr-637">

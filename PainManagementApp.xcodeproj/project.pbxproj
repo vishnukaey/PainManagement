@@ -66,7 +66,6 @@
 		22DB4E4319CAB74D008F7FB4 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22DB4E4219CAB74D008F7FB4 /* images.jpeg */; };
 		22DB4E4519CAF03B008F7FB4 /* shin_pain_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 22DB4E4419CAF03B008F7FB4 /* shin_pain_2.png */; };
 		22DB4E4719CB13AE008F7FB4 /* images (1).jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22DB4E4619CB13AE008F7FB4 /* images (1).jpeg */; };
-		22E7DFBC19C01BD8000A1E7F /* PMSampleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */; };
 		22F883DA19C2B8C300C4363C /* PMOsteoporosisReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F883D919C2B8C300C4363C /* PMOsteoporosisReminderViewController.m */; };
 		22F883DC19C2BF2000C4363C /* userplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F883DB19C2BF2000C4363C /* userplaceholder.png */; };
 		22F883DE19C2C53400C4363C /* passwordPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 22F883DD19C2C53400C4363C /* passwordPlaceholder.png */; };
@@ -187,8 +186,6 @@
 		22DB4E4219CAB74D008F7FB4 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
 		22DB4E4419CAF03B008F7FB4 /* shin_pain_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shin_pain_2.png; sourceTree = "<group>"; };
 		22DB4E4619CB13AE008F7FB4 /* images (1).jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images (1).jpeg"; sourceTree = "<group>"; };
-		22E7DFBA19C01BD8000A1E7F /* PMSampleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMSampleCollectionViewController.h; path = PainManagementApp/PMSampleCollectionViewController.h; sourceTree = "<group>"; };
-		22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PMSampleCollectionViewController.m; path = PainManagementApp/PMSampleCollectionViewController.m; sourceTree = "<group>"; };
 		22F883D819C2B8C300C4363C /* PMOsteoporosisReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMOsteoporosisReminderViewController.h; sourceTree = "<group>"; };
 		22F883D919C2B8C300C4363C /* PMOsteoporosisReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMOsteoporosisReminderViewController.m; sourceTree = "<group>"; };
 		22F883DB19C2BF2000C4363C /* userplaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userplaceholder.png; sourceTree = "<group>"; };
@@ -311,8 +308,6 @@
 		22A79E3919B45D7900E00023 = {
 			isa = PBXGroup;
 			children = (
-				22E7DFBA19C01BD8000A1E7F /* PMSampleCollectionViewController.h */,
-				22E7DFBB19C01BD8000A1E7F /* PMSampleCollectionViewController.m */,
 				22A79E4B19B45D7900E00023 /* PainManagementApp */,
 				22A79E4C19B45D7900E00023 /* Supporting Files */,
 				22A79E4419B45D7900E00023 /* Frameworks */,
@@ -419,12 +414,12 @@
 		22A79E7C19B460A500E00023 /* Modal Classes */ = {
 			isa = PBXGroup;
 			children = (
+				22FED67919C80E3F003015F7 /* PMUser.h */,
+				22FED67A19C80E3F003015F7 /* PMUser.m */,
 				229A13AD19B97C020002BEA7 /* PMMedicationModal.h */,
 				229A13AE19B97C020002BEA7 /* PMMedicationModal.m */,
 				22F883F119C307DC00C4363C /* PMOsteoMedication.h */,
 				22F883F219C307DC00C4363C /* PMOsteoMedication.m */,
-				22FED67919C80E3F003015F7 /* PMUser.h */,
-				22FED67A19C80E3F003015F7 /* PMUser.m */,
 				22ABDAAF19CC006F00E30FC4 /* PMJointPain.h */,
 				22ABDAB019CC006F00E30FC4 /* PMJointPain.m */,
 				22ABDAB219CC008700E30FC4 /* PMAppointment.h */,
@@ -826,7 +821,6 @@
 				221D393519BEBD47001690C4 /* PMLandingViewController.m in Sources */,
 				22F883EA19C2C89F00C4363C /* PMGetNewEmailViewController.m in Sources */,
 				221D393F19BECDF6001690C4 /* PMPhysiciansViewController.m in Sources */,
-				22E7DFBC19C01BD8000A1E7F /* PMSampleCollectionViewController.m in Sources */,
 				229A13B219B9B6300002BEA7 /* PMOsteoMedicationViewController.m in Sources */,
 				2299D02719B5994600AA6252 /* PMEmptyRootViewController.m in Sources */,
 				22A79E8919B48AC800E00023 /* PMOverallSliderCell.m in Sources */,
